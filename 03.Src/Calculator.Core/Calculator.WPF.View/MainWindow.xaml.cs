@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Calculator.Core;
 
 namespace Calculator.WPF.View
 {
@@ -28,7 +29,9 @@ namespace Calculator.WPF.View
 
         private void Numb_Click(object sender, RoutedEventArgs e)
         {
-            
+            string input = ((Button)sender).Content.ToString();
+            Number n = new Number();
+            n.GetNumber(input);
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Num
+namespace Calculator.Core
 {
-    class Number
+   public  class Number
     {
         bool isFirstNumberInput = true;
 
