@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator.MH.View
 {
-    class Class1
+    class Test1
     {
     }
 }
