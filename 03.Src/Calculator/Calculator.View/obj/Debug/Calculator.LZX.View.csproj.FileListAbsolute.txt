@@ -1,0 +1,8 @@
+F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.View\obj\Debug\Calculator.LZX.View.csprojResolveAssemblyReference.cache
+F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.View\obj\Debug\Calculator.LZX.View.Form1.resources
+F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.View\obj\Debug\Calculator.View.Properties.Resources.resources
+F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.View\obj\Debug\Calculator.LZX.View.csproj.GenerateResource.Cache
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.LZX.View.csprojResolveAssemblyReference.cache
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.LZX.View.Form1.resources
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.View.Properties.Resources.resources
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.LZX.View.csproj.GenerateResource.Cache
