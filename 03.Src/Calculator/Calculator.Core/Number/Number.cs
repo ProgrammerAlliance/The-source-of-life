@@ -42,6 +42,11 @@ namespace Calculator.Core.Number
             }
         }
 
+        /// <summary>
+        /// 输入小数点
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public string Point(string str)
         {
             if (HasPoint())
