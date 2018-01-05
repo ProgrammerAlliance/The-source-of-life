@@ -3,3 +3,9 @@ F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\bin\Debug
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.csprojResolveAssemblyReference.cache
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.dll
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.pdb
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\bin\Debug\Calculator.Core.dll
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\bin\Debug\Calculator.Core.pdb
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.csprojResolveAssemblyReference.cache
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.csproj.CoreCompileInputs.cache
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.dll
+E:\work\源码\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.pdb

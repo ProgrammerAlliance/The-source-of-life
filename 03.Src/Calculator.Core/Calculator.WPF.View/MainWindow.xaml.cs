@@ -23,6 +23,12 @@ namespace Calculator.WPF.View
         public MainWindow()
         {
             InitializeComponent();
+            resultShow.Text = "0";
+        }
+
+        private void Numb_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
