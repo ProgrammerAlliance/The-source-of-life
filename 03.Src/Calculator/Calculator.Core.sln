@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Core", "Calculat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.LZX.View", "Calculator.View\Calculator.LZX.View.csproj", "{8D6E3D7A-F566-4D4F-992F-3AF19100DDC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.WR.View", "Calculator.WPF.View\Calculator.WR.View.csproj", "{F1EA3F81-2C87-4338-87EC-05CDFD4E1534}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.MH.View", "Calculator.MH.View\Calculator.MH.View.csproj", "{03038F0B-F21E-4148-B4F6-E75FC27A1D25}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{8D6E3D7A-F566-4D4F-992F-3AF19100DDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D6E3D7A-F566-4D4F-992F-3AF19100DDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D6E3D7A-F566-4D4F-992F-3AF19100DDC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1EA3F81-2C87-4338-87EC-05CDFD4E1534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1EA3F81-2C87-4338-87EC-05CDFD4E1534}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1EA3F81-2C87-4338-87EC-05CDFD4E1534}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1EA3F81-2C87-4338-87EC-05CDFD4E1534}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03038F0B-F21E-4148-B4F6-E75FC27A1D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03038F0B-F21E-4148-B4F6-E75FC27A1D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03038F0B-F21E-4148-B4F6-E75FC27A1D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03038F0B-F21E-4148-B4F6-E75FC27A1D25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

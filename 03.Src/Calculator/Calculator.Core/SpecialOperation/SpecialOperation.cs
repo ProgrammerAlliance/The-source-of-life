@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-    class Special_Operation
+    public class Special_Operation
     {
         /// <summary>
         /// 开方

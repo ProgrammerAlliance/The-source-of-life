@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Calculator.View
 {
     static class Program
@@ -16,7 +17,7 @@ namespace Calculator.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LZX.View.Form1());
         }
     }
 }

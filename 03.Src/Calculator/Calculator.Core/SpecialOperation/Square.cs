@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-    class Square:Special_Operation
+    public class Square:Special_Operation
     {
+        string result = "";
         public override object GetResult()
         {
             double result = 0;
@@ -17,7 +18,10 @@ namespace Calculator.Core.Opt
 
         public override string GetString()
         {
-            return "Sqr(" + NumberA + ")";
+            result = "sqr(" + NumberA + ")";
+            return result ;
         }
+
+        
     }
 }

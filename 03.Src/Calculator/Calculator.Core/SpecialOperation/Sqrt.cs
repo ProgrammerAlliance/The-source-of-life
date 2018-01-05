@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-    class Sqrt:Special_Operation
+    public class Sqrt:Special_Operation
     {
         public override object GetResult()
         {

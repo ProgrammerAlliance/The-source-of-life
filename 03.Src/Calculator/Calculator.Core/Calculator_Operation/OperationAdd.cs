@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Calculator.Core.Opt;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-    class OperationAdd:Operation
+   public  class OperationAdd:Operation
     {
         public override object GetResult()
         {

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-     class Operation
+    public  class Operation
     {
-        private double _numberA = 0;
-        private double _numberB = 0;
+        public double _numberA = 0;
+        public double _numberB = 0;
 
         public double NumberA
         {

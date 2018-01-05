@@ -2,6 +2,7 @@ F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\bin\Debug
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\bin\Debug\Calculator.Core.pdb
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.dll
 F:\Work\Code\The-source-of-life\03.Src\Calculator.Core\Calculator.Core\obj\Debug\Calculator.Core.pdb
-F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.Core\obj\Debug\Calculator.Core.csprojResolveAssemblyReference.cache
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.Core\bin\Debug\Calculator.Core.dll
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.Core\bin\Debug\Calculator.Core.pdb
 F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.Core\obj\Debug\Calculator.Core.dll
 F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.Core\obj\Debug\Calculator.Core.pdb

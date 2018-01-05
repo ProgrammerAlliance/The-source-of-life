@@ -13,10 +13,10 @@ namespace Calculator.LZX.View
         
         public static string  GetButtonText(string num,string str)
         {
-            if (Form1.CL == true)
+            if (Form1.isClr == true)
             {
                  str= "0";
-                Form1.CL = false;
+                Form1.isClr = false;
             }
 
             if (str == "0")
@@ -25,8 +25,8 @@ namespace Calculator.LZX.View
             else
                 str += num;
 
-            if (Form1.first == false)
-                Form1.CC = true;
+            if (Form1.FirstInput == false)
+                Form1.isCanCalc = true;
 
             return str;
 

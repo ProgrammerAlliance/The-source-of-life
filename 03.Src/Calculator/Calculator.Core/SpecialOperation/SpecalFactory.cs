@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Calculator.Core.Opt;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Opt
+namespace Calculator.Core
 {
-    class SpecalFactory
+    public class SpecalFactory
     {
         public static Special_Operation creatSpecial_Operation(string operate)
         {
@@ -27,7 +28,7 @@ namespace Calculator.Core.Opt
                     }
                 case "1/x":
                     {
-                        spo = new BackNumber();
+                        spo = new Reciprocal();
                         break;
                     }
             }

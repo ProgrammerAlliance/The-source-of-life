@@ -6,3 +6,10 @@ F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calc
 F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.LZX.View.Form1.resources
 F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.View.Properties.Resources.resources
 F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.LZX.View.csproj.GenerateResource.Cache
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\bin\Debug\Calculator.View.exe.config
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\bin\Debug\Calculator.View.exe
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\bin\Debug\Calculator.View.pdb
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\bin\Debug\Calculator.Core.dll
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\bin\Debug\Calculator.Core.pdb
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.View.exe
+F:\Work\Code\The-source-of-life\03.Src\Calculator\Calculator.View\obj\Debug\Calculator.View.pdb
