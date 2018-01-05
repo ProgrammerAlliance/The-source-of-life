@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Frm_Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Calculator.Designer.cs">
       <DependentUpon>Frm_Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Calculator.resx">
