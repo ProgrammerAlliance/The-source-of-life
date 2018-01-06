@@ -8,7 +8,7 @@ namespace Calculator.Core
 {
     public class Reciprocal : Special_Operation
     {
-        public override object GetResult()
+        public override void GetResult()
         {
             object result = 0;
             if (NumberA == 0)
@@ -19,13 +19,11 @@ namespace Calculator.Core
             {
                 result = 1 / NumberA;
             }
-           
-            return result;
         }
 
-        public override string GetString()
-        {
-            return "1/(" + NumberA + ")";
-        }
+        //public override string GetString()
+        //{
+        //    return "1/(" + NumberA + ")";
+        //}
     }
 }

@@ -15,26 +15,27 @@ namespace Calculator.Core
         /// <param name="str"></param>
         /// <returns></returns>
         private double _numberA = 0;
+        private string _strFormula = "";
 
         public double NumberA
         {
             get { return _numberA; }
             set { _numberA = value; }
         }
-
+        public string StrFormula
+        {
+            get { return _strFormula; }
+            set { _strFormula = value; }
+        }
        
 
-        public virtual object GetResult()
+        public virtual void GetResult()
         {
-            double result = 0;
-            return result;
         }
 
-        public virtual string GetString()
-        {
-            string StringWord=null;
-            return StringWord;
-        }
+        //public virtual void GetString()
+        //{
+        //}
 
 
 

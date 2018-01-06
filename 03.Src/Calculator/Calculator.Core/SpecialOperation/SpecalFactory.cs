@@ -31,6 +31,11 @@ namespace Calculator.Core
                         spo = new Reciprocal();
                         break;
                     }
+                case "%":
+                    {
+                        spo = new Percent();
+                        break;
+                    }
             }
             return spo;
         }
