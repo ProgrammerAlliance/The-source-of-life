@@ -1,4 +1,5 @@
 ﻿
+
 using Calculator.Core;
 using System;
 using System.Windows.Forms;
@@ -23,7 +24,10 @@ namespace Calculator.LZX.View
         {
             string num = (sender as Button).Text;
             string str = OneText.Text;
-            OneText.Text= GetNumber.GetButtonText(num,str);
+            //OneText.Text= GetNumber.GetButtonText(num,str);
+           
+
+            
         }
         //初始化
         private void Form1_Load(object sender, EventArgs e)

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core.Number
 {
-    class Number
+    public class Number
     {
-        bool isFirstNumberInput = true;
+        public bool isFirstNumberInput = true;
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -60,7 +60,7 @@ namespace Calculator.Core.Number
         /// 判断位数是否超过限制
         /// </summary>
         /// <returns></returns>
-        private bool IsLimitNum()
+        public bool IsLimitNum()
         {
             if (HasPoint())
             {
@@ -93,7 +93,7 @@ namespace Calculator.Core.Number
         /// 判断是否存在小数点
         /// </summary>
         /// <returns></returns>
-        private bool HasPoint()
+        public bool HasPoint()
         {
             if (stringBuilder.ToString().IndexOf(".") != -1)
             {

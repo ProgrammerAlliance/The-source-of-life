@@ -41,7 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+<<<<<<< HEAD
     <Compile Include="Data\Number.cs" />
+=======
+    <Compile Include="Number\Number.cs" />
+    <Compile Include="Save\Memory.cs" />
+>>>>>>> f111132351356dd90df2c46292ae3f1ff12ef88d
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
