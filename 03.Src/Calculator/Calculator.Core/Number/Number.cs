@@ -8,16 +8,15 @@ namespace Calculator.Core.Number
 {
     public class Number
     {
-        public bool isFirstNumberInput = true;
-
         StringBuilder stringBuilder = new StringBuilder();
 
         /// <summary>
         /// 输入数字
         /// </summary>
-        /// <param name="str">按钮上的字符</param>
+        /// <param name="str">输入的字符</param>
+        /// <param name="isFirstNumberInput">是否是第一次输入</param>
         /// <returns></returns>
-        public double GetNumber(string str)
+        public double GetNumber(string str, bool isFirstNumberInput)
         {
             if (isFirstNumberInput)
             {
@@ -53,7 +52,7 @@ namespace Calculator.Core.Number
             {
                 stringBuilder.Append(str);
             }
-            return str;
+            return stringBuilder.ToString();
         }
 
         /// <summary>
