@@ -16,7 +16,7 @@ namespace Calculator.Core.Number
         /// <param name="str">输入的字符</param>
         /// <param name="isFirstNumberInput">是否是第一次输入</param>
         /// <returns></returns>
-        public double GetNumber(string str, bool isFirstNumberInput)
+        public double GetNumber(string str, ref bool isFirstNumberInput)
         {
             if (isFirstNumberInput)
             {
@@ -26,8 +26,8 @@ namespace Calculator.Core.Number
                 }
                 else
                 {
-                    isFirstNumberInput = false;
                     stringBuilder.Append(str);
+                    isFirstNumberInput = false;
                     return Convert.ToDouble(str);
                 }
             }
