@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Number
+namespace Calculator.Core
 {
     public class Number
     {
-        public bool isFirstNumberInput = true;
+       
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -17,9 +17,9 @@ namespace Calculator.Core.Number
         /// </summary>
         /// <param name="str">按钮上的字符</param>
         /// <returns></returns>
-        public double GetNumber(string str)
+        public double GetNumber(bool falg,string str)
         {
-            if (isFirstNumberInput)
+            if (falg)
             {
                 if ("0".Equals(str))
                 {
@@ -27,7 +27,7 @@ namespace Calculator.Core.Number
                 }
                 else
                 {
-                    isFirstNumberInput = false;
+                    falg = false;
                     stringBuilder.Append(str);
                     return Convert.ToDouble(str);
                 }

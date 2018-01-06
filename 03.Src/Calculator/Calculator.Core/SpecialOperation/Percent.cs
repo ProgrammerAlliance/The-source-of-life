@@ -1,4 +1,4 @@
-﻿namespace Calculator.Core.Opt
+﻿namespace Calculator.Core
 {/// <summary>
  /// 百分号
  /// </summary>

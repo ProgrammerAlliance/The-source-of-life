@@ -36,10 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Calculator.Core">
-      <HintPath>..\Calculator.Core\bin\Debug\Calculator.Core.dll</HintPath>
+      <HintPath>..\Calculator.Core\obj\Debug\Calculator.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Clean.cs" />
-    <Compile Include="Code\GetNumber.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
