@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Data\ScreenData.cs" />
+    <Compile Include="Data\Number.cs" />
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
