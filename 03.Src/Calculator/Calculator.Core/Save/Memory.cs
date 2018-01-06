@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core.Save
 {
-    class Memory
+    public class Memory
     {
-        List<double> MemoryNumber = new List<double>();
+        public double MemoryNumber;
 
         public void MemorySave(double num)
-        {
-            if (num != 0)
-            {
-                MemoryNumber.Add(num);
-            }
+        { 
+             MemoryNumber = num;
         }
 
         public double MemoryRead()
         {
-            return MemoryNumber[1];
+            return MemoryNumber;
         }
 
         public void MemoryClean()
         {
+            MemoryNumber = 0;
+        }
 
+        public void MemoryAdd(double num)
+        {
+            MemoryNumber += num;
+        }
+
+        public void MemorySub(double num)
+        {
+            MemoryNumber -= num;
         }
     }
 }
