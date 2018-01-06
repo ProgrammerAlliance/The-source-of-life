@@ -8,9 +8,11 @@ namespace Calculator.Core
 {
     public  class Operation
     {
-        public double _numberA = 0;
-        public double _numberB = 0;
-
+        private double _numberA = 0;
+        private double _numberB = 0;
+        //private double _result = 0;
+       // private string _symbol = null;
+        
         public double NumberA
         {
             get { return _numberA; }
@@ -28,7 +30,7 @@ namespace Calculator.Core
             double result = 0;
             return result;
         }
-
+        
 
     }
 }

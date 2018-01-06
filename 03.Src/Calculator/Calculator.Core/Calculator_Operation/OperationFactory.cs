@@ -25,12 +25,12 @@ namespace Calculator.Core
                         oper = new OperationSub();
                         break;
                     }
-                case "×":
+                case "*":
                     {
                         oper = new OperationMul();
                         break;
                     }
-                case "÷":
+                case "/":
                     {
                         oper = new OperationDIV();
                         break;
