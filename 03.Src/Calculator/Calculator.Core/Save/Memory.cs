@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
+    /// <summary>
+    /// todo: wr
+    /// </summary>
     public class Memory
     {
         public double MemoryNumber;

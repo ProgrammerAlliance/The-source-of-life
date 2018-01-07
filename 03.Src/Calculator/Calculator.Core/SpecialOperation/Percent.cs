@@ -1,7 +1,8 @@
 ﻿namespace Calculator.Core.Opt
-{/// <summary>
- /// 百分号
- /// </summary>
+{
+    /// <summary>
+    /// todo: mh
+    /// </summary>
     public class Percent : ISpecialOperation
     {
         public double GetResult(double number)

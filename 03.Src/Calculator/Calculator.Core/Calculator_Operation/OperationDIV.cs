@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
+    /// <summary>
+    /// todo: mh
+    /// </summary>
     public class OperationDiv : IOperation
     {
         public double GetResult(double number1, double number2)
