@@ -4,7 +4,7 @@
  /// </summary>
     public class Percent : ISpecialOperation
     {
-        public double GeResult(double number)
+        public double GetResult(double number)
         {
             double result = 0;
             result = number / 100;

@@ -9,7 +9,7 @@ namespace Calculator.Core
 
     public class Reciprocal : ISpecialOperation
     {
-        public override object GetResult(double number)
+        public double GetResult(double number)
         {
             double result = 0;
             if (number == 0)
@@ -21,7 +21,6 @@ namespace Calculator.Core
                 result = 1 / number;
             }
             return result;
-
         }
 
         public string GetString(double number)

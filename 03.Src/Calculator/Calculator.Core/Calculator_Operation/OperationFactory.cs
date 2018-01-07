@@ -32,7 +32,7 @@ namespace Calculator.Core
                     }
                 case "/":
                     {
-                        oper = new OperationDIV();
+                        oper = new OperationDiv();
                         break;
                     }
             }

@@ -18,7 +18,7 @@ namespace Calculator.Core.SDK
         public double UseOperation(double firstNum,double secondNum,string symbol)
         {
             IOperation oper = OperationFactory.CreatOperation(symbol);
-            return 0;
+            return oper.GetResult(firstNum,secondNum);
         }
         /// <summary>
         /// 调用Special计算方法
@@ -28,7 +28,7 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public double UseSpecial(double num,string  symbol) {
             ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
-            return 0;
+            return spo.GetResult(num);
         }
         /// <summary>
         /// 调用特殊工厂的显示方法
@@ -38,10 +38,8 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public static string UseSpecial_show(double num,string symbol)
         {
-            Special_Operation spo = new Special_Operation();
-            spo = SpecalFactory.creatSpecial_Operation(symbol);
-            spo.NumberA = num;
-            return spo.GetString();
+            ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
+            return spo.GetString(num);
         }
         /// <summary>
         /// 调用数字显示方法

@@ -1,8 +1,7 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using Calculator.Core.Number;
-using Calculator.Core;
+﻿using Calculator.Core;
 using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace Calculator.WPF.View
 {
@@ -45,7 +44,7 @@ namespace Calculator.WPF.View
         {
             string input = ((Button)sender).Content.ToString();
             IOperation op = OperationFactory.CreatOperation(temp);
-            result = op.GetResult();
+            
             
         }
 

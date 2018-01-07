@@ -66,16 +66,7 @@ namespace Calculator.LZX.View
             }
             else if (isCanCalc == true)    //如果允许计算
             {
-                IOperation oper = new IOperation(); 
-                oper = OperationFactory.CreatOperation(symbol);
-                oper.NumberA = double.Parse(lastVal);
-                oper.NumberB = double.Parse(OneText.Text);
-                result = oper.GetResult(); //计算函数
-                TwoBox.Text = TwoBox.Text + OneText.Text + NowSymbol;   
-                lastVal = OneText.Text = result.ToString();             
-                symbol = NowSymbol;                                 //更新 新的待执行的双目运算的符合
-                isClr = true;
-                isCanCalc = false;                                  //没有输入输入下一个数,再次按下双目运算按钮,只能修改当前symbol的值
+                                                 //没有输入输入下一个数,再次按下双目运算按钮,只能修改当前symbol的值
             }
             else
             {
@@ -86,16 +77,7 @@ namespace Calculator.LZX.View
         //等于
         private void Res_Btn_Click(object sender, EventArgs e)
         {
-                IOperation oper = new IOperation();
-                oper = OperationFactory.CreatOperation(symbol);
-                oper.NumberA = double.Parse(lastVal);
-                oper.NumberB = double.Parse(OneText.Text);
-                object result = oper.GetResult();
-                TwoBox.Text = "";
-                if (FirstInput == false)
-                    OneText.Text = result.ToString();
-                FirstInput = true;
-                isClr = true;  
+                
         }
         //C  初始化
         private void C_Btn_Click(object sender, EventArgs e)
@@ -129,12 +111,7 @@ namespace Calculator.LZX.View
         /// <param name="e"></param>
         private void Sp_Click(object sender, EventArgs e)
         {
-                string str = (sender as Button).Text;
-                Special_Operation spo = new Special_Operation();
-                spo = SpecalFactory.CreatSpecial_Operation(str);
-                spo.NumberA = double.Parse(OneText.Text);
-                OneText.Text = spo.GetResult().ToString();
-                TwoBox.Text = spo.GetString();                         
+                                    
         }
     }
 }

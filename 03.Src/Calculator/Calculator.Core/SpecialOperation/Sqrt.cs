@@ -8,7 +8,7 @@ namespace Calculator.Core
 {
     public class Sqrt:ISpecialOperation
     {
-        public double GeResult(double number)
+        public double GetResult(double number)
         {
             double result = 0;
             result = Math.Sqrt(number);

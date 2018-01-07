@@ -10,7 +10,7 @@ namespace Calculator.Core
     {
         string result = "";
 
-        public double GeResult(double number)
+        public double GetResult(double number)
         {
             double result = 0;
             result = number * number;

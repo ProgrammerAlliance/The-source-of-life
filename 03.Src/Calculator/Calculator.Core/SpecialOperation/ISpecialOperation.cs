@@ -9,7 +9,7 @@ namespace Calculator.Core
 {
     public interface ISpecialOperation
     {
-        double GeResult(double number);
+        double GetResult(double number);
 
         string GetString(double number);
     }
