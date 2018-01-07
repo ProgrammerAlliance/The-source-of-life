@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Calculator.Core">
-      <HintPath>..\Calculator.Core\bin\Debug\Calculator.Core.dll</HintPath>
+      <HintPath>..\Calculator.Core\obj\Debug\Calculator.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

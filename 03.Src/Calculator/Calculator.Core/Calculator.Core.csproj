@@ -39,6 +39,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\ScreenData.cs" />
+    <Compile Include="Save\Memory.cs" />
+<<<<<<< .mine
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Number\Number.cs" />
@@ -61,4 +65,28 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+=======
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> .theirs
 </Project>
