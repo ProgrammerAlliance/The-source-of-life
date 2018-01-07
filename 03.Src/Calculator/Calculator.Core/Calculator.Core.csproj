@@ -40,20 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Class1.cs" />
-<<<<<<< HEAD
     <Compile Include="Data\ScreenData.cs" />
-=======
-=======
->>>>>>> d90c7d6d0572c5f6d57f1ffe112281e773a1c682
     <Compile Include="Number\Number.cs" />
     <Compile Include="Save\Memory.cs" />
-<<<<<<< HEAD
->>>>>>> 219000db4554af0ffde259704a5df6d82c918618
-=======
     <Compile Include="SDK\Calculator.cs" />
->>>>>>> db4406cbbba0b178f26193c98f28ecd7f9427ca6
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
