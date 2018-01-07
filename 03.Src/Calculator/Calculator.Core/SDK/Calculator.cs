@@ -18,10 +18,37 @@ namespace Calculator.Core
 
         public Memorys Memorys { get; set; }
 
-        public void CalcOperation(string op)
+        private bool _lastIsSymbol = false;
+
+
+        public void CalcOperation(OperateEnum oe)
         {
-            string regexNum = @"([0-9])|([\.])";
-            string regexSymbol = @"([+\-*/])";
+
+            OperationFactory.CreatOperation(oe);
+        }
+
+        public void SpecOperation(SpecialEnum se)
+        {
+
+        }
+
+        public void MOperation(MEnum me)
+        {
+
+        }
+
+        public void ClearOperation(ClearEnum ce)
+        {
+
+        }
+
+        /// <summary>
+        /// 界面数字调用方法
+        /// </summary>
+        /// <param name="op"></param>
+        public void CalcNumber(string op)
+        {
+
         }
 
         public void MemoryOperation(string key, string op)

@@ -22,6 +22,12 @@ namespace Calculator
             ScreenDisplay();
         }
 
+        private void Btn_Number_Click(object sender, EventArgs e)
+        {
+            string strBtn = ((Button)sender).Text;
+            calculator.CalcNumber(strBtn);
+        }
+
 
         /// <summary>
         /// 数字按钮
@@ -31,9 +37,60 @@ namespace Calculator
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
-            calculator.CalcOperation(strBtn);
+            switch(strBtn)
+            {
+                case "+":
+                    calculator.CalcOperation(Core.OperateEnum.Add);
+                    break;
+                case "-":
+                    calculator.CalcOperation(Core.OperateEnum.Sub);
+                    break;
+                case "*":
+                    calculator.CalcOperation(Core.OperateEnum.Mul);
+                    break;
+                case "/":
+                    calculator.CalcOperation(Core.OperateEnum.Div);
+                    break;
+                case "%":
+                    calculator.SpecOperation(Core.SpecialEnum.Percent);
+                    break;
+                case "1/x":
+                    calculator.SpecOperation(Core.SpecialEnum.Reciprocal);
+                    break;
+                case "√":
+                    calculator.SpecOperation(Core.SpecialEnum.Sqrt);
+                    break;
+                case "MC":
+                    calculator.MOperation(Core.MEnum.MClear);
+                    break;
+                case "MS":
+                    calculator.MOperation(Core.MEnum.MSave);
+                    break;
+                case "MR":
+                    calculator.MOperation(Core.MEnum.MRead);
+                    break;
+                case "M+":
+                    calculator.MOperation(Core.MEnum.MAdd);
+                    break;
+                case "M-":
+                    calculator.MOperation(Core.MEnum.MSub);
+                    break;
+                case "←":
+                    calculator.ClearOperation(Core.ClearEnum.Del);
+                    break;
+                case "CE":
+                    calculator.ClearOperation(Core.ClearEnum.CE);
+                    break;
+                case "C":
+                    calculator.ClearOperation(Core.ClearEnum.C);
+                    break;
+                case "=":
+                    calculator.CalcOperation(Core.OperateEnum.Equal);
+                    break;
+                default:
+                    throw new Exception("操作符不存在");
+            }
             ScreenDisplay();
-            //_lastIsSymbol = false;
         }
 
         private void Btn_Memory_Click(object sender, EventArgs e)

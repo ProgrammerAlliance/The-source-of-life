@@ -9,32 +9,33 @@ namespace Calculator.Core
 {
     public class OperationFactory
     {
-        public static IOperation CreatOperation(string operate)
+        public static IOperation CreatOperation(OperateEnum oe)
         {
             IOperation oper = null;
 
-            switch (operate)
+            switch (oe)
             {
-                case "+":
+                case OperateEnum.Add :
                     {
                         oper = new OperationAdd();
                         break;
                     }
-                case "-":
+                case OperateEnum.Sub:
                     {
                         oper = new OperationSub();
                         break;
                     }
-                case "*":
+                case OperateEnum.Mul:
                     {
                         oper = new OperationMul();
                         break;
                     }
-                case "/":
+                case OperateEnum.Div:
                     {
                         oper = new OperationDiv();
                         break;
                     }
+
             }
             return oper;
         }
