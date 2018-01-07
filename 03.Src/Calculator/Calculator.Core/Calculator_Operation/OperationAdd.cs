@@ -2,9 +2,9 @@
 {
     public  class OperationAdd:Operation
     {
-        public override object GetResult()
+        public override double GetResult()
         {
-            object result = 0;
+            double result = 0;
             result = NumberA + NumberB;
             return result;
         }

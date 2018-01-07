@@ -43,6 +43,10 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Number\Number.cs" />
     <Compile Include="Save\Memory.cs" />
+<<<<<<< master
+=======
+    <Compile Include="SDK\Calculator.cs" />
+>>>>>>> local
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
@@ -57,5 +61,9 @@
     <Compile Include="SpecialOperation\Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+<<<<<<< master
+=======
+  <ItemGroup />
+>>>>>>> local
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

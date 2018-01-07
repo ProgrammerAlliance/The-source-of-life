@@ -3,7 +3,7 @@
     public class Square:Special_Operation
     {
         string result = "";
-        public override object GetResult()
+        public override double GetResult()
         {
             double result = 0;
             result = NumberA* NumberA;

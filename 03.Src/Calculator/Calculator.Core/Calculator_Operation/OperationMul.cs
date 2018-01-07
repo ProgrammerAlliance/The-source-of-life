@@ -2,7 +2,7 @@
 {
     public class OperationMul:Operation
     {
-        public override object GetResult()
+        public override double GetResult()
         {  
                 double result = 0;
                 result = NumberA * NumberB;

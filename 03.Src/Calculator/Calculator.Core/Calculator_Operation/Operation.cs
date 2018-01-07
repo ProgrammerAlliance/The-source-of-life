@@ -17,7 +17,7 @@
             set { _numberB = value; }
         }
 
-        public virtual object GetResult()
+        public virtual double GetResult()
         {
             double result = 0;
             return result;

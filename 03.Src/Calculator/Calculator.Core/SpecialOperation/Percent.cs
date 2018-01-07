@@ -4,7 +4,7 @@
  /// </summary>
     public class Percent: Special_Operation
     {
-        public override object GetResult()
+        public override double GetResult()
         {
             double result = 0;
             result =  NumberA/100;
