@@ -9,9 +9,12 @@ namespace Calculator.Core
     
     public class Calculator
     {
-        public static bool FirstInput = true;
-        public static string lastVal = "";
+        public static bool FirstInput = true;//是否第一次输入
+        public static string lastVal = "";       //双目运算保存前一个数 
+        private string symbol = "";//保存运算符
         Memory m = new Memory();
+
+
         /// <summary>
         /// 调用Operation计算方法
         /// </summary>
@@ -19,11 +22,11 @@ namespace Calculator.Core
         /// <param name="secondNum"></param>
         /// <param name="symbol"></param>
         /// <returns></returns>
-        public double UseOperation(double firstNum,double secondNum,string symbol)
-        {
-            IOperation oper = OperationFactory.CreatOperation(symbol);
-            return oper.GetResult(firstNum,secondNum);
-        }
+        //public double UseOperation(string symbol)
+        //{
+        //    IOperation oper = OperationFactory.CreatOperation(symbol);
+        //    return oper.GetResult(lastVal, secondNum);
+        //}
 
         /// <summary>
         /// 调用Special计算方法
@@ -32,6 +35,7 @@ namespace Calculator.Core
         /// <param name="symbol"></param>
         /// <returns></returns>
         public double UseSpecial(double num,string  symbol) {
+
             ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
             return spo.GetResult(num);
         }
