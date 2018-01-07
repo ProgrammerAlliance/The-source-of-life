@@ -15,11 +15,17 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void calculator_Load(object sender, EventArgs e)
+        private void Calculator_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             labOfLine.SendToBack();
             ScreenDisplay();
+            Bind_Click();
+        }
+
+        private void Bind_Click()
+        {
+            this.
         }
 
         /// <summary>
@@ -27,7 +33,7 @@ namespace Calculator
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_num_Click(object sender, EventArgs e)
+        private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             
             //string strBtn = ((Button)sender).Text;
@@ -36,6 +42,10 @@ namespace Calculator
             //_lastIsSymbol = false;
         }
 
+        private void Btn_Memory_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 
