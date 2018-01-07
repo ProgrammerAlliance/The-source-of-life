@@ -9,7 +9,6 @@ namespace Calculator.Core
 {
     public interface ISpecialOperation
     {
-<<<<<<< HEAD
         /// <summary>
         /// 开方
         /// </summary>
@@ -39,9 +38,7 @@ namespace Calculator.Core
         }
 
 
-=======
         double GeResult(double number);
->>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
 
         string GetString(double number);
     }
