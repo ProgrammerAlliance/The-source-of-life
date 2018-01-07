@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-   public  class OperationAdd:Operation
+    public class OperationAdd : Operation
     {
-        public override object GetResult()
+        public double GetResult(double number1, double number2)
         {
-            object result = 0;
-            result = NumberA + NumberB;
+            double result = 0;
+            result = number1 + number2;
             return result;
         }
     }

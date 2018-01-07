@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class OperationDIV:Operation
+    public class OperationDIV : Operation
     {
-        public override object GetResult()
+        public double GetResult(double number1, double number2)
         {
-            object result = 0;
+            double result = 0;
 
-            if (NumberA==0&&NumberB==0)
+            if (number1 == 0 && number2 == 0)
             {
-                result = "结果未定义！";
+                throw new Exception("结果未定义!");
             }
-            else if (NumberB != 0)
+            else if (number2 != 0)
             {
-                result = NumberA / NumberB;
+                result = number1 / number2;
             }
             else
             {
-               result= "除数不能为零！";
+                throw new Exception("除数不能为零!");
             }
             return result;
         }

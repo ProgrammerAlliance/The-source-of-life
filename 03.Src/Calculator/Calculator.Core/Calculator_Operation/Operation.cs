@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public  class Operation
+    public interface Operation
     {
+<<<<<<< HEAD
         private double _numberA = 0;
         private double _numberB = 0;
         //private double _result = 0;
@@ -32,5 +33,8 @@ namespace Calculator.Core
         }
         
 
+=======
+        double GetResult(double number1, double number2);
+>>>>>>> d90c7d6d0572c5f6d57f1ffe112281e773a1c682
     }
 }
