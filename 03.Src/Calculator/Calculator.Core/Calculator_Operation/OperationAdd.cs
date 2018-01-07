@@ -11,7 +11,9 @@ namespace Calculator.Core
     {
         public double GetResult(double number1, double number2)
         {
-            return number1 + number2;
+            double result = 0;
+            result = number1 + number2;
+            return result;
         }
     }
 }
