@@ -48,6 +48,7 @@
     <Compile Include="Operation\Memory\MemorySave.cs" />
     <Compile Include="Operation\Memory\MemorySub.cs" />
     <Compile Include="Operation\ScreenInput.cs" />
+    <Compile Include="Save\Formula.cs" />
     <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calculator.cs" />
