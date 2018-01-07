@@ -8,7 +8,12 @@ namespace Calculator.Core
 {
     public class Reciprocal : ISpecialOperation
     {
+
+        public override void GetResult()
+        { }
+
         public double GeResult(double number)
+
         {
             double result = 0;
             if (number == 0)
@@ -19,7 +24,10 @@ namespace Calculator.Core
             {
                 result = 1 / number;
             }
+
+
             return result;
+
         }
 
         public string GetString(double number)

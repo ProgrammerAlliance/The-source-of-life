@@ -7,10 +7,36 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public interface ISpecialOperation
+    public class ISpecialOperation
     {
-        double GeResult(double number);
+        /// <summary>
+        /// 开方
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        private double _numberA = 0;
+        private string _strFormula = "";
 
-        string GetString(double number);
+        public double NumberA
+        {
+            get { return _numberA; }
+            set { _numberA = value; }
+        }
+        public string StrFormula
+        {
+            get { return _strFormula; }
+            set { _strFormula = value; }
+        }
+       
+
+        public virtual void GetResult()
+        {
+        }
+
+        public virtual void GetString()
+        {
+        }
+
+
     }
 }
