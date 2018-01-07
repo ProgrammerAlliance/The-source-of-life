@@ -17,6 +17,7 @@ namespace Calculator
     public partial class Frm_Calculator : Form
     {
         ScreenData screenData = new ScreenData();
+<<<<<<< HEAD
         Operation oper = new Operation();
         Special_Operation speOper = new Special_Operation();
 
@@ -28,6 +29,9 @@ namespace Calculator
         private bool _lastIsSymbol = false;
         private bool _lastIsSpecial = false;
         private string result = "0";
+=======
+        IOperation oper;
+>>>>>>> 8ba5894f325e10dcd5dc56769c10d852fcdfe96b
 
         public Frm_Calculator()
         {

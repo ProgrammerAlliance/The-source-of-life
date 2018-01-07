@@ -9,9 +9,9 @@ namespace Calculator.Core
 {
     public class OperationFactory
     {
-        public static Operation creatOperation(string operate)
+        public static IOperation creatOperation(string operate)
         {
-            Operation oper = null;
+            IOperation oper = null;
 
             switch (operate)
             {
