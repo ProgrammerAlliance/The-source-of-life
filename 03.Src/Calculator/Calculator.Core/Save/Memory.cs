@@ -35,15 +35,6 @@ namespace Calculator.Core
 
     public class Memorys : List<Memory>
     {
-        public void Add()
-        {
-
-        }
-
-        public void Clear()
-        {
-
-        }
     }
 
 }

@@ -16,15 +16,6 @@ namespace Calculator.Core
 
     public class Historys : List<History>
     {
-        public void Add()
-        {
-
-        }
-
-        public void Clear()
-        {
-
-        }
     }
     
 }
