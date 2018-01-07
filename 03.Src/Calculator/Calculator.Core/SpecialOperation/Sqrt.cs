@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Sqrt:Special_Operation
+    public class Sqrt:ISpecialOperation
     {
-        public override object GetResult()
+        public double GeResult(double number)
         {
             double result = 0;
-            result = Math.Sqrt(NumberA);
+            result = Math.Sqrt(number);
             return result;
         }
 
-        public override string GetString()
+        public string GetString(double number)
         {
-            return "√("+NumberA+")";
+            return "√(" + number + ")";
         }
     }
 }

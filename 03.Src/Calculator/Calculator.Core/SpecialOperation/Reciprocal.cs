@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Reciprocal : Special_Operation
+    public class Reciprocal : ISpecialOperation
     {
-        public override object GetResult()
+        public double GeResult(double number)
         {
-            object result = 0;
-            if (NumberA == 0)
+            double result = 0;
+            if (number == 0)
             {
-                result = "零没有倒数";
+                throw new Exception("0没有倒数!");
             }
             else
             {
-                result = 1 / NumberA;
+                result = 1 / number;
             }
-           
             return result;
         }
 
-        public override string GetString()
+        public string GetString(double number)
         {
-            return "1/(" + NumberA + ")";
+            return "1/(" + number + ")";
         }
     }
 }

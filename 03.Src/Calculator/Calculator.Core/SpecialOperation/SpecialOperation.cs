@@ -7,36 +7,10 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Special_Operation
+    public interface ISpecialOperation
     {
-        /// <summary>
-        /// 开方
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private double _numberA = 0;
+        double GeResult(double number);
 
-        public double NumberA
-        {
-            get { return _numberA; }
-            set { _numberA = value; }
-        }
-
-       
-
-        public virtual object GetResult()
-        {
-            double result = 0;
-            return result;
-        }
-
-        public virtual string GetString()
-        {
-            string StringWord=null;
-            return StringWord;
-        }
-
-
-
+        string GetString(double number);
     }
 }

@@ -9,9 +9,9 @@ namespace Calculator.Core
 {
     public class SpecalFactory
     {
-        public static Special_Operation creatSpecial_Operation(string operate)
+        public static ISpecialOperation CreateSpecial_Operation(string operate)
         {
-            Special_Operation spo = null;
+            ISpecialOperation spo = null;
 
             switch (operate)
             {

@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Square:Special_Operation
+    public class Square:ISpecialOperation
     {
         string result = "";
-        public override object GetResult()
+
+        public double GeResult(double number)
         {
             double result = 0;
-            result = NumberA* NumberA;
+            result = number * number;
             return result;
         }
 
-        public override string GetString()
+        public string GetString(double number)
         {
-            result = "sqr(" + NumberA + ")";
-            return result ;
+            result = "sqr(" + number + ")";
+            return result;
         }
-
-        
     }
 }

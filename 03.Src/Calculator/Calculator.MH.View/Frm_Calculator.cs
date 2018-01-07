@@ -56,7 +56,7 @@ namespace Calculator
         {
             string strBtn = ((Button)sender).Text;
 
-            oper = OperationFactory.creatOperation(strBtn);
+            oper = OperationFactory.CreatOperation(strBtn);
             oper.NumberB = Convert.ToDouble(screenData.Lab_Answer);
             screenData.ProcessSymbol(strBtn);
 
