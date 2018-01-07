@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Number\Number.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calculator.cs" />
