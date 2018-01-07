@@ -14,6 +14,8 @@ namespace Calculator
         //Special_Operation speOper = new Special_Operation();
 
 
+        Calculator.Core.SDK.Calculator calculator = new Core.SDK.Calculator();
+
 
 
 
