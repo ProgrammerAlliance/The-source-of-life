@@ -20,6 +20,7 @@ namespace Calculator.Core.SDK
             IOperation oper = OperationFactory.CreatOperation(symbol);
             return oper.GetResult(firstNum,secondNum);
         }
+
         /// <summary>
         /// 调用Special计算方法
         /// </summary>
@@ -30,6 +31,7 @@ namespace Calculator.Core.SDK
             ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
             return spo.GetResult(num);
         }
+
         /// <summary>
         /// 调用特殊工厂的显示方法
         /// </summary>
@@ -41,6 +43,7 @@ namespace Calculator.Core.SDK
             ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
             return spo.GetString(num);
         }
+
         /// <summary>
         /// 调用数字显示方法
         /// </summary>
@@ -54,6 +57,7 @@ namespace Calculator.Core.SDK
         }
 
         Memory m = new Memory();
+
         /// <summary>
         /// 调用MS功能
         /// </summary>
@@ -62,6 +66,7 @@ namespace Calculator.Core.SDK
         {
             m.MemorySave(num);
         }
+
         /// <summary>
         /// 调用MR方法
         /// </summary>
