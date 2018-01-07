@@ -45,10 +45,10 @@ namespace Calculator.Core
         /// 处理数字键
         /// </summary>
         /// <param name="num"></param>
-        public void ProcessNum(string num)
+        public void ProcessNum(string num,bool lastIsSyb)
         {
 
-            if("0".Equals(_lab_Answer))
+            if("0".Equals(_lab_Answer)||lastIsSyb)
             {
                 _lab_Answer = "";
             }
@@ -67,8 +67,6 @@ namespace Calculator.Core
         }
 
 
-
-
         /// <summary>
         /// 删除键功能，将输入框的数字删除一位
         /// </summary>
@@ -76,10 +74,6 @@ namespace Calculator.Core
         {
             _lab_Answer = ((_lab_Answer.Length) == 1) ? "0" : _lab_Answer.Remove(_lab_Answer.Length - 1);
         }
-
-
-
-
 
 
         /// <summary>

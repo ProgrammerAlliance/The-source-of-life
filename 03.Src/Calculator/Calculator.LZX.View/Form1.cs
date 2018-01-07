@@ -61,8 +61,8 @@ namespace Calculator.LZX.View
             }
             else if (isCanCalc == true)    //如果允许计算
             {
-                Operation oper = new Operation(); 
-                oper = OperationFactory.creatOperation(symbol);
+                IOperation oper = new IOperation(); 
+                oper = OperationFactory.CreatOperation(symbol);
                 oper.NumberA = double.Parse(lastVal);
                 oper.NumberB = double.Parse(OneText.Text);
                 result = oper.GetResult(); //计算函数
@@ -81,8 +81,8 @@ namespace Calculator.LZX.View
         //等于
         private void Res_Btn_Click(object sender, EventArgs e)
         {
-                Operation oper = new Operation();
-                oper = OperationFactory.creatOperation(symbol);
+                IOperation oper = new IOperation();
+                oper = OperationFactory.CreatOperation(symbol);
                 oper.NumberA = double.Parse(lastVal);
                 oper.NumberB = double.Parse(OneText.Text);
                 object result = oper.GetResult();
@@ -126,7 +126,7 @@ namespace Calculator.LZX.View
         {
                 string str = (sender as Button).Text;
                 Special_Operation spo = new Special_Operation();
-                spo = SpecalFactory.creatSpecial_Operation(str);
+                spo = SpecalFactory.CreatSpecial_Operation(str);
                 spo.NumberA = double.Parse(OneText.Text);
                 OneText.Text = spo.GetResult().ToString();
                 TwoBox.Text = spo.GetString();                         

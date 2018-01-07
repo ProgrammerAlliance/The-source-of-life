@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Calculator.Core">
-      <HintPath>..\Calculator.Core\bin\Debug\Calculator.Core.dll</HintPath>
+      <HintPath>..\Calculator.Core\obj\Debug\Calculator.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Frm_Calculator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Calculator.Designer.cs">
       <DependentUpon>Frm_Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Calculator.resx">
@@ -81,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
