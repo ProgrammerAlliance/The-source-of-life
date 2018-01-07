@@ -48,7 +48,7 @@ namespace Calculator.Core.Number
         /// <returns></returns>
         public string Point(string str)
         {
-            if (HasPoint())
+            if (HasPoint(stringBuilder.ToString()))
             {
                 stringBuilder.Append(str);
             }
@@ -61,7 +61,7 @@ namespace Calculator.Core.Number
         /// <returns></returns>
         public bool IsLimitNum()
         {
-            if (HasPoint())
+            if (HasPoint(stringBuilder.ToString()))
             {
                 string[] temp = stringBuilder.ToString().Split('.');
                 string num_length = temp[0] + temp[1];
@@ -92,9 +92,10 @@ namespace Calculator.Core.Number
         /// 判断是否存在小数点
         /// </summary>
         /// <returns></returns>
-        public bool HasPoint()
+        public bool HasPoint(string str)
         {
-            if (stringBuilder.ToString().IndexOf(".") != -1)
+            str = stringBuilder.ToString();
+            if (str.IndexOf(".") != -1)
             {
                 return true;
             }
