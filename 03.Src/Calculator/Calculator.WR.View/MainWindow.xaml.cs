@@ -44,7 +44,7 @@ namespace Calculator.WPF.View
         private void Opt_Click(object sender, RoutedEventArgs e)
         {
             string input = ((Button)sender).Content.ToString();
-            IOperation op = OperationFactory.creatOperation(temp);
+            IOperation op = OperationFactory.CreatOperation(temp);
             result = op.GetResult();
             
         }
