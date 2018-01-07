@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core
+namespace Calculator.Core.SDK
 {
-    public class Class1
+    public class Calculator
     {
+        public 
+
+
+
+
+
+
     }
 }

@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Special_Operation
+    public interface ISpecialOperation
     {
+<<<<<<< HEAD
         /// <summary>
         /// 开方
         /// </summary>
@@ -33,11 +34,15 @@ namespace Calculator.Core
         {
         }
 
-        //public virtual void GetString()
-        //{
-        //}
+        public virtual void GetString()
+        {
+        }
 
 
+=======
+        double GeResult(double number);
+>>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
 
+        string GetString(double number);
     }
 }
