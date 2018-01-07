@@ -40,15 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Class1.cs" />
-    <Compile Include="Data\ScreenData.cs" />
-=======
     <Compile Include="Data\ScreenData.cs" />
     <Compile Include="Number\Number.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calculator.cs" />
->>>>>>> maohong
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
