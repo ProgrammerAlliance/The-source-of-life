@@ -11,10 +11,6 @@
             result = number / 100;
             return result;
         }
-
-        public string GetString(double number)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

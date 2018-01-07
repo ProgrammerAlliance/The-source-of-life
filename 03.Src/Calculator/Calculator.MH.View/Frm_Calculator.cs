@@ -1,26 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Windows.Forms;
+
 
 namespace Calculator
 {
 
     public partial class Frm_Calculator : Form
     {
-        //ScreenData screenData = new ScreenData();
-
-        //Operation oper = new Operation();
-        //Special_Operation speOper = new Special_Operation();
-
-
-
-
-
-
-        private string _symbol = null;
-        private bool _lastIsSymbol = false;
-        private bool _lastIsSpecial = false;
-        private string result = "0";
+        Calculator.Core.Calculator calculator = new Core.Calculator();
 
 
         public Frm_Calculator()
@@ -32,7 +19,7 @@ namespace Calculator
         {
             this.MaximizeBox = false;
             labOfLine.SendToBack();
-            //ScreenDisplay();
+            ScreenDisplay();
         }
 
         /// <summary>
@@ -42,6 +29,7 @@ namespace Calculator
         /// <param name="e"></param>
         private void btn_num_Click(object sender, EventArgs e)
         {
+            
             //string strBtn = ((Button)sender).Text;
             //screenData.ProcessNum(strBtn, _lastIsSymbol);
             //ScreenDisplay();
@@ -163,15 +151,12 @@ namespace Calculator
 
         #region 自定义方法
 
-
-
-
-        //public void ScreenDisplay()
-        //{
-        //    lab_formula.Text = screenData.Lab_Formula;
-        //    lab_answer.Text = screenData.Lab_Answer;
-        //    lab_register.Text = screenData.Lab_Register;
-        //}
+        public void ScreenDisplay()
+        {
+            lab_formula.Text = calculator.GetStr_Formula();
+            //lab_answer.Text = screenData.Lab_Answer;
+            //lab_register.Text = screenData.Lab_Register;
+        }
 
 
 

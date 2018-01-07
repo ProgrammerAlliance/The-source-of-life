@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Calculator.Core">
-      <HintPath>..\Calculator.Core\obj\Debug\Calculator.Core.dll</HintPath>
+    <Reference Include="Calculator.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Calculator.Core\bin\Debug\Calculator.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,7 +55,6 @@
     <Compile Include="Frm_Calculator.Designer.cs">
       <DependentUpon>Frm_Calculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Calculator.resx">
