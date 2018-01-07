@@ -1,6 +1,4 @@
-﻿
-
-using Calculator.Core;
+﻿using Calculator.Core;
 using System;
 using System.Windows.Forms;
 
@@ -8,7 +6,7 @@ using System.Windows.Forms;
 namespace Calculator.LZX.View
 {
     public partial class Form1 : Form
-    {    
+    {
         public static bool FirstInput = true;//是否第一次输入
         public static string lastVal = "";       //双目运算保存前一个数 
         public static bool isCanCalc = false;  //判断在按下双目运算符后 是进行计算 还是修改已有的Symbol   
@@ -25,30 +23,30 @@ namespace Calculator.LZX.View
             string num = (sender as Button).Text;
             string str = OneText.Text;
             //OneText.Text= GetNumber.GetButtonText(num,str);
-           
 
-            
+
+
         }
         //初始化
         private void Form1_Load(object sender, EventArgs e)
         {
-            TwoBox.Enabled = false;     
-            OneText.Enabled = false;      
-            OneText.Text = "";            
-            OneText.Text = "0";           
+            TwoBox.Enabled = false;
+            OneText.Enabled = false;
+            OneText.Text = "";
+            OneText.Text = "0";
         }
         //取反 
         private void Opp_Btn_Click(object sender, EventArgs e)
         {
-            string str = OneText.Text;               
-            double val = double.Parse(str);         
-            val = -val;                            
-            OneText.Text = val.ToString();           
+            string str = OneText.Text;
+            double val = double.Parse(str);
+            val = -val;
+            OneText.Text = val.ToString();
         }
         //消除
         private void Back_Btn_Click(object sender, EventArgs e)
         {
-            OneText.Text=Clean.Backspace(OneText.Text);
+            OneText.Text = Clean.Backspace(OneText.Text);
         }
         //运算符  +-*/
         private void Symbol_Btn_Click(object sender, EventArgs e)
@@ -66,22 +64,22 @@ namespace Calculator.LZX.View
             }
             else if (isCanCalc == true)    //如果允许计算
             {
-                                                 //没有输入输入下一个数,再次按下双目运算按钮,只能修改当前symbol的值
+                //没有输入输入下一个数,再次按下双目运算按钮,只能修改当前symbol的值
             }
             else
             {
                 symbol = NowSymbol;     //不允许计算, 只能修改当前symbol的值
-                OneText.Text = OneText.Text.Substring(0, OneText.Text.Length - 1) + symbol; 
+                OneText.Text = OneText.Text.Substring(0, OneText.Text.Length - 1) + symbol;
             }
         }
         //等于
         private void Res_Btn_Click(object sender, EventArgs e)
         {
-                
+
         }
         //C  初始化
         private void C_Btn_Click(object sender, EventArgs e)
-        {          
+        {
             Form1_Load(sender, e);
             OneText.Text = "0";
             TwoBox.Text = "";
@@ -98,9 +96,9 @@ namespace Calculator.LZX.View
         //小数点
         private void Point_Click(object sender, EventArgs e)
         {
-            string str = (sender as Button).Text;   
-            if (OneText.Text.IndexOf(str) == -1)     
-            {                                                                             
+            string str = (sender as Button).Text;
+            if (OneText.Text.IndexOf(str) == -1)
+            {
                 OneText.Text += str;
             }
         }
@@ -111,7 +109,7 @@ namespace Calculator.LZX.View
         /// <param name="e"></param>
         private void Sp_Click(object sender, EventArgs e)
         {
-                                    
+
         }
     }
 }
