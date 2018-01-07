@@ -9,7 +9,8 @@ namespace Calculator.Core
 
     public class Calculator
     {
-        public List<string> Formula { get; set; }
+        private List<string> _Formula { get; set; }
+        public string Formula { get { return ""; } }
 
         public string Result { get; set; }
 
@@ -23,6 +24,10 @@ namespace Calculator.Core
         }
 
         public void MemoryOperation(string key, string op)
+        {
+
+        }
+        public void MemoryOperation(string op)
         {
 
         }
