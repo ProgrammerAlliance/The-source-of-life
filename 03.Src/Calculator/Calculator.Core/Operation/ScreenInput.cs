@@ -9,21 +9,6 @@ namespace Calculator.Core
     public class ScreenInput
     {
         StringBuilder stringBuilder = new StringBuilder();
-        StringBuilder str_Formula = new StringBuilder("");
-        StringBuilder str_Input = new StringBuilder("0");
-        StringBuilder str_M = new StringBuilder("");
-
-        public StringBuilder Str_Formula
-        {
-            get { return str_Formula; }
-            set { str_Formula = value; }
-        }
-
-
-
-
-
-
 
         /// <summary>
         /// 获取数字

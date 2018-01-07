@@ -20,16 +20,22 @@ namespace Calculator.Core
 
         public void CalcOperation(string op)
         {
-
+            string regexNum = @"([0-9])|([\.])";
+            string regexSymbol = @"([+\-*/])";
         }
 
         public void MemoryOperation(string key, string op)
         {
+            switch (op)
+            {
+                case "MR":
 
+            }
         }
+
         public void MemoryOperation(string op)
         {
-
+            
         }
 
         public void SelectHisory(string key)
