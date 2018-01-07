@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.SDK
+namespace Calculator.Core
 {
+    
     public class Calculator
     {
+        public static bool FirstInput = true;
+        public static string lastVal = "";
+        Memory m = new Memory();
         /// <summary>
         /// 调用Operation计算方法
         /// </summary>
@@ -32,17 +36,7 @@ namespace Calculator.Core.SDK
             return spo.GetResult(num);
         }
 
-        /// <summary>
-        /// 调用特殊工厂的显示方法
-        /// </summary>
-        /// <param name="num"></param>
-        /// <param name="symbol"></param>
-        /// <returns></returns>
-        public static string UseSpecial_show(double num,string symbol)
-        {
-            ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
-            return spo.GetString(num);
-        }
+      
 
         /// <summary>
         /// 调用数字显示方法
@@ -52,11 +46,11 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public double UseNumber(ref bool flag,string str)
         {
-            Number n = new Number();
-            return n.GetNumber(str,ref flag);
+            ScreenInput sc = new ScreenInput();
+            return sc.GetNumber(str,ref flag);
         }
 
-        Memory m = new Memory();
+       
 
         /// <summary>
         /// 调用MS功能
@@ -66,7 +60,6 @@ namespace Calculator.Core.SDK
         {
             m.MemorySave(num);
         }
-
         /// <summary>
         /// 调用MR方法
         /// </summary>
@@ -75,6 +68,14 @@ namespace Calculator.Core.SDK
         {
             return m.MemoryRead();
         }
-        
+        /// <summary>
+        /// 调用MC方法
+        /// </summary>
+        public void UseMC()
+        {
+             m.MemoryClean();
+        }
+
+
     }
 }
