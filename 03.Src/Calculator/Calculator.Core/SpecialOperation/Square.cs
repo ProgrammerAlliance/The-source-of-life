@@ -8,12 +8,10 @@ namespace Calculator.Core
 {
     public class Square:ISpecialOperation
     {
-<<<<<<< HEAD
-        public override void GetResult()
-        {
-            double result = 0;
-            result = NumberA* NumberA;
-=======
+        //public override void GetResult()
+        //{
+        //    double result = 0;
+        //    result = NumberA* NumberA;
         string result = "";
 
         public double GeResult(double number)
@@ -21,7 +19,6 @@ namespace Calculator.Core
             double result = 0;
             result = number * number;
             return result;
->>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
         }
 
         public string GetString(double number)

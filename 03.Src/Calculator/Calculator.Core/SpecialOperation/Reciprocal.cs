@@ -10,6 +10,7 @@ namespace Calculator.Core
     {
 
         public override void GetResult()
+        { }
 
         public double GeResult(double number)
 

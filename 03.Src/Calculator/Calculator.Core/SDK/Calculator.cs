@@ -8,12 +8,6 @@ namespace Calculator.Core.SDK
 {
     public class Calculator
     {
-        public 
-
-
-
-
-
 
     }
 }

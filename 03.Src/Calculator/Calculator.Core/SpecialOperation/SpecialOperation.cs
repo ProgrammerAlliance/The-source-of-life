@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public interface ISpecialOperation
+    public class ISpecialOperation
     {
         /// <summary>
         /// 开方
@@ -38,8 +38,5 @@ namespace Calculator.Core
         }
 
 
-        double GeResult(double number);
-
-        string GetString(double number);
     }
 }
