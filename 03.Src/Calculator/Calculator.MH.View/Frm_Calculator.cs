@@ -85,13 +85,6 @@ namespace Calculator
             //_lastIsSymbol = true;
         }
 
-<<<<<<< HEAD
-=======
-            oper = OperationFactory.CreatOperation(strBtn);
-            oper.NumberB = Convert.ToDouble(screenData.Lab_Answer);
-            screenData.ProcessSymbol(strBtn);
->>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
-
 
         /// <summary>
         /// 根号，百分号，倒数特殊算法
