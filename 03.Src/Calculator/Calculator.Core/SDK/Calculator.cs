@@ -20,7 +20,8 @@ namespace Calculator.Core
 
         public void CalcOperation(string op)
         {
-
+            string regexNum = @"([0-9])|([\.])";
+            string regexSymbol = @"([+\-*/])";
         }
 
         public void MemoryOperation(string key, string op)

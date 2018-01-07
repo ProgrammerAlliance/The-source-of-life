@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
     <Compile Include="Operation\ScreenInput.cs" />
+    <Compile Include="Save\Formula.cs" />
     <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calculator.cs" />
