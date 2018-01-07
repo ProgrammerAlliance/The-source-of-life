@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:Calculator.WPF.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--自定义颜色-->
+        <LinearGradientBrush x:Key="LinearGradientBlueBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF377FED" Offset="0"/>
+            <GradientStop Color="#FF074CC0" Offset="1"/>
+        </LinearGradientBrush>
+        <Color x:Key="NumBtnColor">#F3F3F3</Color>
+        <!--END-->
+        <Style x:Key="NumBtn" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{StaticResource LinearGradientBlueBackground}"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="{StaticResource NumBtnColor}"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

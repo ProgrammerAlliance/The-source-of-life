@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core.Number
 {
-    class Number
+    public class Number
     {
-        bool isFirstNumberInput = true;
-
         StringBuilder stringBuilder = new StringBuilder();
 
         /// <summary>
         /// 输入数字
         /// </summary>
-        /// <param name="str">按钮上的字符</param>
+        /// <param name="str">输入的字符</param>
+        /// <param name="isFirstNumberInput">是否是第一次输入</param>
         /// <returns></returns>
-        public double GetNumber(string str)
+        public double GetNumber(string str, ref bool isFirstNumberInput)
         {
             if (isFirstNumberInput)
             {
@@ -27,8 +26,8 @@ namespace Calculator.Core.Number
                 }
                 else
                 {
-                    isFirstNumberInput = false;
                     stringBuilder.Append(str);
+                    isFirstNumberInput = false;
                     return Convert.ToDouble(str);
                 }
             }
@@ -49,20 +48,20 @@ namespace Calculator.Core.Number
         /// <returns></returns>
         public string Point(string str)
         {
-            if (HasPoint())
+            if (HasPoint(stringBuilder.ToString()))
             {
                 stringBuilder.Append(str);
             }
-            return str;
+            return stringBuilder.ToString();
         }
 
         /// <summary>
         /// 判断位数是否超过限制
         /// </summary>
         /// <returns></returns>
-        private bool IsLimitNum()
+        public bool IsLimitNum()
         {
-            if (HasPoint())
+            if (HasPoint(stringBuilder.ToString()))
             {
                 string[] temp = stringBuilder.ToString().Split('.');
                 string num_length = temp[0] + temp[1];
@@ -93,9 +92,10 @@ namespace Calculator.Core.Number
         /// 判断是否存在小数点
         /// </summary>
         /// <returns></returns>
-        private bool HasPoint()
+        public bool HasPoint(string str)
         {
-            if (stringBuilder.ToString().IndexOf(".") != -1)
+            str = stringBuilder.ToString();
+            if (str.IndexOf(".") != -1)
             {
                 return true;
             }

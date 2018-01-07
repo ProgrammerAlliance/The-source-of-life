@@ -109,11 +109,11 @@ namespace Calculator
                 speOper.StrFormula = speOper.NumberA.ToString();
             }
 
-
-
-
             speOper.GetResult();
 
+            screenData.Lab_Answer = speOper.NumberA.ToString();
+
+            ScreenDisplay();
             _lastIsSpecial = true;
 
         }

@@ -11,7 +11,7 @@ namespace Calculator.Core
         public override void GetResult()
         {
             NumberA = Math.Sqrt(NumberA);
-            StrFormula
+            StrFormula = $"sqrt({StrFormula})";
         }
 
         //public override void GetString()

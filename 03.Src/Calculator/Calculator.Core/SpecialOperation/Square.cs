@@ -8,7 +8,6 @@ namespace Calculator.Core
 {
     public class Square:Special_Operation
     {
-        string result = "";
         public override void GetResult()
         {
             double result = 0;
