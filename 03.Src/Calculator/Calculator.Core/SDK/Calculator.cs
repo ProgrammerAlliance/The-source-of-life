@@ -34,7 +34,8 @@ namespace Calculator.Core
 
         public void SelectHisory(string key)
         {
-
+            int index = int.Parse(key);
+            
         }
 
 
