@@ -11,6 +11,9 @@ namespace Calculator.Core
     /// </summary>
     public class Memory
     {
+        /// <summary>
+        /// Memory中存储的数
+        /// </summary>
         public double MemoryNumber;
 
         public void MemorySave(double num)
