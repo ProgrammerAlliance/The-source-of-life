@@ -44,9 +44,9 @@ namespace Calculator.WPF.View
         private void Opt_Click(object sender, RoutedEventArgs e)
         {
             string input = ((Button)sender).Content.ToString();
-            Operation op = new Operation();
-            op = OperationFactory.creatOperation(temp);
-            op._numberA = Current_number;
+            IOperation op = OperationFactory.CreatOperation(temp);
+            result = op.GetResult();
+            
         }
 
         private void InvertSign_Click(object sender, RoutedEventArgs e)

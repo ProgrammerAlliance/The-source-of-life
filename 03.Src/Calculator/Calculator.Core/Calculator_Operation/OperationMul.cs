@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class OperationMul:Operation
+    public class OperationMul : IOperation
     {
-        public override object GetResult()
-        {  
-                double result = 0;
-                result = NumberA * NumberB;
-                return result;    
+        public double GetResult(double number1, double number2)
+        {
+            double result = 0;
+            result = number1 * number2;
+            return result;
         }
     }
 }

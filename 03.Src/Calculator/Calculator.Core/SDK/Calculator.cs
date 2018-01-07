@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core.SDK
 {
-    class Calculator
+    public class Calculator
     {
+        public 
+
+
+
+
+
+
     }
 }
