@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Clean.cs" />
-    <Compile Include="Code\GetNumber.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
