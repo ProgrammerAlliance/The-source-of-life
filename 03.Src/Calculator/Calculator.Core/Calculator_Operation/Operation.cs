@@ -1,7 +1,8 @@
 ﻿namespace Calculator.Core
 {
-    public  class Operation
+    public interface IOperation
     {
+<<<<<<< HEAD
         public double _numberA = 0;
         public double _numberB = 0;
 
@@ -24,5 +25,8 @@
         }
 
 
+=======
+        double GetResult(double number1, double number2);
+>>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
     }
 }

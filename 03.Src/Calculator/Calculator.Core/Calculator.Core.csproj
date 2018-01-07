@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Class1.cs" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Compile Include="Number\Number.cs" />
     <Compile Include="Save\Memory.cs" />
@@ -51,6 +53,15 @@
 =======
     <Compile Include="Data\ScreenData.cs" />
 >>>>>>> a752ea4cda6cc6b4b42ec82bb3e34ac12be2c798
+=======
+    <Compile Include="Data\ScreenData.cs" />
+=======
+    <Compile Include="Data\ScreenData.cs" />
+    <Compile Include="Number\Number.cs" />
+    <Compile Include="Save\Memory.cs" />
+    <Compile Include="SDK\Calculator.cs" />
+>>>>>>> maohong
+>>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\Operation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />

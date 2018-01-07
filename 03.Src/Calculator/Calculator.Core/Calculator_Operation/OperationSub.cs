@@ -1,11 +1,11 @@
 ﻿namespace Calculator.Core
 {
-    public class OperationSub:Operation
+    public class OperationSub : IOperation
     {
-        public override object GetResult()
+        public double GetResult(double number1, double number2)
         {
             double result = 0;
-            result = NumberA - NumberB;
+            result = number1 - number2;
             return result;
         }
     }

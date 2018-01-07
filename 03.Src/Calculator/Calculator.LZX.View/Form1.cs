@@ -62,8 +62,13 @@ namespace Calculator.LZX.View
             }
             else if (isCanCalc == true)    //如果允许计算
             {
+<<<<<<< HEAD
                 Operation oper = new Operation();
                 oper = OperationFactory.creatOperation(symbol);
+=======
+                IOperation oper = new IOperation(); 
+                oper = OperationFactory.CreatOperation(symbol);
+>>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
                 oper.NumberA = double.Parse(lastVal);
                 oper.NumberB = double.Parse(OneText.Text);
                 result = oper.GetResult(); //计算函数
@@ -82,6 +87,7 @@ namespace Calculator.LZX.View
         //等于
         private void Res_Btn_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Operation oper = new Operation();
             oper = OperationFactory.creatOperation(symbol);
             oper.NumberA = double.Parse(lastVal);
@@ -92,6 +98,18 @@ namespace Calculator.LZX.View
                 OneText.Text = result.ToString();
             FirstInput = true;
             isClr = true;
+=======
+                IOperation oper = new IOperation();
+                oper = OperationFactory.CreatOperation(symbol);
+                oper.NumberA = double.Parse(lastVal);
+                oper.NumberB = double.Parse(OneText.Text);
+                object result = oper.GetResult();
+                TwoBox.Text = "";
+                if (FirstInput == false)
+                    OneText.Text = result.ToString();
+                FirstInput = true;
+                isClr = true;  
+>>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
         }
         //C  初始化
         private void C_Btn_Click(object sender, EventArgs e)
@@ -125,12 +143,21 @@ namespace Calculator.LZX.View
         /// <param name="e"></param>
         private void Sp_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string str = (sender as Button).Text;
             Special_Operation spo = new Special_Operation();
             spo = SpecalFactory.creatSpecial_Operation(str);
             spo.NumberA = double.Parse(OneText.Text);
             OneText.Text = spo.GetResult().ToString();
             TwoBox.Text = spo.GetString();
+=======
+                string str = (sender as Button).Text;
+                Special_Operation spo = new Special_Operation();
+                spo = SpecalFactory.CreatSpecial_Operation(str);
+                spo.NumberA = double.Parse(OneText.Text);
+                OneText.Text = spo.GetResult().ToString();
+                TwoBox.Text = spo.GetString();                         
+>>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
         }
     }
 }
