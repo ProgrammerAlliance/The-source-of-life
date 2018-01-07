@@ -17,7 +17,7 @@ namespace Calculator
     public partial class Frm_Calculator : Form
     {
         ScreenData screenData = new ScreenData();
-        Operation oper;
+        IOperation oper;
 
         public Frm_Calculator()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public interface Operation
+    public interface IOperation
     {
         double GetResult(double number1, double number2);
     }
