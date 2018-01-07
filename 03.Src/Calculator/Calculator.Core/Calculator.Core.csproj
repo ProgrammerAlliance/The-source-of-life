@@ -41,21 +41,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
-    <Compile Include="Input\ScreenInput.cs" />
+    <Compile Include="Operation\ScreenInput.cs" />
+    <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calculator.cs" />
-    <Compile Include="SpecialOperation\Reciprocal.cs" />
-    <Compile Include="Calculator_Operation\IOperation.cs" />
-    <Compile Include="Calculator_Operation\OperationAdd.cs" />
-    <Compile Include="Calculator_Operation\OperationDiv.cs" />
-    <Compile Include="Calculator_Operation\OperationFactory.cs" />
-    <Compile Include="Calculator_Operation\OperationMul.cs" />
-    <Compile Include="Calculator_Operation\OperationSub.cs" />
-    <Compile Include="SpecialOperation\Percent.cs" />
-    <Compile Include="SpecialOperation\SpecalFactory.cs" />
-    <Compile Include="SpecialOperation\ISpecialOperation.cs" />
-    <Compile Include="SpecialOperation\Sqrt.cs" />
-    <Compile Include="SpecialOperation\Square.cs" />
+    <Compile Include="Operation\Special\Reciprocal.cs" />
+    <Compile Include="Operation\Base\IOperation.cs" />
+    <Compile Include="Operation\Base\OperationAdd.cs" />
+    <Compile Include="Operation\Base\OperationDiv.cs" />
+    <Compile Include="Operation\Base\OperationFactory.cs" />
+    <Compile Include="Operation\Base\OperationMul.cs" />
+    <Compile Include="Operation\Base\OperationSub.cs" />
+    <Compile Include="Operation\Special\Percent.cs" />
+    <Compile Include="Operation\Special\ISpecialOperation.cs" />
+    <Compile Include="Operation\Special\SpecalFactory.cs" />
+    <Compile Include="Operation\Special\Sqrt.cs" />
+    <Compile Include="Operation\Special\Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

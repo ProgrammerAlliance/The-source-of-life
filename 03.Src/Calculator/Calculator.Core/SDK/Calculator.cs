@@ -6,9 +6,33 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    
+
     public class Calculator
     {
+        public List<string> Formula { get; set; }
+
+        public string Result { get; set; }
+
+        public Historys Historys { get; set; }
+
+        public Memorys Memorys { get; set; }
+
+        public void CalcOperation(string op)
+        {
+
+        }
+
+        public void MemoryOperation(string key, string op)
+        {
+
+        }
+
+        public void SelectHisory(string key)
+        {
+
+        }
+
+
         public static bool FirstInput = true;//是否第一次输入
         public static string lastVal = "";       //双目运算保存前一个数 
         private string symbol = "";//保存运算符
@@ -34,13 +58,14 @@ namespace Calculator.Core
         /// <param name="num"></param>
         /// <param name="symbol"></param>
         /// <returns></returns>
-        public double UseSpecial(double num,string  symbol) {
+        public double UseSpecial(double num, string symbol)
+        {
 
             ISpecialOperation spo = SpecalFactory.CreateSpecialOperation(symbol);
             return spo.GetResult(num);
         }
 
-      
+
 
         /// <summary>
         /// 调用数字显示方法
@@ -48,13 +73,13 @@ namespace Calculator.Core
         /// <param name="flag"></param>
         /// <param name="str"></param>
         /// <returns></returns>
-        public double UseNumber(ref bool flag,string str)
+        public double UseNumber(ref bool flag, string str)
         {
             ScreenInput sc = new ScreenInput();
-            return sc.GetNumber(str,ref flag);
+            return sc.GetNumber(str, ref flag);
         }
 
-       
+
 
         /// <summary>
         /// 调用MS功能
@@ -77,7 +102,7 @@ namespace Calculator.Core
         /// </summary>
         public void UseMC()
         {
-             m.MemoryClean();
+            m.MemoryClean();
         }
 
 

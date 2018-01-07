@@ -14,31 +14,36 @@ namespace Calculator.Core
         /// <summary>
         /// Memory中存储的数
         /// </summary>
-        public double MemoryNumber;
+        public double Result { get; set; }
 
-        public void MemorySave(double num)
-        { 
-             MemoryNumber = num;
+        public void Clear()
+        {
+            Result = 0;
         }
 
-        public double MemoryRead()
+        public void Add(double num)
         {
-            return MemoryNumber;
+            Result += num;
         }
 
-        public void MemoryClean()
+        public void Sub(double num)
         {
-            MemoryNumber = 0;
+            Result -= num;
         }
 
-        public void MemoryAdd(double num)
+    }
+
+    public class Memorys : List<Memory>
+    {
+        public void Add()
         {
-            MemoryNumber += num;
+
         }
 
-        public void MemorySub(double num)
+        public void Clear()
         {
-            MemoryNumber -= num;
+
         }
     }
+
 }
