@@ -16,9 +16,12 @@ namespace Calculator.Core
         /// </summary>
         public double Result { get; set; }
 
-        public void Clear()
+        public void Clear(Memorys memorys, int key)
         {
-            Result = 0;
+            if (memorys != null)
+            {
+                memorys.RemoveAt(key);
+            }
         }
 
         public void Add(double num)
