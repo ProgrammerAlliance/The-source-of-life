@@ -445,6 +445,7 @@
             this.btn_rec.TabIndex = 2;
             this.btn_rec.Text = "1/x";
             this.btn_rec.UseVisualStyleBackColor = false;
+            this.btn_rec.Click += new System.EventHandler(this.btn_Special_Click);
             // 
             // btn_done
             // 
@@ -472,6 +473,7 @@
             this.btn_per.TabIndex = 2;
             this.btn_per.Text = "%";
             this.btn_per.UseVisualStyleBackColor = false;
+            this.btn_per.Click += new System.EventHandler(this.btn_Special_Click);
             // 
             // btn_del
             // 
@@ -544,6 +546,7 @@
             this.btn_reagan.TabIndex = 2;
             this.btn_reagan.Text = "√";
             this.btn_reagan.UseVisualStyleBackColor = false;
+            this.btn_reagan.Click += new System.EventHandler(this.btn_Special_Click);
             // 
             // btn_MClear
             // 

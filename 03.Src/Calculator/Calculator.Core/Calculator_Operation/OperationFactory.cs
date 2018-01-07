@@ -9,9 +9,9 @@ namespace Calculator.Core
 {
     public class OperationFactory
     {
-        public static Operation creatOperation(string operate)
+        public static IOperation CreatOperation(string operate)
         {
-            Operation oper = null;
+            IOperation oper = null;
 
             switch (operate)
             {
@@ -25,12 +25,12 @@ namespace Calculator.Core
                         oper = new OperationSub();
                         break;
                     }
-                case "×":
+                case "*":
                     {
                         oper = new OperationMul();
                         break;
                     }
-                case "÷":
+                case "/":
                     {
                         oper = new OperationDIV();
                         break;

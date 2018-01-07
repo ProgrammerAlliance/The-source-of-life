@@ -7,36 +7,42 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class Special_Operation
+    public interface ISpecialOperation
     {
+<<<<<<< HEAD
         /// <summary>
         /// 开方
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
         private double _numberA = 0;
+        private string _strFormula = "";
 
         public double NumberA
         {
             get { return _numberA; }
             set { _numberA = value; }
         }
-
+        public string StrFormula
+        {
+            get { return _strFormula; }
+            set { _strFormula = value; }
+        }
        
 
-        public virtual object GetResult()
+        public virtual void GetResult()
         {
-            double result = 0;
-            return result;
         }
 
-        public virtual string GetString()
+        public virtual void GetString()
         {
-            string StringWord=null;
-            return StringWord;
         }
 
 
+=======
+        double GeResult(double number);
+>>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
 
+        string GetString(double number);
     }
 }
