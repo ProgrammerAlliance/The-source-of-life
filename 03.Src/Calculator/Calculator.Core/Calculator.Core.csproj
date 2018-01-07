@@ -47,13 +47,13 @@
     <Compile Include="SpecialOperation\Reciprocal.cs" />
     <Compile Include="Calculator_Operation\IOperation.cs" />
     <Compile Include="Calculator_Operation\OperationAdd.cs" />
-    <Compile Include="Calculator_Operation\OperationDIV.cs" />
+    <Compile Include="Calculator_Operation\OperationDiv.cs" />
     <Compile Include="Calculator_Operation\OperationFactory.cs" />
     <Compile Include="Calculator_Operation\OperationMul.cs" />
     <Compile Include="Calculator_Operation\OperationSub.cs" />
     <Compile Include="SpecialOperation\Percent.cs" />
     <Compile Include="SpecialOperation\SpecalFactory.cs" />
-    <Compile Include="SpecialOperation\SpecialOperation.cs" />
+    <Compile Include="SpecialOperation\ISpecialOperation.cs" />
     <Compile Include="SpecialOperation\Sqrt.cs" />
     <Compile Include="SpecialOperation\Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

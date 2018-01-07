@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class OperationDIV : IOperation
+    public class OperationDiv : IOperation
     {
         public double GetResult(double number1, double number2)
         {
