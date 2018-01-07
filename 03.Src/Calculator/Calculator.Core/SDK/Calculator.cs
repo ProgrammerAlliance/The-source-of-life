@@ -17,8 +17,7 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public double UseOperation(double firstNum,double secondNum,string symbol)
         {
-            Operation oper = new Operation();
-            oper = OperationFactory.creatOperation(symbol);
+            IOperation oper = OperationFactory.creatOperation(symbol);
             oper.NumberA = firstNum;
             oper.NumberB = secondNum;
             return oper.GetResult();
