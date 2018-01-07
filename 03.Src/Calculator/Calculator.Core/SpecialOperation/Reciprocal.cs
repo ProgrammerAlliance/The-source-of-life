@@ -1,12 +1,15 @@
-﻿namespace Calculator.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator.Core
 {
+
     public class Reciprocal : ISpecialOperation
     {
-
-        public override void GetResult()
-
-        public double GeResult(double number)
-
+        public override object GetResult(double number)
         {
             double result = 0;
             if (number == 0)
@@ -17,8 +20,6 @@
             {
                 result = 1 / number;
             }
-
-
             return result;
 
         }

@@ -1,14 +1,10 @@
-﻿namespace Calculator.Core
+﻿namespace Calculator.Core.Opt
 {/// <summary>
  /// 百分号
  /// </summary>
     public class Percent : ISpecialOperation
     {
-<<<<<<< HEAD
-        public override double GetResult()
-=======
         public double GeResult(double number)
->>>>>>> c91dbec4ac1806d5b5a6795e8a72deb349337b7c
         {
             double result = 0;
             result = number / 100;
