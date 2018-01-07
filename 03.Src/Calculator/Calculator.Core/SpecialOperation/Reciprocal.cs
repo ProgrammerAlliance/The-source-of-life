@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
+
     public class Reciprocal : ISpecialOperation
     {
-<<<<<<< HEAD
-        public override void GetResult()
-=======
-        public double GeResult(double number)
->>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
-        {
+        public override object GetResult()        {
             double result = 0;
             if (number == 0)
             {
@@ -23,10 +19,15 @@ namespace Calculator.Core
             {
                 result = 1 / number;
             }
+<<<<<<< .mine
 <<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> .theirs
             return result;
->>>>>>> 692bed95dc0dc21f4b7583cb344a275d72502576
+
         }
 
         public string GetString(double number)

@@ -8,25 +8,6 @@ namespace Calculator.Core.SDK
 {
     public class Calculator
     {
-        public 
-
-
-
-
-
-
-    }
-}
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator.Core.SDK
-{
-    public class Calculator
-    {
         /// <summary>
         /// 调用Operation计算方法
         /// </summary>
