@@ -12,14 +12,6 @@ namespace Calculator.Core
         /// </summary>
         public double Result { get; set; }
 
-        public void Clear(Memorys memorys, int key)
-        {
-            if (memorys != null)
-            {
-                memorys.RemoveAt(key);
-            }
-        }
-
         public void Add(double num)
         {
             Result += num;
@@ -34,6 +26,7 @@ namespace Calculator.Core
 
     public class Memorys : List<Memory>
     {
+        
     }
 
 }
