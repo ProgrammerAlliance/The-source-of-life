@@ -21,9 +21,9 @@ namespace Calculator.Core
             }
         }
 
-        //public override string GetString()
-        //{
-        //    return "1/(" + NumberA + ")";
-        //}
+        public override string GetString()
+        {
+            return "1/(" + NumberA + ")";
+        }
     }
 }

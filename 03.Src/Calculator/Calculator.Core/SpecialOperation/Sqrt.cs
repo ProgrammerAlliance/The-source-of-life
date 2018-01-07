@@ -14,10 +14,10 @@ namespace Calculator.Core
             StrFormula = $"sqrt({StrFormula})";
         }
 
-        //public override void GetString()
-        //{
-        //    return StrFormula;
-        //    //return "√("+NumberA+")";
-        //}
+        public override void GetString()
+        {
+            return StrFormula;
+            //return "√("+NumberA+")";
+        }
     }
 }

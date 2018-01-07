@@ -14,11 +14,11 @@ namespace Calculator.Core
             result = NumberA* NumberA;
         }
 
-        //public override string GetString()
-        //{
-        //    result = "sqr(" + NumberA + ")";
-        //    return result ;
-        //}
+        public override string GetString()
+        {
+            result = "sqr(" + NumberA + ")";
+            return result ;
+        }
 
         
     }

@@ -33,9 +33,9 @@ namespace Calculator.Core
         {
         }
 
-        //public virtual void GetString()
-        //{
-        //}
+        public virtual void GetString()
+        {
+        }
 
 
 
