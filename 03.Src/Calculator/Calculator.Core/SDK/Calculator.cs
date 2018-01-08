@@ -20,6 +20,8 @@ namespace Calculator.Core
 
         private bool _lastIsSymbol = false;
 
+        ScreenInput screenInput = new ScreenInput();
+
 
         public void CalcOperation(OperateEnum oe)
         {
@@ -48,14 +50,14 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-
+            screenInput.ProcessNum(op,_lastIsSymbol);
         }
 
         public void MemoryOperation(string key, string op)
         {
             switch (op)
             {
-                case "MR":
+               // case "MR":
 
             }
         }

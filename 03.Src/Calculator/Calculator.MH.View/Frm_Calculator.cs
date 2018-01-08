@@ -61,7 +61,7 @@ namespace Calculator
                     calculator.SpecOperation(Core.SpecialEnum.Sqrt);
                     break;
                 case "MC":
-                    calculator.MOperation(Core.MEnum.MClear);
+                    calculator.MOperation(MEnum.MClear);
                     break;
                 case "MS":
                     calculator.MOperation(Core.MEnum.MSave);
