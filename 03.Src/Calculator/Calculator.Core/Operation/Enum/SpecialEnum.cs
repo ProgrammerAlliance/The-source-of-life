@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Operation
+namespace Calculator.Core
 {
-    public interface IMemory
+    public enum SpecialEnum
     {
-        
+        Percent = 1,
+        Reciprocal = 2,
+        Sqrt = 3,
+        Square = 4
     }
 }

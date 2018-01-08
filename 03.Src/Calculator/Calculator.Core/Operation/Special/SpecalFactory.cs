@@ -9,29 +9,29 @@ namespace Calculator.Core
 {
     public class SpecalFactory
     {
-        public static ISpecialOperation CreateSpecialOperation(string operate)
+        public static ISpecialOperation CreateSpecialOperation(SpecialEnum se)
         {
             ISpecialOperation spo = null;
 
-            switch (operate)
+            switch (se)
             {
                 
-                case "X²":
+                case SpecialEnum.Square:
                     {
                         spo = new Square();
                         break;
                     }
-                case "√":
+                case SpecialEnum.Sqrt:
                     {
                         spo = new Sqrt();
                         break;
                     }
-                case "1/x":
+                case SpecialEnum.Reciprocal:
                     {
                         spo = new Reciprocal();
                         break;
                     }
-                case "%":
+                case SpecialEnum.Percent:
                     {
                         spo = new Percent();
                         break;

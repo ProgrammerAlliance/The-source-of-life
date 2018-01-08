@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public enum OperateEnum
+    public enum MEnum
     {
-        Add = 1,
-        Div = 2,
-        Mul = 3,
-        Sub = 4,
-        Equal = 17
+        MClear = 1,
+        MRead = 2,
+        MSave = 3,
+        MAdd = 4,
+        MSub = 6
     }
 }

@@ -1,5 +1,4 @@
-﻿using Calculator.Core.Save;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +9,8 @@ namespace Calculator.Core
 
     public class Calculator
     {
-        public Formulas Formulas { get; set; }
+        private List<string> _Formula { get; set; }
+        public string Formula { get { return ""; } }
 
         public string Result { get; set; }
 
@@ -18,40 +18,85 @@ namespace Calculator.Core
 
         public Memorys Memorys { get; set; }
 
-        public Calculator()
+        private bool _lastIsSymbol = false;
+
+
+        public void CalcOperation(OperateEnum oe)
+        {
+
+            OperationFactory.CreatOperation(oe);
+        }
+
+        public void SpecOperation(SpecialEnum se)
         {
 
         }
 
-        public void CalcOperation(string op)
+        public void MOperation(MEnum me)
         {
-            string regexNum = @"([0-9])|([\.])";
-            string regexSymbol = @"([+\-*/])";
+
+        }
+
+        public void ClearOperation(ClearEnum ce)
+        {
+
+        }
+
+        /// <summary>
+        /// 界面数字调用方法
+        /// </summary>
+        /// <param name="op"></param>
+        public void CalcNumber(string op)
+        {
+
         }
 
         public void MemoryOperation(string key, string op)
         {
-            
+            Result = Memorys[Convert.ToInt16(key)].MemoryNumber.ToString();
         }
 
         public void MemoryOperation(string op)
         {
-
-        }
-
-        public void SelectHistory(string key)
-        {
-            if (Historys == null) return;
-
-            var his = Historys.Select(key);
-
-            if (his == null)
+            switch (op)
             {
-                throw new Exception("历史记录不存在");
+                case "MR":
+                    {
+                        Result = Memorys.MemoryRead().ToString();
+                        break;
+                    }
+                case "MS":
+                    {
+                        Memorys.MemorySave(Convert.ToDouble(Result));
+                        break;
+                    }
+                case "MC":
+                    {
+                        Memorys.Clear();
+                        break;
+                    }
+                case "M+":
+                    {
+                        Memorys.MemoryAdd(Convert.ToDouble(Result));
+                        break;
+                    }
+                case "M-":
+                    {
+                        Memorys.MemorySub(Convert.ToDouble(Result));
+                        break;
+                    }
             }
+            
+        }
 
+        public void SelectHisory(string key)
+        {
 
         }
+
+
+        
+
 
     }
 }

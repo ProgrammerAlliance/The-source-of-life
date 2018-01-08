@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Operation
+namespace Calculator.Core
 {
-    public interface IMemory
+    public enum ClearEnum
     {
-        
+        Del = 1,
+        CE = 2,
+        C = 3
     }
 }
