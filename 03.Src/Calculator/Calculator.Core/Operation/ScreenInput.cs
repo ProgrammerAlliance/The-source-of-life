@@ -8,94 +8,96 @@ namespace Calculator.Core
 {
     public class ScreenInput
     {
-        StringBuilder stringBuilder = new StringBuilder();
+        /// <summary>
+        /// 算式框内容
+        /// </summary>
+        private string _lab_Formula = "";
 
         /// <summary>
-        /// 获取数字
+        /// 输入框内容
         /// </summary>
-        /// <param name="str">输入的字符</param>
-        /// <param name="isFirstNumberInput">是否是第一次输入</param>
-        /// <returns></returns>
-        public double GetNumber(string str, ref bool isFirstNumberInput)
+        private string _lab_Answer = "0";
+
+        /// <summary>
+        /// 寄存器存储数据后显示“M”
+        /// Win10不需要
+        /// </summary>
+        private string _lab_Register = "";
+
+        public string Lab_Formula
         {
-            if (isFirstNumberInput)
+            get { return _lab_Formula; }
+            set { _lab_Formula = value; }
+        }
+        public string Lab_Answer
+        {
+            get { return _lab_Answer; }
+            set { _lab_Answer = value; }
+        }
+        public string Lab_Register
+        {
+            get { return _lab_Register; }
+            set { _lab_Register = value; }
+        }
+
+
+
+        /// <summary>
+        /// 处理显示的数字
+        /// </summary>
+        /// <param name="num">当前点击的数字</param>
+        /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
+        public void ProcessNum(string num, bool lastIsSyb)
+        {
+            bool doIt = false;
+
+            bool doDot = false;//是否要写小数点
+            if (".".Equals(num) && !HasPoint())//在输入为小数点时判断是否有小数点
             {
-                if ("0".Equals(str))
-                {
-                    return 0;
-                }
-                else
-                {
-                    stringBuilder.Append(str);
-                    isFirstNumberInput = false;
-                    return Convert.ToDouble(str);
-                }
+                doDot = true;
             }
-            else
+            if (!IsLimitNum(doDot)) { return; }//数字长度超出限制
+
+            if(doDot)
             {
-                if (IsLimitNum())
-                {
-                    stringBuilder.Append(str);
-                }
-                return Convert.ToDouble(stringBuilder.ToString());
+                if ("0".Equals(_lab_Answer)) { _lab_Answer = "0."; }
+                else { _lab_Answer += num; }
+            }
+            else if(!".".Equals(num))
+            {
+                if (lastIsSyb|| "0".Equals(_lab_Answer)) { _lab_Answer = ""; }
+                else { _lab_Answer += num; }
             }
         }
 
         /// <summary>
-        /// 输入小数点
+        /// 处理显示的符号
         /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        public string Point(string str)
+        /// <param name="syb"></param>
+        public void ProcessSymbol(string syb)
         {
-            if (HasPoint(stringBuilder.ToString()))
-            {
-                stringBuilder.Append(str);
-            }
-            return stringBuilder.ToString();
+            _lab_Formula += _lab_Answer + syb;
         }
 
         /// <summary>
         /// 判断位数是否超过限制
         /// </summary>
         /// <returns></returns>
-        public bool IsLimitNum()
+        public bool IsLimitNum(bool doDot)
         {
-            if (HasPoint(stringBuilder.ToString()))
-            {
-                string[] temp = stringBuilder.ToString().Split('.');
-                string num_length = temp[0] + temp[1];
-                if (num_length.Length > 16)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-
-            }
-            else
-            {
-                if (stringBuilder.ToString().Length > 16)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
+            if (_lab_Answer.Length < 16) { return true; }
+            if (_lab_Answer.Length == 16 && doDot) { return true; }
+            return false;
         }
 
         /// <summary>
         /// 判断是否存在小数点
         /// </summary>
         /// <returns></returns>
-        public bool HasPoint(string str)
+        public bool HasPoint()
         {
-            str = stringBuilder.ToString();
-            if (str.IndexOf(".") != -1)
+
+            if (_lab_Answer.IndexOf(".") != -1)
             {
                 return true;
             }
@@ -114,5 +116,18 @@ namespace Calculator.Core
         {
             return -number;
         }
+
+        public void CE()
+        {
+            //单目运算还需删除上一行算式
+
+            Lab_Answer = "0";
+        }
+        public void C()
+        {
+            Lab_Answer = "0";
+            Lab_Formula = "";
+        }
+
     }
 }
