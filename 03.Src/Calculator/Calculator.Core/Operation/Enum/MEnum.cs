@@ -12,6 +12,6 @@ namespace Calculator.Core
         MRead = 2,
         MSave = 3,
         MAdd = 4,
-        MSub = 6
+        MSub = 5
     }
 }

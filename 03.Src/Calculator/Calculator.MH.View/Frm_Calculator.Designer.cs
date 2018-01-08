@@ -710,6 +710,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Calculator";
             this.Text = "计算器";
+            this.Activated += new System.EventHandler(this.Calculator_Load);
             this.Load += new System.EventHandler(this.Calculator_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
