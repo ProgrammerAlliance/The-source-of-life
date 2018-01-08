@@ -9,8 +9,6 @@ namespace Calculator.Core
 
     public class Calculator
     {
-        private List<string> _Formula { get; set; }
-        public string Formula { get { return ""; } }
 
         public string Result { get; set; }
 
@@ -19,8 +17,6 @@ namespace Calculator.Core
         public Memorys Memorys { get; set; }
 
         private bool _lastIsSymbol = false;
-
-        ScreenInput screenInput = new ScreenInput();
 
 
         public void CalcOperation(OperateEnum oe)
@@ -50,20 +46,44 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-            screenInput.ProcessNum(op,_lastIsSymbol);
+
         }
 
         public void MemoryOperation(string key, string op)
         {
-            switch (op)
-            {
-               // case "MR":
-
-            }
+            Result = Memorys[Convert.ToInt16(key)].MemoryNumber.ToString();
         }
 
         public void MemoryOperation(string op)
         {
+            switch (op)
+            {
+                case "MR":
+                    {
+                        Result = Memorys.MemoryRead().ToString();
+                        break;
+                    }
+                case "MS":
+                    {
+                        Memorys.MemorySave(Convert.ToDouble(Result));
+                        break;
+                    }
+                case "MC":
+                    {
+                        Memorys.Clear();
+                        break;
+                    }
+                case "M+":
+                    {
+                        Memorys.MemoryAdd(Convert.ToDouble(Result));
+                        break;
+                    }
+                case "M-":
+                    {
+                        Memorys.MemorySub(Convert.ToDouble(Result));
+                        break;
+                    }
+            }
             
         }
 

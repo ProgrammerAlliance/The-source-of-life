@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core.Operation
 {
-    class MemorySub:IMemory
+    class MemorySub : IMemory
     {
-
+        public void Process(double result, double number)
+        {
+            number -= result;
+        }
     }
 }

@@ -8,5 +8,9 @@ namespace Calculator.Core.Operation
 {
     class MemoryRead:IMemory
     {
+        double Process()
+        {
+
+        }
     }
 }
