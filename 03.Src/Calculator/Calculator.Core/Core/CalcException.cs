@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Core
+namespace Calculator.Core
 {
     public class CalcException : Exception
     {
