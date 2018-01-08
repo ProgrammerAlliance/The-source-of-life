@@ -8,5 +8,6 @@ namespace Calculator.Core.Operation
 {
     class MemoryClear:IMemory
     {
+
     }
 }

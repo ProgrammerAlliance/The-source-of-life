@@ -8,6 +8,6 @@ namespace Calculator.Core.Operation
 {
     public interface IMemory
     {
-
+        
     }
 }

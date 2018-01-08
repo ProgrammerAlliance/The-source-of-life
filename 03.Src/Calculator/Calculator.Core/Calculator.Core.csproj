@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
+    <Compile Include="Operation\Enum\OperateEnum.cs" />
     <Compile Include="Operation\Memory\IMemory.cs" />
     <Compile Include="Operation\Memory\MemoryAdd.cs" />
     <Compile Include="Operation\Memory\MemoryClear.cs" />
+    <Compile Include="Operation\Memory\MemoryFactory.cs" />
     <Compile Include="Operation\Memory\MemoryRead.cs" />
     <Compile Include="Operation\Memory\MemorySave.cs" />
     <Compile Include="Operation\Memory\MemorySub.cs" />
