@@ -233,7 +233,7 @@
             this.Btn_Num1.TabIndex = 2;
             this.Btn_Num1.Text = "1";
             this.Btn_Num1.UseVisualStyleBackColor = false;
-            this.Btn_Num1.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num1.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num2
             // 
@@ -247,7 +247,7 @@
             this.Btn_Num2.TabIndex = 2;
             this.Btn_Num2.Text = "2";
             this.Btn_Num2.UseVisualStyleBackColor = false;
-            this.Btn_Num2.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num2.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num3
             // 
@@ -261,7 +261,7 @@
             this.Btn_Num3.TabIndex = 2;
             this.Btn_Num3.Text = "3";
             this.Btn_Num3.UseVisualStyleBackColor = false;
-            this.Btn_Num3.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num3.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num4
             // 
@@ -275,7 +275,7 @@
             this.Btn_Num4.TabIndex = 2;
             this.Btn_Num4.Text = "4";
             this.Btn_Num4.UseVisualStyleBackColor = false;
-            this.Btn_Num4.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num4.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num5
             // 
@@ -289,7 +289,7 @@
             this.Btn_Num5.TabIndex = 2;
             this.Btn_Num5.Text = "5";
             this.Btn_Num5.UseVisualStyleBackColor = false;
-            this.Btn_Num5.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num5.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num6
             // 
@@ -303,7 +303,7 @@
             this.Btn_Num6.TabIndex = 2;
             this.Btn_Num6.Text = "6";
             this.Btn_Num6.UseVisualStyleBackColor = false;
-            this.Btn_Num6.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num6.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num7
             // 
@@ -317,7 +317,7 @@
             this.Btn_Num7.TabIndex = 2;
             this.Btn_Num7.Text = "7";
             this.Btn_Num7.UseVisualStyleBackColor = false;
-            this.Btn_Num7.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num7.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num8
             // 
@@ -331,7 +331,7 @@
             this.Btn_Num8.TabIndex = 2;
             this.Btn_Num8.Text = "8";
             this.Btn_Num8.UseVisualStyleBackColor = false;
-            this.Btn_Num8.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num8.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num9
             // 
@@ -345,7 +345,7 @@
             this.Btn_Num9.TabIndex = 2;
             this.Btn_Num9.Text = "9";
             this.Btn_Num9.UseVisualStyleBackColor = false;
-            this.Btn_Num9.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num9.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Num0
             // 
@@ -361,7 +361,7 @@
             this.Btn_Num0.TabIndex = 2;
             this.Btn_Num0.Text = "0";
             this.Btn_Num0.UseVisualStyleBackColor = false;
-            this.Btn_Num0.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Num0.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Dot
             // 
@@ -375,7 +375,7 @@
             this.Btn_Dot.TabIndex = 2;
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
-            this.Btn_Dot.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Dot.Click += new System.EventHandler(this.Btn_Number_Click);
             // 
             // Btn_Mul
             // 

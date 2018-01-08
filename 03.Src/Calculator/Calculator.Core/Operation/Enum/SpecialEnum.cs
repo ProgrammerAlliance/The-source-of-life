@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public enum OperateEnum
+    public enum SpecialEnum
     {
-        Add = 1,
-        Div = 2,
-        Mul = 3,
-        Sub = 4,
-        Equal = 17
+        Percent = 1,
+        Reciprocal = 2,
+        Sqrt = 3,
+        Square = 4
     }
 }
