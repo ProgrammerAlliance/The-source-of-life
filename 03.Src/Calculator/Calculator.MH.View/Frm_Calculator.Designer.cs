@@ -659,7 +659,7 @@
             this.labOfLine.Cursor = System.Windows.Forms.Cursors.Default;
             this.labOfLine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labOfLine.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labOfLine.Location = new System.Drawing.Point(11, 35);
+            this.labOfLine.Location = new System.Drawing.Point(11, 36);
             this.labOfLine.Name = "labOfLine";
             this.labOfLine.Size = new System.Drawing.Size(252, 66);
             this.labOfLine.TabIndex = 7;
