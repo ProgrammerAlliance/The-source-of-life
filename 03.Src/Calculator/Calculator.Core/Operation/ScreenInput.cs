@@ -49,33 +49,37 @@ namespace Calculator.Core
         /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
         public void ProcessNum(string num, bool lastIsSyb)
         {
-            bool doIt = false;
-
-            bool doDot = false;//是否要写小数点
-            if (".".Equals(num) && !HasPoint())//在输入为小数点时判断是否有小数点
+            if(!IsLimitNum()) { return; }
+            if(lastIsSyb||"0".Equals(Lab_Answer))
             {
-                doDot = true;
+                Lab_Answer = "";
             }
-            if (!IsLimitNum(doDot)) { return; }//数字长度超出限制
+            Lab_Answer += num;
+        }
 
-            if(doDot)
+
+        /// <summary>
+        /// 输入小数点
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public void Point(string str)
+        {
+            if (HasPoint(Lab_Answer)) { return; }
+            if(IsLimitNum())
             {
-                if ("0".Equals(_lab_Answer)) { _lab_Answer = "0."; }
-                else { _lab_Answer += num; }
-            }
-            else if(!".".Equals(num))
-            {
-                if (lastIsSyb|| "0".Equals(_lab_Answer)) { _lab_Answer = ""; }
-                else { _lab_Answer += num; }
+                Lab_Answer += str;
             }
         }
+
 
         /// <summary>
         /// 处理显示的符号
         /// </summary>
         /// <param name="syb"></param>
-        public void ProcessSymbol(string syb)
+        public void ProcessSymbol(string syb,bool lastIsSymbol)
         {
+            
             _lab_Formula += _lab_Answer + syb;
         }
 
@@ -83,21 +87,43 @@ namespace Calculator.Core
         /// 判断位数是否超过限制
         /// </summary>
         /// <returns></returns>
-        public bool IsLimitNum(bool doDot)
+        public bool IsLimitNum()
         {
-            if (_lab_Answer.Length < 16) { return true; }
-            if (_lab_Answer.Length == 16 && doDot) { return true; }
-            return false;
+            if (HasPoint(Lab_Answer.ToString()))
+            {
+                string[] temp = Lab_Answer.ToString().Split('.');
+                string num_length = temp[0] + temp[1];
+                if (num_length.Length > 16)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+            else
+            {
+                if (Lab_Answer.ToString().Length > 16)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
 
         /// <summary>
         /// 判断是否存在小数点
         /// </summary>
         /// <returns></returns>
-        public bool HasPoint()
+        public bool HasPoint(string str)
         {
 
-            if (_lab_Answer.IndexOf(".") != -1)
+            if (str.IndexOf(".") != -1)
             {
                 return true;
             }

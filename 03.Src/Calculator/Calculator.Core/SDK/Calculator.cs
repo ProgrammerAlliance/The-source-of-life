@@ -16,15 +16,28 @@ namespace Calculator.Core
 
         public Memorys Memorys { get; set; }
 
+        public Formulas Forlmulas { get; set; }
+
         private bool _lastIsSymbol = false;
 
         ScreenInput screenInput = new ScreenInput();
 
+        private string Symbol = "";
+
 
         public void CalcOperation(OperateEnum oe, string syb)
         {
-            screenInput.ProcessSymbol(syb);
-            OperationFactory.CreatOperation(oe);
+
+            IOperation operation = OperationFactory.CreatOperation(oe);
+            
+
+            double num1 = Convert.ToDouble(Result);
+            double num2 = Convert.ToDouble(screenInput.Lab_Answer);
+            operation.GetResult(num1, num2);
+
+            screenInput.ProcessSymbol(Symbol, _lastIsSymbol);
+
+            Symbol = syb;
             _lastIsSymbol = true;
         }
 
@@ -67,10 +80,10 @@ namespace Calculator.Core
 
         public void ClearOperation(ClearEnum ce)
         {
-            switch(ce)
+            switch (ce)
             {
                 case ClearEnum.CE:
-                    
+
                     break;
             }
         }
@@ -81,7 +94,8 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-            screenInput.ProcessNum(op, _lastIsSymbol);
+            if (".".Equals(op)) { screenInput.Point(op); }
+            else { screenInput.ProcessNum(op, _lastIsSymbol); }
             _lastIsSymbol = false;
         }
 
