@@ -28,9 +28,9 @@
         </Grid.RowDefinitions>
 
         <TextBox x:Name="option" Grid.Row="0" IsReadOnly="True" Background="#EBEBEB" Text="标准" IsEnabled="False" FontSize="30" BorderThickness="0"/>
-        <TextBox x:Name="equation" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+        <TextBox x:Name="Formula_Text" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
                  FontSize="20" Background="#EBEBEB" BorderThickness="0"/>
-        <TextBox x:Name="resultShow" Text="0" IsReadOnly="True" Grid.Row="2" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+        <TextBox x:Name="Result_Text" Text="0" IsReadOnly="True" Grid.Row="2" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
                  FontSize="40" FontWeight="Bold" Background="#EBEBEB" BorderThickness="0"/>
 
         <Button x:Name="PercentSign" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="4" Content="%" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
@@ -41,20 +41,20 @@
         <Button x:Name="C" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="5" Content="C" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
         <Button x:Name="Backspase" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="5" Content="←" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
         <Button x:Name="Division" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="3" Grid.Row="5" Content="÷" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number7" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="6" Content="7" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number8" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="6" Content="8" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number9" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="6" Content="9" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
+        <Button x:Name="Number7" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="6" Content="7" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number8" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="6" Content="8" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number9" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="6" Content="9" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
         <Button x:Name="Multiplication" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="3" Grid.Row="6" Content="×" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number4" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="7" Content="4" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number5" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="7" Content="5" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number6" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="7" Content="6" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
+        <Button x:Name="Number4" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="7" Content="4" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number5" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="7" Content="5" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number6" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="7" Content="6" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
         <Button x:Name="Subtraction" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="3" Grid.Row="7" Content="-" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number1" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="8" Content="1" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number2" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="8" Content="2" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
-        <Button x:Name="Number3" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="8" Content="3" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
+        <Button x:Name="Number1" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="8" Content="1" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number2" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="8" Content="2" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
+        <Button x:Name="Number3" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="8" Content="3" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
         <Button x:Name="Addition" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="3" Grid.Row="8" Content="+" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
         <Button x:Name="InvertSign" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="0" Grid.Row="9" Content="±" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click" />
-        <Button x:Name="Number0" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="9" Content="0" Background="#FBFBFB" BorderThickness="0" Click="Calc_Click"/>
+        <Button x:Name="Number0" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="1" Grid.Row="9" Content="0" Background="#FBFBFB" BorderThickness="0" Click="Num_Click"/>
         <Button x:Name="Point" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="2" Grid.Row="9" Content="." Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
         <Button x:Name="EquleSign" MinHeight="46" MinWidth="80" Margin="3" Grid.Column="3" Grid.Row="9" Content="=" Background="#F3F3F3" BorderThickness="0" Click="Calc_Click"/>
     </Grid>

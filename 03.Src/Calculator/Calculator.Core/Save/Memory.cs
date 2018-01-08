@@ -8,8 +8,6 @@ namespace Calculator.Core
     /// </summary>
     public class Memory
     {
-        public string Key { get; set; }
-
         /// <summary>
         /// Memory中存储的数
         /// </summary>
