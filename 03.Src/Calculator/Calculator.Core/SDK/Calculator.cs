@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Core.Save;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,18 @@ namespace Calculator.Core
 
     public class Calculator
     {
-        private List<string> _Formula { get; set; }
-        public string Formula { get { return ""; } }
+        public Formulas Formulas { get; set; }
 
         public string Result { get; set; }
 
         public Historys Historys { get; set; }
 
         public Memorys Memorys { get; set; }
+
+        public Calculator()
+        {
+
+        }
 
         public void CalcOperation(string op)
         {
@@ -26,27 +31,27 @@ namespace Calculator.Core
 
         public void MemoryOperation(string key, string op)
         {
-            switch (op)
-            {
-                case "MR":
-
-            }
+            
         }
 
         public void MemoryOperation(string op)
         {
-            
+
         }
 
-        public void SelectHisory(string key)
+        public void SelectHistory(string key)
         {
-            int index = int.Parse(key);
-            
+            if (Historys == null) return;
+
+            var his = Historys.Select(key);
+
+            if (his == null)
+            {
+                throw new Exception("历史记录不存在");
+            }
+
+
         }
-
-
-        
-
 
     }
 }

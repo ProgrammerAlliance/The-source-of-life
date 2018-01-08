@@ -15,7 +15,7 @@ namespace Calculator.Core.Save
     {
         public void Op(string op)
         {
-
+            
         }
 
         public void CE()
@@ -23,6 +23,10 @@ namespace Calculator.Core.Save
 
         }
 
+        /// <summary>
+        /// 返回运算字符串
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return base.ToString();

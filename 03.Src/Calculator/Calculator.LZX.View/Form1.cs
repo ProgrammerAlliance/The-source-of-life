@@ -51,26 +51,7 @@ namespace Calculator.LZX.View
         //运算符  +-*/
         private void Symbol_Btn_Click(object sender, EventArgs e)
         {
-            string NowSymbol = (sender as Button).Text;
-            object result;
-            if (FirstInput == true)//如是第一次输入
-            {
-                lastVal = OneText.Text;   //将当前的值赋给 lastVal
-                symbol = NowSymbol;     //将取得计算符合传进symbol
-                OneText.Text = "0";       //刷新输入 为输入下一个数做准备
-                FirstInput = false;   //已经完成 第一次输入 
-                TwoBox.Text = lastVal + symbol; //显示第一个数和运算符合
-                isCanCalc = false;      //没有输入第二个数 不能进行计算
-            }
-            else if (isCanCalc == true)    //如果允许计算
-            {
-                                                 //没有输入输入下一个数,再次按下双目运算按钮,只能修改当前symbol的值
-            }
-            else
-            {
-                symbol = NowSymbol;     //不允许计算, 只能修改当前symbol的值
-                OneText.Text = OneText.Text.Substring(0, OneText.Text.Length - 1) + symbol; 
-            }
+           
         }
         //等于
         private void Res_Btn_Click(object sender, EventArgs e)
