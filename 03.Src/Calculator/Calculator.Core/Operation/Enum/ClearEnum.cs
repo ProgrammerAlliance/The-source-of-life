@@ -10,7 +10,6 @@ namespace Calculator.Core
     {
         Del = 1,
         CE = 2,
-        C = 3,
-        Invert = 4
+        C = 3
     }
 }

@@ -41,11 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
+    <Compile Include="Input\Point.cs" />
+    <Compile Include="Input\Symbol.cs" />
+    <Compile Include="Check\Limit.cs" />
+    <Compile Include="Operation\Base\Equal.cs" />
     <Compile Include="Operation\Enum\ClearEnum.cs" />
     <Compile Include="Operation\Enum\MEnum.cs" />
     <Compile Include="Operation\Enum\OperateEnum.cs" />
     <Compile Include="Operation\Enum\SpecialEnum.cs" />
-    <Compile Include="Operation\ScreenInput.cs" />
+    <Compile Include="Input\Number.cs" />
     <Compile Include="Save\Formula.cs" />
     <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
