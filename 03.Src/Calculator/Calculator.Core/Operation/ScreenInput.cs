@@ -83,11 +83,13 @@ namespace Calculator.Core
         /// <param name="syb"></param>
         public void ProcessSymbol(string syb,bool lastIsSymbol)
         {
-            if(lastIsSymbol)
+            if(lastIsSymbol&&Lab_Formula.Length-1>0)
             {
-                Lab_Formula.Remove(Lab_Formula.Length - 1, 1);
+                Lab_Formula = Lab_Formula.Remove(Lab_Formula.Length - 1)+syb;
+                return;
             }
-            _lab_Formula += Lab_Answer + syb;
+            double strLab= Convert.ToDouble(Lab_Answer);
+            _lab_Formula += strLab.ToString() + syb;
         }
 
         /// <summary>
@@ -143,24 +145,13 @@ namespace Calculator.Core
         /// <summary>
         /// 取反
         /// </summary>
-        /// <param name="number">需要取反的数</param>
         /// <returns></returns>
-        public double Invert(double number)
+        public void Invert()
         {
-            return -number;
+            Lab_Answer =( -(Convert.ToDouble(Lab_Answer))).ToString();
         }
 
-        public void CE()
-        {
-            //单目运算还需删除上一行算式
 
-            Lab_Answer = "0";
-        }
-        public void C()
-        {
-            Lab_Answer = "0";
-            Lab_Formula = "";
-        }
 
     }
 }

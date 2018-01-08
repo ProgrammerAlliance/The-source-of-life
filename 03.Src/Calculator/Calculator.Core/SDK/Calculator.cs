@@ -22,25 +22,48 @@ namespace Calculator.Core
 
         ScreenInput screenInput = new ScreenInput();
 
-        private string Symbol = "";
+        OperateEnum sybEnum = OperateEnum.first;
+
+        private double n = 0;
 
 
         public void CalcOperation(OperateEnum oe, string syb)
         {
 
-            IOperation operation = OperationFactory.CreatOperation(oe);
-            
-
-            double num1 = Convert.ToDouble(Result);
             double num2 = Convert.ToDouble(screenInput.Lab_Answer);
-            operation.GetResult(num1, num2);
 
             screenInput.ProcessSymbol(syb, _lastIsSymbol);
-
-            Symbol = syb;
+            if (!_lastIsSymbol)
+            {
+                if (OperationFactory.CreatOperation(sybEnum) == null)
+                {
+                    n = Convert.ToDouble(num2);
+                }
+                else
+                {
+                    n = OperationFactory.CreatOperation(sybEnum).GetResult(n, num2);
+                }
+            }
+            screenInput.Lab_Answer = n.ToString();
+            sybEnum = oe;
             _lastIsSymbol = true;
+
         }
 
+        public void Equal()
+        {
+
+            screenInput.Lab_Formula = "";
+            try
+            {
+                screenInput.Lab_Answer = OperationFactory.CreatOperation(sybEnum).GetResult(n, double.Parse(screenInput.Lab_Answer)).ToString();
+                //n = 0;
+            }catch(NullReferenceException)
+            {
+                
+            }
+
+        }
         public void SpecOperation(SpecialEnum se, string syb)
         {
 
@@ -82,7 +105,19 @@ namespace Calculator.Core
         {
             switch (ce)
             {
+                case ClearEnum.C:
+                    screenInput = new ScreenInput();
+                    n = 0;
+                    sybEnum = OperateEnum.first;
+                    _lastIsSymbol = false;
+                    break;
                 case ClearEnum.CE:
+
+                    break;
+                case ClearEnum.Del:
+
+                    break;
+                case ClearEnum.Invert:
 
                     break;
             }
@@ -94,7 +129,7 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-            if (".".Equals(op)) { screenInput.Point(op,_lastIsSymbol); }
+            if (".".Equals(op)) { screenInput.Point(op, _lastIsSymbol); }
             else { screenInput.ProcessNum(op, _lastIsSymbol); }
             _lastIsSymbol = false;
         }

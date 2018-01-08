@@ -12,6 +12,7 @@ namespace Calculator.Core
         Div = 2,
         Mul = 3,
         Sub = 4,
-        Equal = 5
+        Equal = 5,
+        first = 6
     }
 }

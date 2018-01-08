@@ -89,7 +89,7 @@ namespace Calculator
                     calculator.ClearOperation(Core.ClearEnum.C);
                     break;
                 case "=":
-                    calculator.CalcOperation(Core.OperateEnum.Equal, strBtn);
+                    calculator.Equal();
                     break;
                 default:
                     throw new Exception("操作符不存在");
