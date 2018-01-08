@@ -18,14 +18,17 @@ namespace Calculator.Core
 
         private bool _lastIsSymbol = false;
 
+        ScreenInput screenInput = new ScreenInput();
 
-        public void CalcOperation(OperateEnum oe)
+
+        public void CalcOperation(OperateEnum oe, string syb)
         {
-
+            screenInput.ProcessSymbol(syb);
             OperationFactory.CreatOperation(oe);
+            _lastIsSymbol = true;
         }
 
-        public void SpecOperation(SpecialEnum se)
+        public void SpecOperation(SpecialEnum se, string syb)
         {
 
         }
@@ -46,7 +49,8 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-
+            screenInput.ProcessNum(op, _lastIsSymbol);
+            _lastIsSymbol = false;
         }
 
         public void MemoryOperation(string key, string op)
@@ -84,7 +88,7 @@ namespace Calculator.Core
                         break;
                     }
             }
-            
+
         }
 
         public void SelectHisory(string key)
@@ -93,7 +97,21 @@ namespace Calculator.Core
         }
 
 
-        
+
+
+
+        public string GetFormula()
+        {
+            return screenInput.Lab_Formula;
+        }
+        public string GetAnswer()
+        {
+            return screenInput.Lab_Answer;
+        }
+        public string GetRegister()
+        {
+            return screenInput.Lab_Register;
+        }
 
 
     }

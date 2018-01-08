@@ -19,13 +19,14 @@ namespace Calculator
         {
             this.MaximizeBox = false;
             labOfLine.SendToBack();
-            ScreenDisplay();
+            Lab_Result.Text = "0";
         }
 
         private void Btn_Number_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
             calculator.CalcNumber(strBtn);
+            ScreenDisplay();
         }
 
 
@@ -37,31 +38,31 @@ namespace Calculator
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
-            switch(strBtn)
+            switch (strBtn)
             {
                 case "+":
-                    calculator.CalcOperation(Core.OperateEnum.Add);
+                    calculator.CalcOperation(Core.OperateEnum.Add, strBtn);
                     break;
                 case "-":
-                    calculator.CalcOperation(Core.OperateEnum.Sub);
+                    calculator.CalcOperation(Core.OperateEnum.Sub, strBtn);
                     break;
                 case "*":
-                    calculator.CalcOperation(Core.OperateEnum.Mul);
+                    calculator.CalcOperation(Core.OperateEnum.Mul, strBtn);
                     break;
                 case "/":
-                    calculator.CalcOperation(Core.OperateEnum.Div);
+                    calculator.CalcOperation(Core.OperateEnum.Div, strBtn);
                     break;
                 case "%":
-                    calculator.SpecOperation(Core.SpecialEnum.Percent);
+                    calculator.SpecOperation(Core.SpecialEnum.Percent, strBtn);
                     break;
                 case "1/x":
-                    calculator.SpecOperation(Core.SpecialEnum.Reciprocal);
+                    calculator.SpecOperation(Core.SpecialEnum.Reciprocal, strBtn);
                     break;
                 case "√":
-                    calculator.SpecOperation(Core.SpecialEnum.Sqrt);
+                    calculator.SpecOperation(Core.SpecialEnum.Sqrt, strBtn);
                     break;
                 case "MC":
-                    calculator.MOperation(MEnum.MClear);
+                    calculator.MOperation(Core.MEnum.MClear);
                     break;
                 case "MS":
                     calculator.MOperation(Core.MEnum.MSave);
@@ -85,7 +86,7 @@ namespace Calculator
                     calculator.ClearOperation(Core.ClearEnum.C);
                     break;
                 case "=":
-                    calculator.CalcOperation(Core.OperateEnum.Equal);
+                    calculator.CalcOperation(Core.OperateEnum.Equal, strBtn);
                     break;
                 default:
                     throw new Exception("操作符不存在");
@@ -106,9 +107,9 @@ namespace Calculator
         /// </summary>
         public void ScreenDisplay()
         {
-            Lab_Formula.Text = calculator.Formula;
-            Lab_Result.Text = calculator.Result;
-            Lab_Register.Text = calculator.Memorys?.Count > 0 ? "M" : "";
+            Lab_Formula.Text = calculator.GetFormula();
+            Lab_Result.Text = calculator.GetAnswer();
+            Lab_Register.Text = calculator.GetRegister();
         }
     }
 }

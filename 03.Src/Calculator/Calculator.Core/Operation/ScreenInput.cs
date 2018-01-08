@@ -49,18 +49,23 @@ namespace Calculator.Core
         /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
         public void ProcessNum(string num, bool lastIsSyb)
         {
-            bool doDot = false;
-            if (".".Equals(num) && !HasPoint())
+            bool doDot = false;//是否要写小数点
+            if (".".Equals(num) && !HasPoint())//在输入为小数点时判断是否有小数点
             {
                 doDot = true;
             }
             if (!IsLimitNum(doDot)) { return; }//数字长度超出限制
 
-            if ("0".Equals(_lab_Answer) || lastIsSyb)
+            if(doDot)
             {
-                _lab_Answer = "";
+                if ("0".Equals(_lab_Answer)) { _lab_Answer = "0."; }
+                else { _lab_Answer += num; }
             }
-            _lab_Answer += num;
+            else if(!".".Equals(num))
+            {
+                if (lastIsSyb) { _lab_Answer = ""; }
+                else { _lab_Answer += num; }
+            }
         }
 
         /// <summary>
