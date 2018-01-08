@@ -40,7 +40,12 @@ namespace Calculator.Core
 
         public void ClearOperation(ClearEnum ce)
         {
-
+            switch(ce)
+            {
+                case ClearEnum.CE:
+                    
+                    break;
+            }
         }
 
         /// <summary>

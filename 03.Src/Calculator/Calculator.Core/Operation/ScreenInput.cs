@@ -114,5 +114,18 @@ namespace Calculator.Core
         {
             return -number;
         }
+
+        public void CE()
+        {
+            //单目运算还需删除上一行算式
+
+            Lab_Answer = "0";
+        }
+        public void C()
+        {
+            Lab_Answer = "0";
+            Lab_Formula = "";
+        }
+
     }
 }
