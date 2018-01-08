@@ -35,7 +35,34 @@ namespace Calculator.Core
 
         public void MOperation(MEnum me)
         {
-
+            switch (me)
+            {
+                case MEnum.MRead:
+                    {
+                        Result = Memorys.MemoryRead().ToString();
+                        break;
+                    }
+                case MEnum.MSave:
+                    {
+                        Memorys.MemorySave(Convert.ToDouble(Result));
+                        break;
+                    }
+                case MEnum.MClear:
+                    {
+                        Memorys.Clear();
+                        break;
+                    }
+                case MEnum.MAdd:
+                    {
+                        Memorys.MemoryAdd(Convert.ToDouble(Result));
+                        break;
+                    }
+                case MEnum.MSub:
+                    {
+                        Memorys.MemorySub(Convert.ToDouble(Result));
+                        break;
+                    }
+            }
         }
 
         public void ClearOperation(ClearEnum ce)
