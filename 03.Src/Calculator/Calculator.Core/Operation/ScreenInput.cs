@@ -49,6 +49,8 @@ namespace Calculator.Core
         /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
         public void ProcessNum(string num, bool lastIsSyb)
         {
+            bool doIt = false;
+
             bool doDot = false;//是否要写小数点
             if (".".Equals(num) && !HasPoint())//在输入为小数点时判断是否有小数点
             {
@@ -63,7 +65,7 @@ namespace Calculator.Core
             }
             else if(!".".Equals(num))
             {
-                if (lastIsSyb) { _lab_Answer = ""; }
+                if (lastIsSyb|| "0".Equals(_lab_Answer)) { _lab_Answer = ""; }
                 else { _lab_Answer += num; }
             }
         }
