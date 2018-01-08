@@ -35,7 +35,7 @@ namespace Calculator.Core
             double num2 = Convert.ToDouble(screenInput.Lab_Answer);
             operation.GetResult(num1, num2);
 
-            screenInput.ProcessSymbol(Symbol, _lastIsSymbol);
+            screenInput.ProcessSymbol(syb, _lastIsSymbol);
 
             Symbol = syb;
             _lastIsSymbol = true;
@@ -94,7 +94,7 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-            if (".".Equals(op)) { screenInput.Point(op); }
+            if (".".Equals(op)) { screenInput.Point(op,_lastIsSymbol); }
             else { screenInput.ProcessNum(op, _lastIsSymbol); }
             _lastIsSymbol = false;
         }

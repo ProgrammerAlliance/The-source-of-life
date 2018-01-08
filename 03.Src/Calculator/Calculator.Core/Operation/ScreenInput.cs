@@ -63,9 +63,13 @@ namespace Calculator.Core
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public void Point(string str)
+        public void Point(string str,bool lastIsSyb)
         {
             if (HasPoint(Lab_Answer)) { return; }
+            if (lastIsSyb)
+            {
+                Lab_Answer = "0.";
+            }
             if(IsLimitNum())
             {
                 Lab_Answer += str;
@@ -79,8 +83,11 @@ namespace Calculator.Core
         /// <param name="syb"></param>
         public void ProcessSymbol(string syb,bool lastIsSymbol)
         {
-            
-            _lab_Formula += _lab_Answer + syb;
+            if(lastIsSymbol)
+            {
+                Lab_Formula.Remove(Lab_Formula.Length - 1, 1);
+            }
+            _lab_Formula += Lab_Answer + syb;
         }
 
         /// <summary>
