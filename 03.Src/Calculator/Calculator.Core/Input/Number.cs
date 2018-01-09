@@ -21,7 +21,7 @@ namespace Calculator.Core
             {
                 input = "";
             }
-            input += num;
+           input += num;
             return input;
         }
 
@@ -29,9 +29,9 @@ namespace Calculator.Core
         /// 取反
         /// </summary>
         /// <returns></returns>
-        public void Invert(string input)
+        public string Invert(string input)
         {
-            input =( -(Convert.ToDouble(input))).ToString();
+            return ( -(Convert.ToDouble(input))).ToString();
         }
 
 

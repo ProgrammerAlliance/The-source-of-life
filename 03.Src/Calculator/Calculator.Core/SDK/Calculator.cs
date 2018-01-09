@@ -25,13 +25,20 @@ namespace Calculator.Core
         private double n = 0;
 
 
+
+
+
+
+
+
+
         /// <summary>
         /// 界面数字调用方法
         /// </summary>
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-
+            
             if (".".Equals(op))
             {
                 Point point = new Point();
@@ -53,7 +60,12 @@ namespace Calculator.Core
         /// <param name="syb"></param>
         public void CalcOperation(OperateEnum oe, string syb)
         {
-
+            switch (oe)
+            {
+                case OperateEnum.Equal:
+                    Equal(syb);
+                    break;
+            }
 
             //double num2 = Convert.ToDouble(screenInput.Lab_Answer);
 
@@ -103,7 +115,6 @@ namespace Calculator.Core
                     Formulas.CE();
                     break;
                 case ClearEnum.Del:
-
                     break;
             }
         }
@@ -154,5 +165,15 @@ namespace Calculator.Core
         }
 
 
+        public void Equal(string syb)
+        {
+            Historys.Add(new History());//添加history
+
+            //计算
+
+            Historys[Historys.Count - 1].Formula = Formulas.ToString() + syb;//向history添加算式
+            Historys[Historys.Count - 1].Result = Result;//向history添加结果
+            Formulas.Clear(); //清除已写入历史记录的Formula?
+        }
     }
 }
