@@ -90,39 +90,6 @@ namespace Calculator.Core
             Result = Memorys[Convert.ToInt16(key)].MemoryNumber.ToString();
         }
 
-        public void MemoryOperation(string op)
-        {
-            switch (op)
-            {
-                case "MR":
-                    {
-                        Result = Memorys.MemoryRead().ToString();
-                        break;
-                    }
-                case "MS":
-                    {
-                        Memorys.MemorySave(Convert.ToDouble(Result));
-                        break;
-                    }
-                case "MC":
-                    {
-                        Memorys.Clear();
-                        break;
-                    }
-                case "M+":
-                    {
-                        Memorys.MemoryAdd(Convert.ToDouble(Result));
-                        break;
-                    }
-                case "M-":
-                    {
-                        Memorys.MemorySub(Convert.ToDouble(Result));
-                        break;
-                    }
-            }
-
-        }
-
         public void SelectHisory(string key)
         {
 
