@@ -16,7 +16,7 @@ namespace Calculator.Core
 
         public Memorys Memorys { get; set; }
 
-        public Formulas Forlmulas { get; set; }
+        public Formulas Formulas { get; set; }
 
         private bool _lastIsSymbol = false;
 
@@ -31,8 +31,18 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
-            if (".".Equals(op)) { screenInput.Point(op, _lastIsSymbol); }
-            else { screenInput.ProcessNum(op, _lastIsSymbol); }
+
+            if (".".Equals(op))
+            {
+                Point point = new Point();
+                Result = point.InputPoint(op, _lastIsSymbol, Result);
+            }
+            else
+            {
+                Number number = new Number();
+                Result = number.ProcessNum(op, _lastIsSymbol, Result);
+            }
+
             _lastIsSymbol = false;
         }
 
@@ -44,31 +54,32 @@ namespace Calculator.Core
         public void CalcOperation(OperateEnum oe, string syb)
         {
 
-            double num2 = Convert.ToDouble(screenInput.Lab_Answer);
 
-            screenInput.ProcessSymbol(syb, _lastIsSymbol);
-            if (!_lastIsSymbol)
-            {
-                if (OperationFactory.CreatOperation(sybEnum) == null)
-                {
-                    n = Convert.ToDouble(num2);
-                }
-                else
-                {
-                    n = OperationFactory.CreatOperation(sybEnum).GetResult(n, num2);
-                }
-            }
-            screenInput.Lab_Answer = n.ToString();
-            sybEnum = oe;
-            _lastIsSymbol = true;
+            //double num2 = Convert.ToDouble(screenInput.Lab_Answer);
+
+            //screenInput.ProcessSymbol(syb, _lastIsSymbol);
+            //if (!_lastIsSymbol)
+            //{
+            //    if (OperationFactory.CreatOperation(sybEnum) == null)
+            //    {
+            //        n = Convert.ToDouble(num2);
+            //    }
+            //    else
+            //    {
+            //        n = OperationFactory.CreatOperation(sybEnum).GetResult(n, num2);
+            //    }
+            //}
+            //screenInput.Lab_Answer = n.ToString();
+            //sybEnum = oe;
+            //_lastIsSymbol = true;
 
         }
 
         /// <summary>
-       /// 特殊运算方法
-       /// </summary>
-       /// <param name="se"></param>
-       /// <param name="syb"></param>
+        /// 特殊运算方法
+        /// </summary>
+        /// <param name="se"></param>
+        /// <param name="syb"></param>
         public void SpecOperation(SpecialEnum se, string syb)
         {
 
@@ -83,18 +94,15 @@ namespace Calculator.Core
             switch (ce)
             {
                 case ClearEnum.C:
-                    screenInput = new ScreenInput();
+
                     n = 0;
                     sybEnum = OperateEnum.first;
                     _lastIsSymbol = false;
                     break;
                 case ClearEnum.CE:
-
+                    Formulas.CE();
                     break;
                 case ClearEnum.Del:
-
-                    break;
-                case ClearEnum.Invert:
 
                     break;
             }
@@ -144,7 +152,7 @@ namespace Calculator.Core
         {
 
         }
-        
+
 
     }
 }

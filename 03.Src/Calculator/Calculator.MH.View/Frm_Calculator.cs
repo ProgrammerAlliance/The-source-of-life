@@ -21,6 +21,11 @@ namespace Calculator
             labOfLine.SendToBack();
         }
 
+        /// <summary>
+        /// 数字按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Number_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
@@ -28,9 +33,8 @@ namespace Calculator
             ScreenDisplay();
         }
 
-
         /// <summary>
-        /// 数字按钮
+        /// 运算符号，清空符号，记忆符号按钮事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -89,7 +93,7 @@ namespace Calculator
                     calculator.ClearOperation(Core.ClearEnum.C);
                     break;
                 case "=":
-                    calculator.Equal();
+                   // calculator.Equal();
                     break;
                 default:
                     throw new Exception("操作符不存在");
@@ -100,7 +104,7 @@ namespace Calculator
         private void Btn_Memory_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
-            calculator.MemoryOperation(strBtn);
+            //calculator.MemoryOperation(strBtn);
             ScreenDisplay();
 
         }
@@ -110,9 +114,9 @@ namespace Calculator
         /// </summary>
         public void ScreenDisplay()
         {
-            Lab_Formula.Text = calculator.GetFormula();
-            Lab_Result.Text = calculator.GetAnswer();
-            Lab_Register.Text = calculator.GetRegister();
+            //    Lab_Formula.Text = calculator.GetFormula();
+            Lab_Result.Text = calculator.Result;
+          //  Lab_Register.Text = calculator.GetRegister();
         }
     }
 }

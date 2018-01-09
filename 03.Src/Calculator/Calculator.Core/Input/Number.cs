@@ -8,29 +8,30 @@ namespace Calculator.Core
 {
     public class Number
     {
-
+        Limit limit = new Limit();
         /// <summary>
         /// 处理显示的数字
         /// </summary>
         /// <param name="num">当前点击的数字</param>
         /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
-        public void ProcessNum(string num, bool lastIsSyb)
+        public string ProcessNum(string num, bool lastIsSyb,string input)
         {
-            if(!IsLimitNum()) { return; }
-            if(lastIsSyb||"0".Equals(Lab_Answer))
+            if(!limit.IsLimited(input)) { return input; }
+            if(lastIsSyb||"0".Equals(input))
             {
-                Lab_Answer = "";
+                input = "";
             }
-            Lab_Answer += num;
+            input += num;
+            return input;
         }
 
         /// <summary>
         /// 取反
         /// </summary>
         /// <returns></returns>
-        public void Invert()
+        public void Invert(string input)
         {
-            Lab_Answer =( -(Convert.ToDouble(Lab_Answer))).ToString();
+            input =( -(Convert.ToDouble(input))).ToString();
         }
 
 
