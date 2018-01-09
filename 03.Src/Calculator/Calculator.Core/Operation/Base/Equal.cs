@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public enum OperateEnum
+    public class Equal
     {
-        Add = 1,
-        Div = 2,
-        Mul = 3,
-        Sub = 4,
-        Equal = 5,
-        first = 6
+        public void EqualTo()
+        {
+            
+        }
     }
 }

@@ -631,6 +631,7 @@
             this.Lab_Result.Name = "Lab_Result";
             this.Lab_Result.Size = new System.Drawing.Size(251, 27);
             this.Lab_Result.TabIndex = 3;
+            this.Lab_Result.Text = "0";
             this.Lab_Result.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txt_Log

@@ -11,6 +11,7 @@ namespace Calculator.Core
         Percent = 1,
         Reciprocal = 2,
         Sqrt = 3,
-        Square = 4
+        Square = 4,
+        Invert = 5
     }
 }

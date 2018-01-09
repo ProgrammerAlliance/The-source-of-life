@@ -19,7 +19,6 @@ namespace Calculator
         {
             this.MaximizeBox = false;
             labOfLine.SendToBack();
-            Lab_Result.Text = "0";
         }
 
         private void Btn_Number_Click(object sender, EventArgs e)
@@ -51,6 +50,10 @@ namespace Calculator
                     break;
                 case "/":
                     calculator.CalcOperation(Core.OperateEnum.Div, strBtn);
+                    break;
+                case "±":
+
+
                     break;
                 case "%":
                     calculator.SpecOperation(Core.SpecialEnum.Percent, strBtn);
@@ -86,7 +89,7 @@ namespace Calculator
                     calculator.ClearOperation(Core.ClearEnum.C);
                     break;
                 case "=":
-                    calculator.CalcOperation(Core.OperateEnum.Equal, strBtn);
+                    calculator.Equal();
                     break;
                 default:
                     throw new Exception("操作符不存在");
