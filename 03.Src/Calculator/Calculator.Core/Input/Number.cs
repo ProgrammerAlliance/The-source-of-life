@@ -16,7 +16,10 @@ namespace Calculator.Core
         /// <param name="lastIsSyb">判断上一次输入的是否是符号</param>
         public void ProcessNum(string num, bool lastIsSyb)
         {
-            if(!IsLimitNum()) { return; }
+            if(!IsLimitNum())
+            {
+                return;
+            }
             if(lastIsSyb||"0".Equals(Lab_Answer))
             {
                 Lab_Answer = "";

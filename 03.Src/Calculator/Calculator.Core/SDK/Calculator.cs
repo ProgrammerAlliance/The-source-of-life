@@ -9,19 +9,25 @@ namespace Calculator.Core
 
     public class Calculator
     {
+        public string Input { get; set; }
 
         public string Result { get; set; }
+
+        public string Opt { get; set; }
 
         public Historys Historys { get; set; }
 
         public Memorys Memorys { get; set; }
 
-        public Formulas Forlmulas { get; set; }
+        public Formulas Formulas { get; set; }
 
         private bool _lastIsSymbol = false;
 
         OperateEnum sybEnum = OperateEnum.first;
 
+        /// <summary>
+        /// 初始数字
+        /// </summary>
         private double n = 0;
 
 
@@ -31,6 +37,9 @@ namespace Calculator.Core
         /// <param name="op"></param>
         public void CalcNumber(string op)
         {
+            Result = op;
+
+
             if (".".Equals(op)) { screenInput.Point(op, _lastIsSymbol); }
             else { screenInput.ProcessNum(op, _lastIsSymbol); }
             _lastIsSymbol = false;
@@ -43,24 +52,9 @@ namespace Calculator.Core
         /// <param name="syb"></param>
         public void CalcOperation(OperateEnum oe, string syb)
         {
-
-            double num2 = Convert.ToDouble(screenInput.Lab_Answer);
-
-            screenInput.ProcessSymbol(syb, _lastIsSymbol);
-            if (!_lastIsSymbol)
-            {
-                if (OperationFactory.CreatOperation(sybEnum) == null)
-                {
-                    n = Convert.ToDouble(num2);
-                }
-                else
-                {
-                    n = OperationFactory.CreatOperation(sybEnum).GetResult(n, num2);
-                }
-            }
-            screenInput.Lab_Answer = n.ToString();
-            sybEnum = oe;
-            _lastIsSymbol = true;
+              IOperation operation = OperationFactory.CreatOperation(sybEnum);
+                operation.GetResult(n, Convert.ToDouble(Result));
+            
 
         }
 

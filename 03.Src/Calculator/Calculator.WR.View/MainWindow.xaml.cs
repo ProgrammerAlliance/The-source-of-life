@@ -82,7 +82,7 @@ namespace Calculator.WPF.View
 
         public void ScreenDisplay()
         {
-            Formula_Text.Text = _Calculator.Formula;
+            Formula_Text.Text = _Calculator.Formulas.ToString();
             Result_Text.Text = _Calculator.Result;
         }
 
