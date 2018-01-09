@@ -45,14 +45,24 @@
     <Compile Include="Check\Limit.cs" />
     <Compile Include="Input\Symbol.cs" />
     <Compile Include="Operation\Base\Equal.cs" />
+    <Compile Include="Operation\Enum\ArithmeticEnum.cs" />
     <Compile Include="Operation\Enum\ClearEnum.cs" />
     <Compile Include="Operation\Enum\MEnum.cs" />
     <Compile Include="Operation\Enum\OperateEnum.cs" />
     <Compile Include="Operation\Enum\SpecialEnum.cs" />
     <Compile Include="Input\Number.cs" />
+    <Compile Include="Operation\Enum\SymbolEnum.cs" />
+    <Compile Include="Ops\IOps.cs" />
+    <Compile Include="Ops\Symbols.cs" />
+    <Compile Include="Ops\Arithmetics.cs" />
+    <Compile Include="Ops\OneOperations.cs" />
+    <Compile Include="Ops\Memorys.cs" />
+    <Compile Include="Ops\Equals.cs" />
+    <Compile Include="Ops\Numbers.cs" />
     <Compile Include="Save\Formula.cs" />
     <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
+    <Compile Include="SDK\Calc.cs" />
     <Compile Include="SDK\Calculator.cs" />
     <Compile Include="Operation\Special\Reciprocal.cs" />
     <Compile Include="Operation\Base\IOperation.cs" />
@@ -67,6 +77,7 @@
     <Compile Include="Operation\Special\Sqrt.cs" />
     <Compile Include="Operation\Special\Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDK\Exp.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
