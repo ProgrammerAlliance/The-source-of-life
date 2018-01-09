@@ -13,7 +13,7 @@ namespace Calculator.Core
         /// 处理显示的符号
         /// </summary>
         /// <param name="syb"></param>
-        public void ProcessSymbol(string syb, bool lastIsSymbol)
+        public void ProcessSymbol(string syb,string lastFormula,string input)
         {
             if (lastIsSymbol && Lab_Formula.Length - 1 > 0)
             {

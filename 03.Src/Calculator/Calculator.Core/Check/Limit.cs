@@ -12,13 +12,14 @@ namespace Calculator.Core
         /// 判断位数是否超过限制
         /// </summary>
         /// <returns></returns>
-        public bool IsLimited()
+        public bool IsLimited(string input)
         {
-            if (HasPoint(Lab_Answer.ToString()))
+            if (input == null) return true;
+            if (HasPoint(input.ToString()))
             {
-                string[] temp = Lab_Answer.ToString().Split('.');
+                string[] temp = input.ToString().Split('.');
                 string num_length = temp[0] + temp[1];
-                if (num_length.Length > 16)
+                if (num_length.Length > 15)
                 {
                     return false;
                 }
@@ -26,11 +27,10 @@ namespace Calculator.Core
                 {
                     return true;
                 }
-
             }
             else
             {
-                if (Lab_Answer.ToString().Length > 16)
+                if (input.ToString().Length > 15)
                 {
                     return false;
                 }

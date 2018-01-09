@@ -8,22 +8,24 @@ namespace Calculator.Core
 {
     public class Point
     {
+        Limit limit = new Limit();
         /// <summary>
         /// 输入小数点
         /// </summary>
         /// <param name="str"></param>
         /// <param name="lastIsSyb"></param>
-        public void InputPoint(string str, bool lastIsSyb)
+        public string InputPoint(string str, bool lastIsSyb,string input)
         {
-            if (HasPoint(Lab_Answer)) { return; }
+            if (limit.HasPoint(input)) { return input; }
             if (lastIsSyb)
             {
-                Lab_Answer = "0.";
+                input = "0.";
             }
-            if (IsLimitNum())
+            if (limit.IsLimited(input))
             {
-                Lab_Answer += str;
+                input += str;
             }
+            return input;
         }
 
     }

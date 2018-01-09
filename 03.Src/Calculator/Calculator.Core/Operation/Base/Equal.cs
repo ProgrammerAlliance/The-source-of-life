@@ -8,7 +8,7 @@ namespace Calculator.Core
 {
     public class Equal
     {
-        public void EqualTo()
+        public void EqualTo(string formula ,string syb)
         {
             
         }

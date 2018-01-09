@@ -22,9 +22,9 @@ namespace Calculator.Core
         public void CE()
         {
             
+            
 
         }
-
         /// <summary>
         /// 返回运算字符串
         /// </summary>
