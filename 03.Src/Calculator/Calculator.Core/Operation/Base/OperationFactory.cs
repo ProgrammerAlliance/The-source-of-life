@@ -1,4 +1,5 @@
-﻿ using Calculator.Core.Opt;
+﻿using Calculator.Core.Operation.Enum;
+using Calculator.Core.Opt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +10,28 @@ namespace Calculator.Core
 {
     public class OperationFactory
     {
-        public static IOperation CreatOperation(OperateEnum oe)
+        public static IOperation CreatOperation(ArithmeticEnum? oe)
         {
             IOperation oper = null;
 
             switch (oe)
             {
-                case OperateEnum.Add :
+                case ArithmeticEnum.Add :
                     {
                         oper = new OperationAdd();
                         break;
                     }
-                case OperateEnum.Sub:
+                case ArithmeticEnum.Sub:
                     {
                         oper = new OperationSub();
                         break;
                     }
-                case OperateEnum.Mul:
+                case ArithmeticEnum.Mul:
                     {
                         oper = new OperationMul();
                         break;
                     }
-                case OperateEnum.Div:
+                case ArithmeticEnum.Div:
                     {
                         oper = new OperationDiv();
                         break;

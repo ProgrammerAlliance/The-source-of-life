@@ -19,25 +19,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            //判断是否需要调用exp.DpCalc，赋值给R
-            switch (_op)
-            {
-                case ArithmeticEnum.Add:
-                    //1.直接点“+”
-
-                    //2.数字->符号->“+”
-
-                    //3.正常“+”
-
-                    break;
-                case ArithmeticEnum.Div:
-                    break;
-                case ArithmeticEnum.Mul:
-                    break;
-                case ArithmeticEnum.Sub:
-                    break;
-            }
-
+            
             //1.第一次点 运算，不需要实例化新对象
 
             //2.连续点 运算，不需要实例化新对象
@@ -47,12 +29,22 @@ namespace Calculator.Core.Ops
             var newExp = new Expression
             {
                 IsCreateNew = true,
-                L = oldExp.ToString(),
+                L = oldExp.DoCalc(),
+                LExp = oldExp,
                 R = oldExp.DoCalc(),
-                O = _op,
-                Exp = oldExp,
+                RExp = null,
+                Opt = _op,
             };
-            exp = newExp;
+
+            var newExp = new Expression
+            {
+                IsCreateNew = true,
+                L = oldExp.DoCalc(),
+                LExp = oldExp,
+                R = oldExp.DoCalc(),
+                RExp = null,
+                Opt = _op,
+            };
 
             return exp;
         }

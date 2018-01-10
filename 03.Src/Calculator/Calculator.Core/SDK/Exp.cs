@@ -15,24 +15,29 @@ namespace Calculator.Core.SDK
         public bool IsCreateNew { get; set; }
 
         /// <summary>
-        /// 左侧数字
+        /// 左值
         /// </summary>
         public string L { get; set; }
 
         /// <summary>
-        /// 右侧数字
+        /// 右值
         /// </summary>
         public string R { get; set; }
 
         /// <summary>
-        /// 运算符
+        /// 左表达式
         /// </summary>
-        public ArithmeticEnum? O { get; set; }
+        public Expression LExp { get; set; }
 
         /// <summary>
-        /// 下级表达式
+        /// 右表达式
         /// </summary>
-        public Expression Exp { get; set; }
+        public Expression RExp { get; set; }
+
+        /// <summary>
+        /// 运算符
+        /// </summary>
+        public ArithmeticEnum? Opt { get; set; }
 
         /// <summary>
         /// 运算
@@ -40,7 +45,7 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public string DoCalc()
         {
-            var opt = OperationFactory.CreatOperation(O);
+            var opt = OperationFactory.CreatOperation(Opt);
             this.R = opt.GetResult(Exp);
         }
 
