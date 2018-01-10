@@ -66,25 +66,7 @@ namespace Calculator.Core
                     Equal(syb);
                     break;
             }
-
-            //double num2 = Convert.ToDouble(screenInput.Lab_Answer);
-
-            //screenInput.ProcessSymbol(syb, _lastIsSymbol);
-            //if (!_lastIsSymbol)
-            //{
-            //    if (OperationFactory.CreatOperation(sybEnum) == null)
-            //    {
-            //        n = Convert.ToDouble(num2);
-            //    }
-            //    else
-            //    {
-            //        n = OperationFactory.CreatOperation(sybEnum).GetResult(n, num2);
-            //    }
-            //}
-            //screenInput.Lab_Answer = n.ToString();
-            //sybEnum = oe;
-            //_lastIsSymbol = true;
-
+            
         }
 
         /// <summary>
