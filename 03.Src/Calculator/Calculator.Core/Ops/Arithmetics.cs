@@ -19,33 +19,38 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            
+
+
             //1.第一次点 运算，不需要实例化新对象
+            if (exp.Opt == null)
+            {
+                exp.Opt = this._op;
+                exp.L = exp.R;
+                return exp;
+            }
+            if(exp.IsOpt)
+            {
+                exp.Opt = this._op;
+                return exp;
+            }
 
             //2.连续点 运算，不需要实例化新对象
-
+              
             //3.需要实例化新的
-            var oldExp = exp;
-            var newExp = new Expression
+            if (exp.IsCreateNew)
             {
-                IsCreateNew = true,
-                L = oldExp.DoCalc(),
-                LExp = oldExp,
-                R = oldExp.DoCalc(),
-                RExp = null,
-                Opt = _op,
-            };
-
-            var newExp = new Expression
-            {
-                IsCreateNew = true,
-                L = oldExp.DoCalc(),
-                LExp = oldExp,
-                R = oldExp.DoCalc(),
-                RExp = null,
-                Opt = _op,
-            };
-
+                var oldExp = exp;
+                 exp = new Expression
+                {
+                    IsCreateNew = false,
+                    R = oldExp.DoCalc(),
+                    LExp = oldExp,
+                    RExp = null,
+                    Opt = this._op,
+                    IsOpt = true,
+                };
+                exp.L = exp.R;
+            }
             return exp;
         }
 

@@ -18,21 +18,18 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            if (exp.IsCreateNew)
+            if (exp.IsOpt)
             {
-                exp.R = _num.ToString();
-                exp.IsCreateNew = false;
-                return exp;
+                exp.R = "0";
             }
-
             //判断是否已经满16个数字
             if (exp.R.Replace(".", "").Replace("-", "").Length == 16)
             {
                 return exp;
             }
-
             //数字追加
-            exp.R = string.IsNullOrWhiteSpace(exp.R) ? _num.ToString() : exp.R + _num;
+            exp.R = (string.IsNullOrWhiteSpace(exp.R) || "0".Equals(exp.R)) ? (Convert.ToDouble(_num)).ToString() : exp.R + _num;
+
             return exp;
         }
     }

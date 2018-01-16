@@ -11,7 +11,7 @@ namespace Calculator.Core.Ops
     {
         public Expression Process(Expression exp)
         {
-            throw new NotImplementedException();
+            return exp;
         }
     }
 }

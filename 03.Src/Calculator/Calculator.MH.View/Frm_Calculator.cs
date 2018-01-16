@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Core.SDK;
+using System;
 using System.Windows.Forms;
 
 
@@ -7,8 +8,7 @@ namespace Calculator
 
     public partial class Frm_Calculator : Form
     {
-        Calculator.Core.Calculator calculator = new Core.Calculator();
-
+        Calc calc = new Calc();
 
         public Frm_Calculator()
         {
@@ -19,6 +19,7 @@ namespace Calculator
         {
             this.MaximizeBox = false;
             labOfLine.SendToBack();
+            Lab_Result.Focus();
         }
 
         /// <summary>
@@ -28,72 +29,61 @@ namespace Calculator
         /// <param name="e"></param>
         private void Btn_Number_Click(object sender, EventArgs e)
         {
-            string strBtn = ((Button)sender).Text;
-            calculator.CalcNumber(strBtn);
+            calc.InputNumber(Convert.ToInt32(((Button)sender).Text));
             ScreenDisplay();
         }
 
-        /// <summary>
-        /// 运算符号，清空符号，记忆符号按钮事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
             switch (strBtn)
             {
-                case "+":
-                    calculator.CalcOperation(Core.OperateEnum.Add, strBtn);
-                    break;
-                case "-":
-                    calculator.CalcOperation(Core.OperateEnum.Sub, strBtn);
-                    break;
-                case "*":
-                    calculator.CalcOperation(Core.OperateEnum.Mul, strBtn);
-                    break;
-                case "/":
-                    calculator.CalcOperation(Core.OperateEnum.Div, strBtn);
+                case ".":
+                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Point);
                     break;
                 case "±":
-
-
+                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Sign);
+                    break;
+                case "+":
+                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Add);
+                    break;
+                case "-":
+                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Sub);
+                    break;
+                case "*":
+                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Mul);
+                    break;
+                case "/":
+                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Div);
                     break;
                 case "%":
-                    calculator.SpecOperation(Core.SpecialEnum.Percent, strBtn);
+                    calc.InputOneOperation(Core.SpecialEnum.Percent);
                     break;
                 case "1/x":
-                    calculator.SpecOperation(Core.SpecialEnum.Reciprocal, strBtn);
+                    calc.InputOneOperation(Core.SpecialEnum.Reciprocal);
                     break;
                 case "√":
-                    calculator.SpecOperation(Core.SpecialEnum.Sqrt, strBtn);
+                    calc.InputOneOperation(Core.SpecialEnum.Sqrt);
                     break;
                 case "MC":
-                    calculator.MOperation(Core.MEnum.MClear);
-                    break;
                 case "MS":
-                    calculator.MOperation(Core.MEnum.MSave);
-                    break;
                 case "MR":
-                    calculator.MOperation(Core.MEnum.MRead);
-                    break;
                 case "M+":
-                    calculator.MOperation(Core.MEnum.MAdd);
-                    break;
                 case "M-":
-                    calculator.MOperation(Core.MEnum.MSub);
+                    calc.InputMemory(strBtn);
                     break;
                 case "←":
-                    calculator.ClearOperation(Core.ClearEnum.Del);
+                    calc.InputClear(Core.ClearEnum.Del);
                     break;
                 case "CE":
-                    calculator.ClearOperation(Core.ClearEnum.CE);
+                    calc.InputClear(Core.ClearEnum.CE);
                     break;
                 case "C":
-                    calculator.ClearOperation(Core.ClearEnum.C);
+                    calc.InputClear(Core.ClearEnum.C);
                     break;
                 case "=":
-                   // calculator.Equal();
+                    calc.InputEqual();
                     break;
                 default:
                     throw new Exception("操作符不存在");
@@ -104,19 +94,22 @@ namespace Calculator
         private void Btn_Memory_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
-            //calculator.MemoryOperation(strBtn);
             ScreenDisplay();
 
         }
 
+        public void DisplaySome()
+        {
+            Lab_Result.Text = calc.R();
+        }
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
         {
-            //    Lab_Formula.Text = calculator.GetFormula();
-            Lab_Result.Text = calculator.Result;
-          //  Lab_Register.Text = calculator.GetRegister();
+            Lab_Result.Text = calc.R();
+            Lab_Formula.Text = calc.GetFormula();
         }
+
     }
 }

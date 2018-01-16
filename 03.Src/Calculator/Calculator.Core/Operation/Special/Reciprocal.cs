@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Calculator.Core.SDK;
 
 namespace Calculator.Core
 {
@@ -23,9 +24,11 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetString(double number)
+
+        public string GetToString(string num)
         {
-            return "1/(" + number + ")";
+            return "1/(" + num.ToString() + ")";
+
         }
     }
 }

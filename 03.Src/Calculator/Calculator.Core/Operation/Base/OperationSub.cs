@@ -1,4 +1,5 @@
-﻿using Calculator.Core.Opt;
+﻿using Calculator.Core.Operation.Enum;
+using Calculator.Core.Opt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace Calculator.Core
             double result = 0;
             result = number1 - number2;
             return result;
+        }
+
+        public string GetToString(string num)
+        {
+            return num + (char)ArithmeticEnum.Sub;
         }
     }
 }

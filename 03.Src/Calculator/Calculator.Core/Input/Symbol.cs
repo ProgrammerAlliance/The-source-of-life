@@ -15,13 +15,7 @@ namespace Calculator.Core
         /// <param name="syb"></param>
         public void ProcessSymbol(string syb,string lastFormula,string input)
         {
-            if (lastIsSymbol && Lab_Formula.Length - 1 > 0)
-            {
-                Lab_Formula = Lab_Formula.Remove(Lab_Formula.Length - 1) + syb;
-                return;
-            }
-            double strLab = Convert.ToDouble(Lab_Answer);
-            _lab_Formula += strLab.ToString() + syb;
+            
         }
 
     }

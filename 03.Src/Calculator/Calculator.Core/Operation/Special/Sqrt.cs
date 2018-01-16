@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Calculator.Core.SDK;
 
 namespace Calculator.Core
 {
     /// <summary>
     /// todo: wr
     /// </summary>
-    public class Sqrt:ISpecialOperation
+    public class Sqrt : ISpecialOperation
     {
         public double GetResult(double number)
         {
@@ -18,9 +19,9 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetString(double number)
+        public string GetToString(string num)
         {
-            return "√(" + number + ")";
+            return $"√({num})";
         }
     }
 }

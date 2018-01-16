@@ -1,4 +1,7 @@
-﻿namespace Calculator.Core.Opt
+﻿using System;
+using Calculator.Core.SDK;
+
+namespace Calculator.Core.Opt
 {
     /// <summary>
     /// todo: mh
@@ -7,10 +10,17 @@
     {
         public double GetResult(double number)
         {
-            double result = 0;
-            result = number / 100;
-            return result;
+            return 0;
         }
-        
+
+        public double GetResult(double left, double number)
+        {
+            return (left*number) / 100;
+        }
+
+        public string GetToString(string num)
+        {
+            return "";
+        }
     }
 }

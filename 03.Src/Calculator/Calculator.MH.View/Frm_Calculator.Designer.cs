@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Calculator));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menu = new System.Windows.Forms.MenuStrip();
             this.查看ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.标准型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.科学型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,32 +79,38 @@
             this.txt_Log = new System.Windows.Forms.TextBox();
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
+            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // Menu
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu.AutoSize = false;
+            this.Menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看ToolStripMenuItem,
             this.编辑ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(276, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Menu.Location = new System.Drawing.Point(0, 0);
+            this.Menu.Name = "Menu";
+            this.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.Menu.Size = new System.Drawing.Size(276, 28);
+            this.Menu.TabIndex = 0;
+            this.Menu.Text = "menuStrip1";
             // 
             // 查看ToolStripMenuItem
             // 
+            this.查看ToolStripMenuItem.Checked = true;
+            this.查看ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.查看ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.标准型ToolStripMenuItem,
             this.科学型ToolStripMenuItem,
             this.程序员ToolStripMenuItem,
             this.统计信息ToolStripMenuItem});
+            this.查看ToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Remove;
             this.查看ToolStripMenuItem.Name = "查看ToolStripMenuItem";
             this.查看ToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.查看ToolStripMenuItem.Text = "查看(V)";
+            this.查看ToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // 标准型ToolStripMenuItem
             // 
@@ -122,14 +128,16 @@
             // 
             // 程序员ToolStripMenuItem
             // 
+            this.程序员ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.程序员ToolStripMenuItem.Name = "程序员ToolStripMenuItem";
             this.程序员ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.程序员ToolStripMenuItem.Text = "程序员（P）           Alt+3";
             // 
             // 统计信息ToolStripMenuItem
             // 
+            this.统计信息ToolStripMenuItem.AutoSize = false;
             this.统计信息ToolStripMenuItem.Name = "统计信息ToolStripMenuItem";
-            this.统计信息ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.统计信息ToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.统计信息ToolStripMenuItem.Text = "统计信息（A）        Alt+4";
             // 
             // 编辑ToolStripMenuItem
@@ -214,7 +222,7 @@
             // 
             this.Lab_Formula.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Lab_Formula.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Lab_Formula.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lab_Formula.Font = new System.Drawing.Font("宋体", 9F);
             this.Lab_Formula.Location = new System.Drawing.Point(12, 38);
             this.Lab_Formula.Name = "Lab_Formula";
             this.Lab_Formula.Size = new System.Drawing.Size(251, 36);
@@ -375,7 +383,7 @@
             this.Btn_Dot.TabIndex = 2;
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
-            this.Btn_Dot.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Dot.Click += new System.EventHandler(this.Btn_Calculator_Click);
             // 
             // Btn_Mul
             // 
@@ -660,7 +668,7 @@
             this.labOfLine.Cursor = System.Windows.Forms.Cursors.Default;
             this.labOfLine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labOfLine.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labOfLine.Location = new System.Drawing.Point(11, 36);
+            this.labOfLine.Location = new System.Drawing.Point(10, 36);
             this.labOfLine.Name = "labOfLine";
             this.labOfLine.Size = new System.Drawing.Size(252, 66);
             this.labOfLine.TabIndex = 7;
@@ -704,17 +712,17 @@
             this.Controls.Add(this.Btn_Num2);
             this.Controls.Add(this.Btn_Num0);
             this.Controls.Add(this.Btn_Num1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.Menu;
             this.Name = "Frm_Calculator";
             this.Text = "计算器";
             this.Activated += new System.EventHandler(this.Calculator_Load);
             this.Load += new System.EventHandler(this.Calculator_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,7 +777,7 @@
         private System.Windows.Forms.TextBox txt_Log;
         public System.Windows.Forms.Label Lab_Result;
         public System.Windows.Forms.Label Lab_Register;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.Label labOfLine;
     }
 }

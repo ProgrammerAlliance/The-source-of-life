@@ -9,6 +9,8 @@ namespace Calculator.Core
     public interface IOperation
     {
         double GetResult(double number1, double number2);
-     
+        string GetToString(string num);
+
+
     }
 }

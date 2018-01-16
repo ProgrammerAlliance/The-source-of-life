@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Calculator.Core.Operation.Enum;
 using System.Threading.Tasks;
 
 namespace Calculator.Core
@@ -17,6 +18,11 @@ namespace Calculator.Core
             double result = 0;
             result = number1 + number2;
             return result;
+        }
+
+        public string GetToString(string num)
+        {
+            return num + (char)ArithmeticEnum.Add;
         }
     }
 }
