@@ -78,7 +78,7 @@ namespace Calculator.Core.SDK
         {
             string str = "";
             var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-
+            opt.GetToString(LExp==null?)
             if(this.LExp==null)
 
 

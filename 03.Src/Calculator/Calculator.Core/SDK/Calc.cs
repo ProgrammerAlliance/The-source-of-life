@@ -93,6 +93,8 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputEqual()
         {
+            IOps opt = new Equals();
+            Exp = opt.Process(Exp);
             //1.直接点
 
             //2.数字->
