@@ -27,7 +27,7 @@ namespace Calculator.Core
 
         public string GetToString(string num)
         {
-            return "1/(" + num.ToString() + ")";
+            return $"reciproc({num.ToString()})";
 
         }
     }

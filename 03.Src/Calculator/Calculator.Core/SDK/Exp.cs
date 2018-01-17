@@ -53,10 +53,11 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public string DoCalc()
         {
+            string result = "";
             if (Opt is ArithmeticEnum)
             {
                 var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                this.R = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                result = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
             }
             else if (Opt is SpecialEnum)
             {
@@ -65,14 +66,15 @@ namespace Calculator.Core.SDK
                 {
                     case SpecialEnum.Percent:
                         var Popt = new Percent();
-                        this.R = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                        string str = this.L;
+                        result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
                         break;
                     default:
-                        this.R = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+                        result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
                         break;
                 }
             }
-            return this.R;
+            return result;
         }
 
         /// <summary>
@@ -81,31 +83,56 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public override string ToString()
         {
+
             string str = "";
-            var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-            opt.GetToString(LExp==null?)
-            if(this.LExp==null)
-
-
+            if (LExp == null && RExp == null && Opt == null) return str;
+            if (LExp != null)
+            {
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                str += LExp.ToString() + opt.GetToString(LExp.R);
+            }
+            else if (RExp != null)
+            {
+                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
+                str += opt.GetToString((RExp.ToString()));
+            }
+            else if (L != null)
+            {
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                str += opt.GetToString(L);
+            }
+            else
+            {
+                return R;
+            }
 
 
             return str;
 
 
 
-
+            //if (this.opt == null) return "";
             //string str = "";
-            //if (Opt == null) return "";
 
-            //var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-
-            //str += LExp == null ? opt.GetToString(L):;
-
-
-            //// str += opt.GetToString(LExp == null ? L : LExp.ToString());
-
+            //var opt = operationfactory.creatoperation((arithmeticenum)opt);
+            //var opt1 = specalfactory.createspecialoperation((specialenum)opt);
+            //if (this.lexp == null)
+            //{
+            //    return opt.gettostring(this.l);
+            //}
+            //else if (lexp != null)
+            //{
+            //    str += this.lexp.tostring() + opt.gettostring(lexp.r);
+            //}
+            //if (this.rexp == null && l == null)
+            //{
+            //    return specalfactory.createspecialoperation((specialenum)opt).gettostring(this.r);
+            //}
+            //else if (rexp != null)
+            //{
+            //    str += opt1.gettostring(this.rexp.tostring());
+            //}
             //return str;
-
         }
     }
 }

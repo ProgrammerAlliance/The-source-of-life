@@ -21,7 +21,7 @@ namespace Calculator.Core
 
         public string GetToString(string num)
         {
-            return $"√({num})";
+            return $"sqrt({num})";
         }
     }
 }

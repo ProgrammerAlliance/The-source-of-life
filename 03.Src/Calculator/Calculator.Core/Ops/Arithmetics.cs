@@ -19,8 +19,6 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-
-
             //1.第一次点 运算，不需要实例化新对象
             if (exp.Opt == null)
             {
@@ -45,13 +43,14 @@ namespace Calculator.Core.Ops
                  exp = new Expression
                 {
                     IsCreateNew = false,
-                    R = oldExp.DoCalc(),
-                    LExp = oldExp,
+                     LExp = oldExp,
+                     R = oldExp.DoCalc(),
                     RExp = null,
                     Opt = this._op,
                     IsOpt = true,
                 };
                 exp.L = exp.R;
+              string str=   exp.LExp.ToString();
             }
             exp.EV = exp.R;
             return exp;

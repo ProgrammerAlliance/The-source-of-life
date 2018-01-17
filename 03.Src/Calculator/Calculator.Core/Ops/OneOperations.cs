@@ -18,11 +18,17 @@ namespace Calculator.Core.Ops
         }
         public Expression Process(Expression exp)
         {
+            if (true)
+            {
+
+            }
+            var oldRExp = exp.RExp;
             exp.RExp = new Expression
             {
-                L = exp.L,
+                L = exp.L.Length == 0 ? "0" : exp.L,
                 R = exp.R,
                 Opt = this._op,
+                RExp = oldRExp
             };
             exp.R = exp.RExp.DoCalc();
             exp.RExp.L = null;

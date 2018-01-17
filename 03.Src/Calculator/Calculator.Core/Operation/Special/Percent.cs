@@ -20,7 +20,7 @@ namespace Calculator.Core.Opt
 
         public string GetToString(string num)
         {
-            return "";
+            return num;
         }
     }
 }
