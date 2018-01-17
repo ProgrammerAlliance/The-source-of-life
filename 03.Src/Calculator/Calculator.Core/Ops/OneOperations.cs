@@ -26,7 +26,7 @@ namespace Calculator.Core.Ops
             };
             exp.R = exp.RExp.DoCalc();
             exp.RExp.L = null;
-
+            exp.EV = exp.R;
             return exp;
         }
     }

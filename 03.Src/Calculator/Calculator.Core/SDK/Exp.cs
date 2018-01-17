@@ -28,6 +28,11 @@ namespace Calculator.Core.SDK
         public string R { get; set; }
 
         /// <summary>
+        /// 用于显示的结果值
+        /// </summary>
+        public string EV { get; set; }
+
+        /// <summary>
         /// 左表达式
         /// </summary>
         public Expression LExp { get; set; }

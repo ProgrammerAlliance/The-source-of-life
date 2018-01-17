@@ -35,6 +35,7 @@ namespace Calculator.Core.Ops
 
                     //3.正常“.”
                     exp.R = exp.R.Contains(".") ? exp.R : $"{exp.R}.";
+                    exp.EV = exp.R;
                     break;
                 case SymbolEnum.Sign:
                     //1.直接点“±”
@@ -47,6 +48,7 @@ namespace Calculator.Core.Ops
                     
                     //3.正常点“±”
                     exp.R = exp.R.StartsWith("-") ? exp.R.Remove(0, 1) : $"-{exp.R}";
+                    exp.EV = exp.R;
                     break;
             }
 

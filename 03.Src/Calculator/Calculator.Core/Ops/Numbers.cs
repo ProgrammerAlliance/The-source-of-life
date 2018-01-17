@@ -29,7 +29,7 @@ namespace Calculator.Core.Ops
             }
             //数字追加
             exp.R = (string.IsNullOrWhiteSpace(exp.R) || "0".Equals(exp.R)) ? (Convert.ToDouble(_num)).ToString() : exp.R + _num;
-
+            exp.EV = exp.R;
             return exp;
         }
     }
