@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core.Operation.Enum
+namespace Calculator.Core
 {
     public enum SymbolEnum
     {

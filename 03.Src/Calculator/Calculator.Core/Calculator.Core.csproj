@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
-    <Compile Include="Check\Limit.cs" />
     <Compile Include="Operation\Enum\ArithmeticEnum.cs" />
     <Compile Include="Operation\Enum\ClearEnum.cs" />
     <Compile Include="Operation\Enum\MEnum.cs" />

@@ -1,4 +1,5 @@
 ﻿using Calculator.Core;
+using Calculator.Core.SDK;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,7 +11,7 @@ namespace Calculator.WPF.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        Core.Calculator _Calculator = new Core.Calculator();
+        Calc cal = new Calc();
 
         public MainWindow()
         {
@@ -18,61 +19,76 @@ namespace Calculator.WPF.View
             Result_Text.Text = "0";
         }
 
+
+        private void Num_Click(object sender, RoutedEventArgs e)
+        {
+            string input = ((Button)sender).Content.ToString();
+            cal.InputNumber(Convert.ToInt32(input));
+        }
+
         private void Calc_Click(object sender, RoutedEventArgs e)
         {
+          
+
             string input = ((Button)sender).Content.ToString();
             switch (input)
             {
+                case ".":
+                    cal.InputSymbol(SymbolEnum.Point);
+                    break;
+                case "±":
+                    cal.InputSymbol(SymbolEnum.Sign);
+                    break;
                 case "+":
-                    _Calculator.CalcOperation(OperateEnum.Add);
+                    cal.InputArithmetic(ArithmeticEnum.Add);
                     break;
                 case "-":
-                    _Calculator.CalcOperation(OperateEnum.Sub);
+                    cal.InputArithmetic(ArithmeticEnum.Sub);
                     break;
                 case "*":
-                    _Calculator.CalcOperation(OperateEnum.Mul);
+                    cal.InputArithmetic(ArithmeticEnum.Mul);
                     break;
                 case "×":
-                    _Calculator.CalcOperation(OperateEnum.Mul);
+                    cal.InputArithmetic(ArithmeticEnum.Mul);
                     break;
                 case "/":
-                    _Calculator.CalcOperation(OperateEnum.Div);
+                    cal.InputArithmetic(ArithmeticEnum.Div);
                     break;
-                case "%":
-                    _Calculator.SpecOperation(SpecialEnum.Percent);
-                    break;
-                case "1/x":
-                    _Calculator.SpecOperation(SpecialEnum.Reciprocal);
-                    break;
-                case "√":
-                    _Calculator.SpecOperation(SpecialEnum.Sqrt);
-                    break;
-                case "MC":
-                    _Calculator.MOperation(MEnum.MClear);
-                    break;
-                case "MS":
-                    _Calculator.MOperation(MEnum.MSave);
-                    break;
-                case "MR":
-                    _Calculator.MOperation(MEnum.MRead);
-                    break;
-                case "M+":
-                    _Calculator.MOperation(MEnum.MAdd);
-                    break;
-                case "M-":
-                    _Calculator.MOperation(MEnum.MSub);
-                    break;
+                //case "%":
+                //    _Calculator.SpecOperation(SpecialEnum.Percent);
+                //    break;
+                //case "1/x":
+                //    _Calculator.SpecOperation(SpecialEnum.Reciprocal);
+                //    break;
+                //case "√":
+                //    _Calculator.SpecOperation(SpecialEnum.Sqrt);
+                //    break;
+                //case "MC":
+                //    _Calculator.MOperation(MEnum.MClear);
+                //    break;
+                //case "MS":
+                //    _Calculator.MOperation(MEnum.MSave);
+                //    break;
+                //case "MR":
+                //    _Calculator.MOperation(MEnum.MRead);
+                //    break;
+                //case "M+":
+                //    _Calculator.MOperation(MEnum.MAdd);
+                //    break;
+                //case "M-":
+                //    _Calculator.MOperation(MEnum.MSub);
+                //    break;
                 case "←":
-                    _Calculator.ClearOperation(ClearEnum.Del);
+                    
                     break;
                 case "CE":
-                    _Calculator.ClearOperation(ClearEnum.CE);
+
                     break;
                 case "C":
-                    _Calculator.ClearOperation(ClearEnum.C);
+
                     break;
                 case "=":
-                    _Calculator.CalcOperation(OperateEnum.Equal);
+                    cal.InputEqual();
                     break;
                 default:
                     throw new Exception("操作符不存在");
@@ -86,10 +102,5 @@ namespace Calculator.WPF.View
             Result_Text.Text = _Calculator.Result;
         }
 
-        private void Num_Click(object sender, RoutedEventArgs e)
-        {
-            string input = ((Button)sender).Content.ToString();
-            _Calculator.CalcNumber(input);
-        }
     }
 }
