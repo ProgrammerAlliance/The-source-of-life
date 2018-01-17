@@ -1,5 +1,4 @@
-﻿using Calculator.Core.Operation.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +9,9 @@ namespace Calculator.Core.SDK
     public class Expression
     {
         /// <summary>
-        /// 是否需要创建新的表达式
+        /// 是否按过操作符
         /// </summary>
-        public bool IsCreateNew { get; set; }
+        public bool IsInputOpt { get; set; }
 
         /// <summary>
         /// 左值
@@ -35,9 +34,14 @@ namespace Calculator.Core.SDK
         public Expression RExp { get; set; }
 
         /// <summary>
-        /// 运算符
+        /// 二目运算符
         /// </summary>
         public ArithmeticEnum? Opt { get; set; }
+
+        /// <summary>
+        /// 一目运算符
+        /// </summary>
+        public SpecialEnum SpOpt { get; set; }
 
         /// <summary>
         /// 运算
@@ -45,8 +49,17 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public string DoCalc()
         {
-            var opt = OperationFactory.CreatOperation(Opt);
-            this.R = opt.GetResult(Exp);
+            if (Opt is ArithmeticEnum)
+            {
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                this.R = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+            }
+            else if (Opt is SpecialEnum)
+            {
+                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                this.R = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+            }
+            return this.R;
         }
 
         /// <summary>
@@ -55,7 +68,9 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public override string ToString()
         {
-            throw new NotImplementedException();
+            var opt = OperationFactory.CreatOperation(Opt);
+
+            return opt.ToString()
         }
 
     }

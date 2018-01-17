@@ -15,5 +15,10 @@ namespace Calculator.Core
             result = number1 * number2;
             return result;
         }
+
+        public string ToString(string number1, string number2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

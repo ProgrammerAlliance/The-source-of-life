@@ -18,10 +18,15 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            if (exp.IsCreateNew)
+            if (exp.Opt != null)
+            {
+                Calc.IsCreateNew = true;
+            }
+
+            if (exp.IsInputOpt)
             {
                 exp.R = _num.ToString();
-                exp.IsCreateNew = false;
+                exp.IsInputOpt = false;
                 return exp;
             }
 

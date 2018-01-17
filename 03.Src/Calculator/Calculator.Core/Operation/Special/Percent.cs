@@ -1,4 +1,6 @@
-﻿namespace Calculator.Core.Opt
+﻿using Calculator.Core.SDK;
+
+namespace Calculator.Core.Opt
 {
     /// <summary>
     /// todo: mh
@@ -11,6 +13,11 @@
             result = number / 100;
             return result;
         }
-        
+
+        public string GetToString(Expression exp)
+        {
+            return exp.R;
+        }
+
     }
 }

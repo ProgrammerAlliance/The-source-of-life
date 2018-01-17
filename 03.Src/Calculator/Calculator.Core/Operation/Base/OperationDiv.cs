@@ -30,5 +30,10 @@ namespace Calculator.Core
             }
             return result;
         }
+
+        public string ToString(string number1, string number2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

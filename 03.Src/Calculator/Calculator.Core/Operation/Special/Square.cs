@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Calculator.Core.SDK;
 
 namespace Calculator.Core
 {
     public class Square:ISpecialOperation
     {
-        string result = "";
-
         public double GetResult(double number)
         {
             double result = 0;
@@ -17,10 +16,9 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetString(double number)
+        public string GetToString(Expression exp)
         {
-            result = "sqr(" + number + ")";
-            return result;
+            return "sqr(" + exp.ToString() + ")";
         }
     }
 }

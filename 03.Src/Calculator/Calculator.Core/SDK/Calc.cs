@@ -1,5 +1,4 @@
-﻿using Calculator.Core.Operation.Enum;
-using Calculator.Core.Ops;
+﻿using Calculator.Core.Ops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +11,21 @@ namespace Calculator.Core.SDK
     {
         Expression Exp { get; set; }
 
+        /// <summary>
+        /// 是否需要创建新的表达式
+        /// </summary>
+        public static bool IsCreateNew = false;
+
         public Calc()
         {
             Exp = new Expression
             {
                 L = "",
-                R = "",
-                O = null,
-                Exp = null,
+                R = "0",
+                LExp = null,
+                RExp = null,
+                Opt = null,
+                IsInputOpt = true,
             };
         }
 
@@ -57,13 +63,10 @@ namespace Calculator.Core.SDK
         /// 一目运算
         /// </summary>
         /// <param name="op"></param>
-        public void InputOneOperation(string op)
+        public void InputOneOperation(SpecialEnum op)
         {
-            //1.直接点
-
-            //2.数字->符号->
-
-            //3.正常
+            IOps opt = new OneOperations(op);
+            Exp = opt.Process(Exp);
         }
 
         /// <summary>
@@ -81,6 +84,7 @@ namespace Calculator.Core.SDK
         public void InputEqual()
         {
             //1.直接点
+
 
             //2.数字->
 

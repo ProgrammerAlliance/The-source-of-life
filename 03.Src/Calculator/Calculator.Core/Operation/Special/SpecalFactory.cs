@@ -9,7 +9,7 @@ namespace Calculator.Core
 {
     public class SpecalFactory
     {
-        public static ISpecialOperation CreateSpecialOperation(SpecialEnum se)
+        public static ISpecialOperation CreateSpecialOperation(SpecialEnum? se)
         {
             ISpecialOperation spo = null;
 
