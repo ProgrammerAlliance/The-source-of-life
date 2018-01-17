@@ -76,7 +76,7 @@ namespace Calculator.Core.SDK
 
             //3.正常
             IOps opt = new OneOperations(op);
-            Exp = opt.Process(Exp);
+            opt.Process(Exp);
         }
 
         /// <summary>
