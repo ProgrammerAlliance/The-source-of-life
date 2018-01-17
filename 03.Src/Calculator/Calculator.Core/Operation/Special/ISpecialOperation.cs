@@ -6,6 +6,7 @@ namespace Calculator.Core
     {
         double GetResult(double number);
 
-        string GetToString(Expression exp);
+        string GetToString(string num);
+        
     }
 }

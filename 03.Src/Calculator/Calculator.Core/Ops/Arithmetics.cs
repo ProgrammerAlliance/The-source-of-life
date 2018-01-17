@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
-using Calculator.Core;
+using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Ops
 {
@@ -19,26 +19,38 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
+
+
             //1.第一次点 运算，不需要实例化新对象
+            if (exp.Opt == null)
+            {
+                exp.Opt = this._op;
+                exp.L = exp.R;
+                return exp;
+            }
+            if(exp.IsOpt)
+            {
+                exp.Opt = this._op;
+                return exp;
+            }
+
             //2.连续点 运算，不需要实例化新对象
-            exp.L = exp.R;
-            exp.Opt = _op;
-            
+              
             //3.需要实例化新的
-            if (Calc.IsCreateNew)
+            if (exp.IsCreateNew)
             {
                 var oldExp = exp;
-                var newExp = new Expression
+                 exp = new Expression
                 {
-                    L = oldExp.DoCalc(),
-                    LExp = oldExp,
+                    IsCreateNew = false,
                     R = oldExp.DoCalc(),
+                    LExp = oldExp,
                     RExp = null,
-                    Opt = _op,
+                    Opt = this._op,
+                    IsOpt = true,
                 };
+                exp.L = exp.R;
             }
-            
-            exp.IsInputOpt = true;
             return exp;
         }
 

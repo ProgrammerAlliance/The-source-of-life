@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Calculator.Core.Operation.Enum;
+using Calculator.Core.Opt;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +10,12 @@ namespace Calculator.Core.SDK
 {
     public class Expression
     {
+        public bool IsOpt;
+
         /// <summary>
-        /// 是否按过操作符
+        /// 是否需要创建新的表达式
         /// </summary>
-        public bool IsInputOpt { get; set; }
+        public bool IsCreateNew { get; set; }
 
         /// <summary>
         /// 左值
@@ -34,14 +38,9 @@ namespace Calculator.Core.SDK
         public Expression RExp { get; set; }
 
         /// <summary>
-        /// 二目运算符
+        /// 运算符
         /// </summary>
-        public ArithmeticEnum? Opt { get; set; }
-
-        /// <summary>
-        /// 一目运算符
-        /// </summary>
-        public SpecialEnum SpOpt { get; set; }
+        public object Opt { get; set; }
 
         /// <summary>
         /// 运算
@@ -57,7 +56,16 @@ namespace Calculator.Core.SDK
             else if (Opt is SpecialEnum)
             {
                 var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
-                this.R = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+                switch ((SpecialEnum)Opt)
+                {
+                    case SpecialEnum.Percent:
+                        var Popt = new Percent();
+                        this.R = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                        break;
+                    default:
+                        this.R = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+                        break;
+                }
             }
             return this.R;
         }
@@ -68,11 +76,31 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public override string ToString()
         {
-            var opt = OperationFactory.CreatOperation(Opt);
+            string str = "";
+            var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
 
-            return opt.ToString()
+            if(this.LExp==null)
+
+
+
+
+            return str;
+
+
+
+
+            //string str = "";
+            //if (Opt == null) return "";
+
+            //var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+
+            //str += LExp == null ? opt.GetToString(L):;
+
+
+            //// str += opt.GetToString(LExp == null ? L : LExp.ToString());
+
+            //return str;
+
         }
-
     }
-
 }

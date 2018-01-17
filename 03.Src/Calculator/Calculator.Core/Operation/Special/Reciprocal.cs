@@ -24,9 +24,11 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetToString(Expression exp)
+
+        public string GetToString(string num)
         {
-            return "1/(" + exp.ToString() +")";
+            return "1/(" + num.ToString() + ")";
+
         }
     }
 }

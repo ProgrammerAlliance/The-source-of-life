@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Calculator.Core.Operation.Enum;
 using System.Threading.Tasks;
 
 namespace Calculator.Core
@@ -31,9 +32,9 @@ namespace Calculator.Core
             return result;
         }
 
-        public string ToString(string number1, string number2)
+        public string GetToString(string num)
         {
-            throw new NotImplementedException();
+            return num + (char)ArithmeticEnum.Div;
         }
     }
 }

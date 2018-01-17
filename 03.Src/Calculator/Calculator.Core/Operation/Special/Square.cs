@@ -9,6 +9,8 @@ namespace Calculator.Core
 {
     public class Square:ISpecialOperation
     {
+        string result = "";
+
         public double GetResult(double number)
         {
             double result = 0;
@@ -16,9 +18,10 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetToString(Expression exp)
+        public string GetToString(string num)
         {
-            return "sqr(" + exp.ToString() + ")";
+            return "sqr(" + num.ToString() + ")";
+
         }
     }
 }

@@ -41,13 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
-    <Compile Include="Operation\DoCalc\IDoCalc.cs" />
-    <Compile Include="Operation\DoCalc\Two.cs" />
+    <Compile Include="Input\Point.cs" />
+    <Compile Include="Check\Limit.cs" />
+    <Compile Include="Input\Symbol.cs" />
     <Compile Include="Operation\Enum\ArithmeticEnum.cs" />
     <Compile Include="Operation\Enum\ClearEnum.cs" />
     <Compile Include="Operation\Enum\MEnum.cs" />
     <Compile Include="Operation\Enum\SpecialEnum.cs" />
+    <Compile Include="Input\Number.cs" />
     <Compile Include="Operation\Enum\SymbolEnum.cs" />
+    <Compile Include="Ops\Clear.cs" />
     <Compile Include="Ops\IOps.cs" />
     <Compile Include="Ops\Symbols.cs" />
     <Compile Include="Ops\Arithmetics.cs" />

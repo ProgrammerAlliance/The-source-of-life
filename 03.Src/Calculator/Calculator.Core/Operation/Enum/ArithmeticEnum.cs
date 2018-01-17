@@ -8,9 +8,9 @@ namespace Calculator.Core
 {
     public enum ArithmeticEnum
     {
-        Add = 1,
-        Div = 2,
-        Mul = 3,
-        Sub = 4,
+        Add = '+',
+        Div = '/',
+        Mul = '*',
+        Sub = '-',
     }
 }

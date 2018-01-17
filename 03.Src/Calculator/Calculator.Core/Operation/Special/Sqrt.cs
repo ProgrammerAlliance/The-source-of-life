@@ -10,7 +10,7 @@ namespace Calculator.Core
     /// <summary>
     /// todo: wr
     /// </summary>
-    public class Sqrt:ISpecialOperation
+    public class Sqrt : ISpecialOperation
     {
         public double GetResult(double number)
         {
@@ -19,9 +19,9 @@ namespace Calculator.Core
             return result;
         }
 
-        public string GetToString(Expression exp)
+        public string GetToString(string num)
         {
-            return "√(" + exp.ToString() + ")";
+            return $"√({num})";
         }
     }
 }

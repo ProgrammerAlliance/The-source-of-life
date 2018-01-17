@@ -1,4 +1,5 @@
-﻿using Calculator.Core.SDK;
+﻿using System;
+using Calculator.Core.SDK;
 
 namespace Calculator.Core.Opt
 {
@@ -9,15 +10,17 @@ namespace Calculator.Core.Opt
     {
         public double GetResult(double number)
         {
-            double result = 0;
-            result = number / 100;
-            return result;
+            return 0;
         }
 
-        public string GetToString(Expression exp)
+        public double GetResult(double left, double number)
         {
-            return exp.R;
+            return (left*number) / 100;
         }
 
+        public string GetToString(string num)
+        {
+            return "";
+        }
     }
 }

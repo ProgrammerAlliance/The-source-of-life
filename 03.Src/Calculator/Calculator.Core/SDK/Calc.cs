@@ -1,4 +1,5 @@
-﻿using Calculator.Core.Ops;
+﻿using Calculator.Core.Operation.Enum;
+using Calculator.Core.Ops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,6 @@ namespace Calculator.Core.SDK
     {
         Expression Exp { get; set; }
 
-        /// <summary>
-        /// 是否需要创建新的表达式
-        /// </summary>
-        public static bool IsCreateNew = false;
-
         public Calc()
         {
             Exp = new Expression
@@ -25,7 +21,8 @@ namespace Calculator.Core.SDK
                 LExp = null,
                 RExp = null,
                 Opt = null,
-                IsInputOpt = true,
+                IsCreateNew = false,
+                IsOpt = false,
             };
         }
 
@@ -37,6 +34,11 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
+            if (Exp.IsOpt)
+            {
+                Exp.IsCreateNew = true;
+            }
+            Exp.IsOpt = false;
         }
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Symbols(op);
             Exp = opt.Process(Exp);
+            Exp.IsOpt = false;
         }
 
         /// <summary>
@@ -57,6 +60,8 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Arithmetics(op);
             Exp = opt.Process(Exp);
+            Exp.IsOpt = true;
+            Exp.IsCreateNew = false;
         }
 
         /// <summary>
@@ -65,6 +70,11 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputOneOperation(SpecialEnum op)
         {
+            //1.直接点
+
+            //2.数字->符号->
+
+            //3.正常
             IOps opt = new OneOperations(op);
             Exp = opt.Process(Exp);
         }
@@ -85,7 +95,6 @@ namespace Calculator.Core.SDK
         {
             //1.直接点
 
-
             //2.数字->
 
             //3.数字->运算->
@@ -94,5 +103,32 @@ namespace Calculator.Core.SDK
 
         }
 
+
+        /// <summary>
+        /// C CE Del
+        /// </summary>
+        public void InputClear(ClearEnum op)
+        {
+            IOps opt = new Clear(op);
+            Exp = opt.Process(Exp);
+        }
+
+        /// <summary>
+        /// 获取输入框的值
+        /// </summary>
+        /// <returns></returns>
+        public string R()
+        {
+            return Exp.R;
+        }
+
+        /// <summary>
+        /// 获取算式
+        /// </summary>
+        /// <returns></returns>
+        public string GetFormula()
+        {
+            return Exp.ToString();
+        }
     }
 }
