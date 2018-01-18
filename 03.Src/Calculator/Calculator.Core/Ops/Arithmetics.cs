@@ -19,7 +19,7 @@ namespace Calculator.Core.Ops
         public Expression Process(Expression exp)
         {
             //1.第一次点 运算，不需要实例化新对象
-            if (exp.Opt == null)
+            if (exp.Opt == null||exp.IsOpt==TypeEnum.Equal)
             {
                 exp.Opt = this._op;
                 exp.L = exp.R;
