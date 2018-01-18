@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
-
-namespace Calculator.Core
+﻿namespace Calculator.Core
 {
     public class Square:ISpecialOperation
     {
-        string result = "";
-
         public double GetResult(double number)
         {
             double result = 0;
@@ -20,7 +11,7 @@ namespace Calculator.Core
 
         public string GetToString(string num)
         {
-            return "sqr(" + num.ToString() + ")";
+            return $"sqr({num})";
 
         }
     }

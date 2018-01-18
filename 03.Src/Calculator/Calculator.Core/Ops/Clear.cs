@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
+﻿using Calculator.Core.SDK;
 using Calculator.Core.Enum;
 
 namespace Calculator.Core.Ops
@@ -39,7 +34,7 @@ namespace Calculator.Core.Ops
                     exp.EV = exp.R;
                     //特殊运算+CE：
 
-                    if ("".Equals(exp.L))
+                    if ("".Equals(exp.L)&&exp.RExp!=null)
                     {
                         exp.Opt = null;
                     }

@@ -19,7 +19,7 @@ namespace Calculator.Core
 
             if (number1 == 0 && number2 == 0)
             {
-                throw new Exception("结果未定义!");
+                throw new CalcException("结果未定义!");
             }
             else if (number2 != 0)
             {
@@ -27,7 +27,7 @@ namespace Calculator.Core
             }
             else
             {
-                throw new Exception("除数不能为零!");
+                throw new CalcException("除数不能为零!");
             }
             return result;
         }

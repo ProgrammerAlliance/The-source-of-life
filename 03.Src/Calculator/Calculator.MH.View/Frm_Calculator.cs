@@ -1,7 +1,7 @@
-﻿using Calculator.Core.SDK;
+﻿using Calculator.Core.Enum;
+using Calculator.Core.SDK;
 using System;
 using System.Windows.Forms;
-using Calculator.Core.Enum;
 
 
 namespace Calculator

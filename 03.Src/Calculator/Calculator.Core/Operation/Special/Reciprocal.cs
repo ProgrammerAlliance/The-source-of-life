@@ -15,7 +15,7 @@ namespace Calculator.Core
             double result = 0;
             if (number == 0)
             {
-                throw new Exception("0没有倒数!");
+                throw new CalcException("0没有倒数!");
             }
             else
             {
@@ -27,7 +27,7 @@ namespace Calculator.Core
 
         public string GetToString(string num)
         {
-            return $"reciproc({num.ToString()})";
+            return $"reciproc({num})";
 
         }
     }
