@@ -32,30 +32,29 @@ namespace Calculator
             calc.InputNumber(Convert.ToInt32(((Button)sender).Text));
             ScreenDisplay();
         }
-
-
+        
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
             switch (strBtn)
             {
                 case ".":
-                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Point);
+                    calc.InputSymbol(Core.SymbolEnum.Point);
                     break;
                 case "±":
-                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Sign);
+                    calc.InputSymbol(Core.SymbolEnum.Sign);
                     break;
                 case "+":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Add);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Add);
                     break;
                 case "-":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Sub);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Sub);
                     break;
                 case "*":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Mul);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Mul);
                     break;
                 case "/":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Div);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Div);
                     break;
                 case "%":
                     calc.InputOneOperation(Core.SpecialEnum.Percent);
@@ -102,6 +101,7 @@ namespace Calculator
         {
             Lab_Result.Text = calc.R();
         }
+
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>

@@ -18,7 +18,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            switch(_op)
+            switch (_op)
             {
                 case ClearEnum.C:
                     exp = new Expression()
@@ -37,10 +37,9 @@ namespace Calculator.Core.Ops
                     exp.R = "0";
                     exp.EV = exp.R;
                     //特殊运算+CE：
-                   
+
 
                     break;
-
                 case ClearEnum.Del:
                     //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
@@ -49,8 +48,6 @@ namespace Calculator.Core.Ops
                     //无响应
                     break;
             }
-
-
             return exp;
         }
     }

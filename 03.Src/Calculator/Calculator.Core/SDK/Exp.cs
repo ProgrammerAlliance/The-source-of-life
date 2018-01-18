@@ -1,5 +1,4 @@
-﻿using Calculator.Core.Operation.Enum;
-using Calculator.Core.Opt;
+﻿using Calculator.Core.Opt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,46 +92,34 @@ namespace Calculator.Core.SDK
             }
             else if (RExp != null)
             {
-                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
-                str += opt.GetToString((RExp.ToString()));
+                if ((SpecialEnum)RExp.Opt == SpecialEnum.Percent)
+                {
+                    str += R;
+                }
+                else
+                {
+                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
+                    str += opt.GetToString((RExp.ToString()));
+                }
             }
             else if (L != null)
             {
-                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                str += opt.GetToString(L);
+                if (Opt is ArithmeticEnum)
+                {
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                    str += opt.GetToString(this.L);
+                }
+                else if (Opt is SpecialEnum)
+                {
+                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                    str += opt.GetToString(R);
+                }
             }
             else
             {
                 return R;
             }
-
-
             return str;
-
-
-
-            //if (this.opt == null) return "";
-            //string str = "";
-
-            //var opt = operationfactory.creatoperation((arithmeticenum)opt);
-            //var opt1 = specalfactory.createspecialoperation((specialenum)opt);
-            //if (this.lexp == null)
-            //{
-            //    return opt.gettostring(this.l);
-            //}
-            //else if (lexp != null)
-            //{
-            //    str += this.lexp.tostring() + opt.gettostring(lexp.r);
-            //}
-            //if (this.rexp == null && l == null)
-            //{
-            //    return specalfactory.createspecialoperation((specialenum)opt).gettostring(this.r);
-            //}
-            //else if (rexp != null)
-            //{
-            //    str += opt1.gettostring(this.rexp.tostring());
-            //}
-            //return str;
         }
     }
 }

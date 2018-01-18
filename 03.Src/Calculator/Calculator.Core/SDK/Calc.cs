@@ -1,5 +1,4 @@
-﻿using Calculator.Core.Operation.Enum;
-using Calculator.Core.Ops;
+﻿using Calculator.Core.Ops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,11 +70,6 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputOneOperation(SpecialEnum op)
         {
-            //1.直接点
-
-            //2.数字->符号->
-
-            //3.正常
             IOps opt = new OneOperations(op);
             opt.Process(Exp);
         }
@@ -94,20 +88,10 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputEqual()
         {
-
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
             Exp.IsOpt = true;
-            //1.直接点
-
-            //2.数字->
-
-            //3.数字->运算->
-
-            //4.正常点
-
         }
-
 
         /// <summary>
         /// C CE Del

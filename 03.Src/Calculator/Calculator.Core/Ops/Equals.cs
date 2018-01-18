@@ -11,17 +11,16 @@ namespace Calculator.Core.Ops
     {
         public Expression Process(Expression exp)
         {
-            exp.L = exp.DoCalc();
-            //if (temp == null)
-            //{
-            //    temp = exp.R;
-            //}
-            //else
-            //{
-            //    exp.L = exp.R;
-            //    exp.R = temp;
-            //}
-            //exp.R = exp.DoCalc();
+            var oldExp = exp;
+            exp = new Expression
+            {
+                L = oldExp.DoCalc(),
+                R = oldExp.R,
+                LExp = null,
+                RExp = null,
+                Opt = oldExp.Opt,
+                IsCreateNew = false,
+            };
             exp.EV = exp.L;
             return exp;
         }

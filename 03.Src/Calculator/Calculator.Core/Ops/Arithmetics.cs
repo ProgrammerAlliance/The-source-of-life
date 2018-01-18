@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
-using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Ops
 {
@@ -27,30 +26,28 @@ namespace Calculator.Core.Ops
                 exp.EV = exp.R;
                 return exp;
             }
-            if(exp.IsOpt)
+            //2.连续点 运算，不需要实例化新对象
+            if (exp.IsOpt)
             {
                 exp.Opt = this._op;
                 exp.EV = exp.R;
                 return exp;
             }
-
-            //2.连续点 运算，不需要实例化新对象
-              
             //3.需要实例化新的
             if (exp.IsCreateNew)
             {
                 var oldExp = exp;
-                 exp = new Expression
+                exp = new Expression
                 {
                     IsCreateNew = false,
-                     LExp = oldExp,
-                     R = oldExp.DoCalc(),
+                    LExp = oldExp,
+                    R = oldExp.DoCalc(),
                     RExp = null,
                     Opt = this._op,
                     IsOpt = true,
                 };
                 exp.L = exp.R;
-              string str=   exp.LExp.ToString();
+                string str = exp.LExp.ToString();
             }
             exp.EV = exp.R;
             return exp;
