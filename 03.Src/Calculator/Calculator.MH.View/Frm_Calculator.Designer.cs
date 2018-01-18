@@ -239,6 +239,7 @@
             this.Btn_Num1.Name = "Btn_Num1";
             this.Btn_Num1.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num1.TabIndex = 2;
+            this.Btn_Num1.TabStop = false;
             this.Btn_Num1.Text = "1";
             this.Btn_Num1.UseVisualStyleBackColor = false;
             this.Btn_Num1.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -253,6 +254,7 @@
             this.Btn_Num2.Name = "Btn_Num2";
             this.Btn_Num2.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num2.TabIndex = 2;
+            this.Btn_Num2.TabStop = false;
             this.Btn_Num2.Text = "2";
             this.Btn_Num2.UseVisualStyleBackColor = false;
             this.Btn_Num2.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -267,6 +269,7 @@
             this.Btn_Num3.Name = "Btn_Num3";
             this.Btn_Num3.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num3.TabIndex = 2;
+            this.Btn_Num3.TabStop = false;
             this.Btn_Num3.Text = "3";
             this.Btn_Num3.UseVisualStyleBackColor = false;
             this.Btn_Num3.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -281,6 +284,7 @@
             this.Btn_Num4.Name = "Btn_Num4";
             this.Btn_Num4.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num4.TabIndex = 2;
+            this.Btn_Num4.TabStop = false;
             this.Btn_Num4.Text = "4";
             this.Btn_Num4.UseVisualStyleBackColor = false;
             this.Btn_Num4.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -295,6 +299,7 @@
             this.Btn_Num5.Name = "Btn_Num5";
             this.Btn_Num5.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num5.TabIndex = 2;
+            this.Btn_Num5.TabStop = false;
             this.Btn_Num5.Text = "5";
             this.Btn_Num5.UseVisualStyleBackColor = false;
             this.Btn_Num5.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -309,6 +314,7 @@
             this.Btn_Num6.Name = "Btn_Num6";
             this.Btn_Num6.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num6.TabIndex = 2;
+            this.Btn_Num6.TabStop = false;
             this.Btn_Num6.Text = "6";
             this.Btn_Num6.UseVisualStyleBackColor = false;
             this.Btn_Num6.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -323,6 +329,7 @@
             this.Btn_Num7.Name = "Btn_Num7";
             this.Btn_Num7.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num7.TabIndex = 2;
+            this.Btn_Num7.TabStop = false;
             this.Btn_Num7.Text = "7";
             this.Btn_Num7.UseVisualStyleBackColor = false;
             this.Btn_Num7.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -337,6 +344,7 @@
             this.Btn_Num8.Name = "Btn_Num8";
             this.Btn_Num8.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num8.TabIndex = 2;
+            this.Btn_Num8.TabStop = false;
             this.Btn_Num8.Text = "8";
             this.Btn_Num8.UseVisualStyleBackColor = false;
             this.Btn_Num8.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -351,6 +359,7 @@
             this.Btn_Num9.Name = "Btn_Num9";
             this.Btn_Num9.Size = new System.Drawing.Size(46, 36);
             this.Btn_Num9.TabIndex = 2;
+            this.Btn_Num9.TabStop = false;
             this.Btn_Num9.Text = "9";
             this.Btn_Num9.UseVisualStyleBackColor = false;
             this.Btn_Num9.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -367,6 +376,7 @@
             this.Btn_Num0.Name = "Btn_Num0";
             this.Btn_Num0.Size = new System.Drawing.Size(98, 36);
             this.Btn_Num0.TabIndex = 2;
+            this.Btn_Num0.TabStop = false;
             this.Btn_Num0.Text = "0";
             this.Btn_Num0.UseVisualStyleBackColor = false;
             this.Btn_Num0.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -381,6 +391,7 @@
             this.Btn_Dot.Name = "Btn_Dot";
             this.Btn_Dot.Size = new System.Drawing.Size(46, 36);
             this.Btn_Dot.TabIndex = 2;
+            this.Btn_Dot.TabStop = false;
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
             this.Btn_Dot.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -395,6 +406,7 @@
             this.Btn_Mul.Name = "Btn_Mul";
             this.Btn_Mul.Size = new System.Drawing.Size(46, 36);
             this.Btn_Mul.TabIndex = 2;
+            this.Btn_Mul.TabStop = false;
             this.Btn_Mul.Text = "*";
             this.Btn_Mul.UseVisualStyleBackColor = false;
             this.Btn_Mul.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -409,6 +421,7 @@
             this.Btn_Sub.Name = "Btn_Sub";
             this.Btn_Sub.Size = new System.Drawing.Size(46, 36);
             this.Btn_Sub.TabIndex = 2;
+            this.Btn_Sub.TabStop = false;
             this.Btn_Sub.Text = "-";
             this.Btn_Sub.UseVisualStyleBackColor = false;
             this.Btn_Sub.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -423,6 +436,7 @@
             this.Btn_Add.Name = "Btn_Add";
             this.Btn_Add.Size = new System.Drawing.Size(46, 36);
             this.Btn_Add.TabIndex = 2;
+            this.Btn_Add.TabStop = false;
             this.Btn_Add.Text = "+";
             this.Btn_Add.UseVisualStyleBackColor = false;
             this.Btn_Add.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -437,6 +451,7 @@
             this.Btn_Div.Name = "Btn_Div";
             this.Btn_Div.Size = new System.Drawing.Size(46, 36);
             this.Btn_Div.TabIndex = 2;
+            this.Btn_Div.TabStop = false;
             this.Btn_Div.Text = "/";
             this.Btn_Div.UseVisualStyleBackColor = false;
             this.Btn_Div.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -451,6 +466,7 @@
             this.Btn_Rec.Name = "Btn_Rec";
             this.Btn_Rec.Size = new System.Drawing.Size(46, 36);
             this.Btn_Rec.TabIndex = 2;
+            this.Btn_Rec.TabStop = false;
             this.Btn_Rec.Text = "1/x";
             this.Btn_Rec.UseVisualStyleBackColor = false;
             this.Btn_Rec.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -466,6 +482,7 @@
             this.Btn_Done.Name = "Btn_Done";
             this.Btn_Done.Size = new System.Drawing.Size(46, 75);
             this.Btn_Done.TabIndex = 2;
+            this.Btn_Done.TabStop = false;
             this.Btn_Done.Text = "=";
             this.Btn_Done.UseVisualStyleBackColor = false;
             this.Btn_Done.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -480,6 +497,7 @@
             this.Btn_Per.Name = "Btn_Per";
             this.Btn_Per.Size = new System.Drawing.Size(46, 36);
             this.Btn_Per.TabIndex = 2;
+            this.Btn_Per.TabStop = false;
             this.Btn_Per.Text = "%";
             this.Btn_Per.UseVisualStyleBackColor = false;
             this.Btn_Per.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -495,6 +513,7 @@
             this.Btn_Del.Name = "Btn_Del";
             this.Btn_Del.Size = new System.Drawing.Size(46, 36);
             this.Btn_Del.TabIndex = 2;
+            this.Btn_Del.TabStop = false;
             this.Btn_Del.Text = "←";
             this.Btn_Del.UseVisualStyleBackColor = false;
             this.Btn_Del.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -509,6 +528,7 @@
             this.Btn_CE.Name = "Btn_CE";
             this.Btn_CE.Size = new System.Drawing.Size(46, 36);
             this.Btn_CE.TabIndex = 2;
+            this.Btn_CE.TabStop = false;
             this.Btn_CE.Text = "CE";
             this.Btn_CE.UseVisualStyleBackColor = false;
             this.Btn_CE.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -523,6 +543,7 @@
             this.Btn_Clear.Name = "Btn_Clear";
             this.Btn_Clear.Size = new System.Drawing.Size(46, 36);
             this.Btn_Clear.TabIndex = 2;
+            this.Btn_Clear.TabStop = false;
             this.Btn_Clear.Text = "C";
             this.Btn_Clear.UseVisualStyleBackColor = false;
             this.Btn_Clear.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -538,6 +559,7 @@
             this.Btn_Negate.Name = "Btn_Negate";
             this.Btn_Negate.Size = new System.Drawing.Size(46, 36);
             this.Btn_Negate.TabIndex = 2;
+            this.Btn_Negate.TabStop = false;
             this.Btn_Negate.Text = "±";
             this.Btn_Negate.UseVisualStyleBackColor = false;
             this.Btn_Negate.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -553,6 +575,7 @@
             this.Btn_Reagan.Name = "Btn_Reagan";
             this.Btn_Reagan.Size = new System.Drawing.Size(46, 36);
             this.Btn_Reagan.TabIndex = 2;
+            this.Btn_Reagan.TabStop = false;
             this.Btn_Reagan.Text = "√";
             this.Btn_Reagan.UseVisualStyleBackColor = false;
             this.Btn_Reagan.Click += new System.EventHandler(this.Btn_Calculator_Click);
@@ -570,6 +593,7 @@
             this.Btn_MClear.Name = "Btn_MClear";
             this.Btn_MClear.Size = new System.Drawing.Size(46, 36);
             this.Btn_MClear.TabIndex = 2;
+            this.Btn_MClear.TabStop = false;
             this.Btn_MClear.Text = "MC";
             this.Btn_MClear.UseVisualStyleBackColor = false;
             this.Btn_MClear.Click += new System.EventHandler(this.Btn_Memory_Click);
@@ -584,6 +608,7 @@
             this.Btn_MRead.Name = "Btn_MRead";
             this.Btn_MRead.Size = new System.Drawing.Size(46, 36);
             this.Btn_MRead.TabIndex = 2;
+            this.Btn_MRead.TabStop = false;
             this.Btn_MRead.Text = "MR";
             this.Btn_MRead.UseVisualStyleBackColor = false;
             this.Btn_MRead.Click += new System.EventHandler(this.Btn_Memory_Click);
@@ -598,6 +623,7 @@
             this.Btn_MSave.Name = "Btn_MSave";
             this.Btn_MSave.Size = new System.Drawing.Size(46, 36);
             this.Btn_MSave.TabIndex = 2;
+            this.Btn_MSave.TabStop = false;
             this.Btn_MSave.Text = "MS";
             this.Btn_MSave.UseVisualStyleBackColor = false;
             this.Btn_MSave.Click += new System.EventHandler(this.Btn_Memory_Click);
@@ -612,6 +638,7 @@
             this.Btn_M_Add.Name = "Btn_M_Add";
             this.Btn_M_Add.Size = new System.Drawing.Size(46, 36);
             this.Btn_M_Add.TabIndex = 2;
+            this.Btn_M_Add.TabStop = false;
             this.Btn_M_Add.Text = "M+";
             this.Btn_M_Add.UseVisualStyleBackColor = false;
             this.Btn_M_Add.Click += new System.EventHandler(this.Btn_Memory_Click);
@@ -626,6 +653,7 @@
             this.Btn__M_Sub.Name = "Btn__M_Sub";
             this.Btn__M_Sub.Size = new System.Drawing.Size(46, 36);
             this.Btn__M_Sub.TabIndex = 2;
+            this.Btn__M_Sub.TabStop = false;
             this.Btn__M_Sub.Text = "M-";
             this.Btn__M_Sub.UseVisualStyleBackColor = false;
             this.Btn__M_Sub.Click += new System.EventHandler(this.Btn_Memory_Click);

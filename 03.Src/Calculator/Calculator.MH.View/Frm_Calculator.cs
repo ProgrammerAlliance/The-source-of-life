@@ -40,22 +40,22 @@ namespace Calculator
             switch (strBtn)
             {
                 case ".":
-                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Point);
+                    calc.InputSymbol(Core.SymbolEnum.Point);
                     break;
                 case "±":
-                    calc.InputSymbol(Core.Operation.Enum.SymbolEnum.Sign);
+                    calc.InputSymbol(Core.SymbolEnum.Sign);
                     break;
                 case "+":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Add);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Add);
                     break;
                 case "-":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Sub);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Sub);
                     break;
                 case "*":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Mul);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Mul);
                     break;
                 case "/":
-                    calc.InputArithmetic(Core.Operation.Enum.ArithmeticEnum.Div);
+                    calc.InputArithmetic(Core.ArithmeticEnum.Div);
                     break;
                 case "%":
                     calc.InputOneOperation(Core.SpecialEnum.Percent);

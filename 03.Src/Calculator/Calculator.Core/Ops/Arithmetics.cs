@@ -26,7 +26,7 @@ namespace Calculator.Core.Ops
                 exp.L = exp.R;
                 return exp;
             }
-            if(exp.IsOpt)
+            if(exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 exp.Opt = this._op;
                 return exp;
@@ -45,7 +45,6 @@ namespace Calculator.Core.Ops
                      R = oldExp.DoCalc(),
                     RExp = null,
                     Opt = this._op,
-                    IsOpt = true,
                 };
                 exp.L = exp.R;
               string str=   exp.LExp.ToString();

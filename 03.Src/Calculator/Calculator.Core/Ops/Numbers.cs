@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
+using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Ops
 {
@@ -18,9 +19,14 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            if (exp.IsOpt)
+            if (exp.IsOpt==TypeEnum.CommonSymbol||exp.IsOpt==TypeEnum.SpecialSymbol)
             {
                 exp.R = "0";
+                if(exp.IsOpt==TypeEnum.SpecialSymbol)
+                {
+                    exp.Opt = new object();
+                    exp.RExp = null;
+                }
             }
             //判断是否已经满16个数字
             if (exp.R.Replace(".", "").Replace("-", "").Length == 16)

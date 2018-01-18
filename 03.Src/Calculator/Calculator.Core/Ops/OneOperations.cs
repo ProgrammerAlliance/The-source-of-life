@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
-using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Ops
 {
@@ -18,21 +17,29 @@ namespace Calculator.Core.Ops
         }
         public Expression Process(Expression exp)
         {
-            if (true)
+            if (exp.Opt == null)
             {
-
+                exp.Opt = _op;
+                var old = exp;
+                exp = new Expression
+                {
+                    RExp = old
+                };
+                exp.R = exp.RExp.DoCalc();
             }
-            var oldRExp = exp.RExp;
-            exp.RExp = new Expression
+            else
             {
-                L = exp.L.Length == 0 ? "0" : exp.L,
-                R = exp.R,
-                Opt = this._op,
-                RExp = oldRExp
-            };
-            exp.R = exp.RExp.DoCalc();
-            exp.RExp.L = null;
-
+                var oldRExp = exp.RExp;
+                exp.RExp = new Expression
+                {
+                    L = exp.L.Length == 0 ? "0" : exp.L,
+                    R = exp.R,
+                    Opt = this._op,
+                    RExp = oldRExp
+                };
+                exp.R = exp.RExp.DoCalc();
+                exp.RExp.L = null;
+            }
             return exp;
         }
     }
