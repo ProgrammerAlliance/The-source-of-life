@@ -50,27 +50,33 @@ namespace Calculator.Core.SDK
         public string DoCalc()
         {
             string result = "";
-            if (Opt is ArithmeticEnum)
-            {
-                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                result = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
-            }
-            else if (Opt is SpecialEnum)
-            {
-                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
-                switch ((SpecialEnum)Opt)
+           
+                if (Opt is ArithmeticEnum)
                 {
-                    case SpecialEnum.Percent:
-                        var Popt = new Percent();
-                        string str = this.L;
-                        result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
-                        break;
-                    default:
-                        result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
-                        break;
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                    result = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
                 }
-            }
-            return result;
+                else if (Opt is SpecialEnum)
+                {
+                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                    switch ((SpecialEnum)Opt)
+                    {
+                        case SpecialEnum.Percent:
+                            var Popt = new Percent();
+                            string str = this.L;
+                            result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                            break;
+                        default:
+                            result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+                            break;
+                    }
+                }
+           
+           
+                return result;
+            
+           
+           
         }
 
         /// <summary>

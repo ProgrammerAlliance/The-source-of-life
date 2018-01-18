@@ -1,23 +1,30 @@
-﻿using System;
-using Calculator.Core.SDK;
-
-namespace Calculator.Core.Opt
+﻿namespace Calculator.Core.Opt
 {
-    /// <summary>
-    /// todo: mh
-    /// </summary>
+
     public class Percent : ISpecialOperation
     {
-        public double GetResult(double number)
+        /// <summary>
+        /// 百分号计算
+        /// </summary>
+        public double GetResult(double right)
         {
             return 0;
         }
-
-        public double GetResult(double left, double number)
+        /// <summary>
+        /// 重载计算方法
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public double GetResult(double left, double right)
         {
-            return (left*number) / 100;
+            return (left* right) / 100;
         }
-
+        /// <summary>
+        /// 百分号算式
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public string GetToString(string num)
         {
             return num;

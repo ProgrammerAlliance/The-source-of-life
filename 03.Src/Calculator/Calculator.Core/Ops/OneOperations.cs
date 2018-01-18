@@ -18,33 +18,38 @@ namespace Calculator.Core.Ops
         }
         public Expression Process(Expression exp)
         {
-            if (exp.Opt == null)
+            try
             {
-                exp.Opt = _op;
-                exp.L = "0";
-                var old = exp;
-                exp = new Expression
+                if (exp.Opt == null)
                 {
-                    LExp = old,
-                    R = old.DoCalc()
-                };
-                exp.LExp.L = null;
+                    exp.Opt = _op;
+                    var old = exp;
+                    exp = new Expression
+                    {
+                        RExp = old
+                    };
+                    exp.R = exp.RExp.DoCalc();
+                }
+                else
+                {
+                    var oldRExp = exp.RExp;
+                    exp.RExp = new Expression
+                    {
+                        L = exp.L.Length == 0 ? "0" : exp.L,
+                        R = exp.R,
+                        Opt = this._op,
+                        RExp = oldRExp
+                    };
+                    exp.R = exp.RExp.DoCalc();
+                    exp.RExp.L = null;
+                }
             }
-            else
+            catch (CalcException e)
             {
-                var oldRExp = exp.RExp;
-                exp.RExp = new Expression
-                {
-                    L = exp.L.Length == 0 ? "0" : exp.L,
-                    R = exp.R,
-                    Opt = this._op,
-                    RExp = oldRExp
-                };
-                exp.R = exp.RExp.DoCalc();
-                exp.RExp.L = null;
+                exp.EV = e.Message;
             }
-            exp.EV = exp.R;
-            return exp;
+            
+                return exp;
         }
     }
 }

@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
-
-namespace Calculator.Core
+﻿namespace Calculator.Core
 {
+    /// <summary>
+    /// 平方
+    /// </summary>
     public class Square:ISpecialOperation
     {
-        string result = "";
-
-        public double GetResult(double number)
+        public double GetResult(double right)
         {
             double result = 0;
-            result = number * number;
+            result = right * right;
             return result;
         }
 
         public string GetToString(string num)
         {
-            return "sqr(" + num.ToString() + ")";
+            return $"sqr({num})";
 
         }
     }

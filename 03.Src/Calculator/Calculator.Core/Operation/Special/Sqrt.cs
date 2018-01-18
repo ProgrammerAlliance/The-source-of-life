@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
 
 namespace Calculator.Core
 {
     /// <summary>
-    /// todo: wr
+    /// 开根号
     /// </summary>
     public class Sqrt : ISpecialOperation
     {
-        public double GetResult(double number)
+        public double GetResult(double right)
         {
+
             double result = 0;
-            result = Math.Sqrt(number);
-            return result;
+            if (right < 0)
+            {
+                throw new CalcException("无效输入");
+            }
+            else
+            {
+                result = Math.Sqrt(right);
+                return result;
+            }
+           
         }
 
         public string GetToString(string num)

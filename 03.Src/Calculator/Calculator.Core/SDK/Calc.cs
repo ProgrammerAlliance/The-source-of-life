@@ -34,7 +34,7 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
-            if (Exp.IsOpt == TypeEnum.CommonSymbol)
+            if (Exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 Exp.IsCreateNew = true;
             }
@@ -71,7 +71,7 @@ namespace Calculator.Core.SDK
         public void InputOneOperation(SpecialEnum op)
         {
             IOps opt = new OneOperations(op);
-            Exp = opt.Process(Exp);
+            Exp=opt.Process(Exp);
             Exp.IsOpt = TypeEnum.SpecialSymbol;
             Exp.IsCreateNew = true;
         }
