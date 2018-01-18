@@ -33,6 +33,7 @@ namespace Calculator.Core.Ops
                         {
                             Opt = _op,
                             R = exp.R,
+                            IsOpt = TypeEnum.SpecialSymbol,
                         };
                         exp.EV = exp.R = exp.RExp.DoCalc();
                     }
@@ -57,6 +58,7 @@ namespace Calculator.Core.Ops
                                 RExp = oldRExp,
                                 Opt = _op,
                                 R = oldRExp.DoCalc(),
+                                IsOpt=TypeEnum.SpecialSymbol,
                             };
                             exp.EV = exp.R = exp.RExp.DoCalc();
                         }
@@ -67,6 +69,7 @@ namespace Calculator.Core.Ops
             catch (CalcException e)
             {
                 exp.EV = e.Message;
+                exp.Locked = true;
             }
             return exp;
         }

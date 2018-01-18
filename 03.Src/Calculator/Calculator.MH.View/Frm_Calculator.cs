@@ -100,6 +100,17 @@ namespace Calculator
         }
 
         /// <summary>
+        /// 按钮按下时按钮变色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Click_Down(object sender, KeyEventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
@@ -138,5 +149,6 @@ namespace Calculator
             }
             Lab_Formula.Text = result;
         }
+
     }
 }
