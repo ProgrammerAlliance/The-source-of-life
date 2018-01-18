@@ -14,7 +14,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            switch (_op)
+            switch (_op) 
             {
                 case ClearEnum.C:
                     exp = new Expression()
@@ -34,11 +34,10 @@ namespace Calculator.Core.Ops
                     exp.R = "0";
                     exp.EV = exp.R;
                     //特殊运算+CE：
-
-                    if ("".Equals(exp.L)&&exp.RExp!=null)
-                    {
-                        exp.Opt = null;
-                    }
+                    //if ("".Equals(exp.L)&&exp.RExp!=null&&exp.Opt is SpecialEnum)
+                    //{
+                    //    exp.Opt = null;
+                    //}
 
                     break;
 
