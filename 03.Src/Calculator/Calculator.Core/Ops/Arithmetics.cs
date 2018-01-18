@@ -24,11 +24,13 @@ namespace Calculator.Core.Ops
             {
                 exp.Opt = this._op;
                 exp.L = exp.R;
+                exp.EV = exp.R;
                 return exp;
             }
             if(exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 exp.Opt = this._op;
+                exp.EV = exp.R;
                 return exp;
             }
 
@@ -49,6 +51,7 @@ namespace Calculator.Core.Ops
                 exp.L = exp.R;
               string str=   exp.LExp.ToString();
             }
+            exp.EV = exp.R;
             return exp;
         }
 

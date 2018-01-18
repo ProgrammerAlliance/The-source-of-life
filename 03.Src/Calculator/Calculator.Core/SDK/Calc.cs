@@ -18,6 +18,7 @@ namespace Calculator.Core.SDK
             {
                 L = "",
                 R = "0",
+                EV = "0",
                 LExp = null,
                 RExp = null,
                 Opt = null,
@@ -89,8 +90,10 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputEqual()
         {
+
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
+            Exp.IsOpt = true;
             //1.直接点
 
             //2.数字->
@@ -117,7 +120,7 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public string R()
         {
-            return Exp.R;
+            return Exp.EV;
         }
 
         /// <summary>

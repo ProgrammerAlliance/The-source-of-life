@@ -25,6 +25,7 @@ namespace Calculator.Core.Ops
                     {
                         L = "",
                         R = "0",
+                        EV = "0",
                         LExp = null,
                         RExp = null,
                         Opt = null,
@@ -34,7 +35,7 @@ namespace Calculator.Core.Ops
                 case ClearEnum.CE:
                     //正常情况：
                     exp.R = "0";
-
+                    exp.EV = exp.R;
                     //特殊运算+CE：
 
                     if ("".Equals(exp.L))
@@ -47,7 +48,7 @@ namespace Calculator.Core.Ops
                 case ClearEnum.Del:
                     //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
-
+                    exp.EV = exp.R;
                     //运算+Del
                     //无响应
                     break;

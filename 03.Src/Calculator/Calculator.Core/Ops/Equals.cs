@@ -9,20 +9,20 @@ namespace Calculator.Core.Ops
 {
     public class Equals : IOps
     {
-        string temp = null;
-
         public Expression Process(Expression exp)
         {
-            if (temp == null)
-            {
-                temp = exp.R;
-            }
-            else
-            {
-                exp.L = temp;
-            }
-            exp.R = exp.DoCalc();
-            
+            exp.L = exp.DoCalc();
+            //if (temp == null)
+            //{
+            //    temp = exp.R;
+            //}
+            //else
+            //{
+            //    exp.L = exp.R;
+            //    exp.R = temp;
+            //}
+            //exp.R = exp.DoCalc();
+            exp.EV = exp.L;
             return exp;
         }
     }
