@@ -22,6 +22,7 @@ namespace Calculator.Core.SDK
                 RExp = null,
                 Opt = null,
                 IsCreateNew = false,
+                IsOpt = TypeEnum.Equal,
             };
         }
 

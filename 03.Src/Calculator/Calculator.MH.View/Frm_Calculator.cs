@@ -33,7 +33,7 @@ namespace Calculator
             calc.InputNumber(Convert.ToInt32(((Button)sender).Text));
             ScreenDisplay();
         }
-        
+
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
@@ -103,7 +103,21 @@ namespace Calculator
         /// </summary>
         public void ScreenDisplay()
         {
-            Lab_Result.Text = calc.R();
+            string str = calc.R();
+            if(str.Length<14)
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
+            }
+            else if (str.Length <17)
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
+            }
+            else
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
+
+            }
+            Lab_Result.Text = str;
             Lab_Formula.Text = calc.GetFormula();
         }
 

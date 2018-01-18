@@ -50,30 +50,25 @@ namespace Calculator.Core.SDK
         public string DoCalc()
         {
             string result = "";
-           
-                if (Opt is ArithmeticEnum)
+            if (Opt is ArithmeticEnum)
+            {
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                result = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+            }
+            else if (Opt is SpecialEnum)
+            {
+                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                switch ((SpecialEnum)Opt)
                 {
-                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                    result = opt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                    case SpecialEnum.Percent:
+                        var Popt = new Percent();
+                        result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
+                        break;
+                    default:
+                        result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
+                        break;
                 }
-                else if (Opt is SpecialEnum)
-                {
-                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
-                    switch ((SpecialEnum)Opt)
-                    {
-                        case SpecialEnum.Percent:
-                            var Popt = new Percent();
-                            string str = this.L;
-                            result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
-                            break;
-                        default:
-                            result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
-                            break;
-                    }
-                }
-           
-            
-            
+            }
             return result;
         }
 
@@ -85,7 +80,7 @@ namespace Calculator.Core.SDK
         {
             string str = "";
 
-            if (Opt == null || IsOpt == TypeEnum.Equal)
+            if (IsOpt == TypeEnum.Equal)
             {
                 return str;
             }
@@ -95,15 +90,62 @@ namespace Calculator.Core.SDK
                 var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
                 str += LExp.ToString() + opt.GetToString(LExp.R);
             }
-            else
+            else if (RExp != null)
             {
-                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                str = opt.GetToString(L);
+                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
+                str += opt.GetToString(RExp.ToString());
             }
+            else if (LExp == null)
+            {
+                if (Opt is ArithmeticEnum)
+                {
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                    str = opt.GetToString(L);
+                }
+                else if (Opt is SpecialEnum)
+                {
+                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                    str = opt.GetToString(R);
+                }
+            }
+            else if(RExp==null)
+            {
+                return R;
+            }
+
 
 
             return str;
 
+
+
+            //if (LExp != null || RExp != null)
+            //{
+            //    if (LExp != null)
+            //    {
+            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+            //        str += LExp.ToString() + opt.GetToString(LExp.R);
+            //    }
+            //    if (RExp != null)
+            //    {
+            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
+            //        str += opt.GetToString(RExp.ToString());
+            //    }
+            //}
+            //else
+            //{
+            //    if (Opt is ArithmeticEnum)
+            //    {
+            //        string str2 = R;
+            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+            //        str = opt.GetToString(L);
+            //    }
+            //    else
+            //    {
+            //        return R;
+            //    }
+            //}
+            //return str;
         }
     }
 }
