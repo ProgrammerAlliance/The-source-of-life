@@ -19,6 +19,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
+            exp.R = Convert.ToDouble(exp.R).ToString();
             //1.第一次点 运算，不需要实例化新对象
             if (exp.Opt == null)
             {

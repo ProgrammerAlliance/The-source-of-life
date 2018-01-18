@@ -26,6 +26,7 @@ namespace Calculator.Core.Ops
                         RExp = null,
                         Opt = null,
                         IsCreateNew = false,
+                        IsOpt = TypeEnum.Equal,
                     };
                     break;
                 case ClearEnum.CE:
