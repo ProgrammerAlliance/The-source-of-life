@@ -11,7 +11,6 @@ namespace Calculator.Core.SDK
     public class Calc
     {
         Expression Exp { get; set; }
-
         public Calc()
         {
             Exp = new Expression
@@ -49,7 +48,6 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Symbols(op);
             Exp = opt.Process(Exp);
-            // Exp.IsOpt = false;
         }
 
         /// <summary>
