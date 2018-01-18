@@ -1,4 +1,5 @@
-﻿using Calculator.Core.Opt;
+﻿using Calculator.Core.Operation.Enum;
+using Calculator.Core.Opt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Calculator.Core.SDK
 {
     public class Expression
     {
-        public bool IsOpt;
+        public TypeEnum IsOpt;
 
         /// <summary>
         /// 是否需要创建新的表达式
@@ -82,9 +83,13 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public override string ToString()
         {
-
             string str = "";
-            if (LExp == null && RExp == null && Opt == null) return str;
+
+            if (Opt == null)
+            {
+                return str;
+            }
+
             if (LExp != null)
             {
                 var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
@@ -92,33 +97,57 @@ namespace Calculator.Core.SDK
             }
             else if (RExp != null)
             {
-                if ((SpecialEnum)RExp.Opt == SpecialEnum.Percent)
-                {
-                    str += R;
-                }
-                else
-                {
-                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
-                    str += opt.GetToString((RExp.ToString()));
-                }
+                str += RExp.ToString();
             }
-            else if (L != null)
+            else if (LExp == null)
             {
-                if (Opt is ArithmeticEnum)
-                {
-                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                    str += opt.GetToString(this.L);
-                }
-                else if (Opt is SpecialEnum)
-                {
-                    var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
-                    str += opt.GetToString(R);
-                }
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                str = opt.GetToString(L);
             }
-            else
-            {
-                return R;
-            }
+
+
+
+
+
+
+
+
+
+            //if (LExp == null && RExp == null && Opt == null) return str;
+            //if (LExp != null)
+            //{
+            //    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+            //    str += LExp.ToString() + opt.GetToString(LExp.R);
+            //}
+            //else if (RExp != null)
+            //{
+            //    if ((SpecialEnum)RExp.Opt == SpecialEnum.Percent)
+            //    {
+            //        str += R;
+            //    }
+            //    else
+            //    {
+            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
+            //        str += opt.GetToString((RExp.ToString()));
+            //    }
+            //}
+            //else if (L != null)
+            //{
+            //    if (Opt is ArithmeticEnum)
+            //    {
+            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+            //        str += opt.GetToString(this.L);
+            //    }
+            //    else if (Opt is SpecialEnum)
+            //    {
+            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+            //        str += opt.GetToString(R);
+            //    }
+            //}
+            //else
+            //{
+            //    return R;
+            //}
             return str;
         }
     }

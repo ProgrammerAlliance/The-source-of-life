@@ -38,8 +38,13 @@ namespace Calculator.Core.Ops
                     exp.EV = exp.R;
                     //特殊运算+CE：
 
+                    if ("".Equals(exp.L))
+                    {
+                        exp.Opt = null;
+                    }
 
                     break;
+
                 case ClearEnum.Del:
                     //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
@@ -48,6 +53,8 @@ namespace Calculator.Core.Ops
                     //无响应
                     break;
             }
+
+
             return exp;
         }
     }

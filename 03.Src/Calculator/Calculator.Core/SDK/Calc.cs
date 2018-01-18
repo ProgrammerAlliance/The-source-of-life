@@ -22,7 +22,6 @@ namespace Calculator.Core.SDK
                 RExp = null,
                 Opt = null,
                 IsCreateNew = false,
-                IsOpt = false,
             };
         }
 
@@ -34,11 +33,11 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
-            if (Exp.IsOpt)
+            if (Exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 Exp.IsCreateNew = true;
             }
-            Exp.IsOpt = false;
+            Exp.IsOpt = TypeEnum.Number;
         }
 
         /// <summary>
@@ -49,7 +48,7 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Symbols(op);
             Exp = opt.Process(Exp);
-            Exp.IsOpt = false;
+            // Exp.IsOpt = false;
         }
 
         /// <summary>
@@ -60,7 +59,7 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Arithmetics(op);
             Exp = opt.Process(Exp);
-            Exp.IsOpt = true;
+            Exp.IsOpt = TypeEnum.CommonSymbol;
             Exp.IsCreateNew = false;
         }
 
@@ -72,6 +71,8 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new OneOperations(op);
             opt.Process(Exp);
+            Exp.IsOpt = TypeEnum.SpecialSymbol;
+            Exp.IsCreateNew = true;
         }
 
         /// <summary>
