@@ -42,8 +42,14 @@ namespace Calculator.Core.Ops
                     break;
 
                 case ClearEnum.Del:
+                    //输入等于号后删除键无效
+                    if(exp.IsOpt==TypeEnum.Equal)
+                    {
+                        return exp;
+                    }
                     //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
+                    exp.R = "-".Equals(exp.R) ? "0" : exp.R;
                     exp.EV = exp.R;
                     //运算+Del
                     //无响应
