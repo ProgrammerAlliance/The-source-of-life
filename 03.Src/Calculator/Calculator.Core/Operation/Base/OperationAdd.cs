@@ -1,25 +1,23 @@
 ﻿using Calculator.Core.Enum;
-using Calculator.Core.Opt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
     /// <summary>
-    /// todo: mh
+    /// 加法计算
     /// </summary>
     public class OperationAdd : IOperation
     {
-        public double GetResult(double number1, double number2)
+        public double GetResult(double left, double right)
         {
             double result = 0;
-            result = number1 + number2;
+            result = left + right;
             return result;
         }
-
+        /// <summary>
+        /// 加法算式
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public string GetToString(string num)
         {
             return num + (char)ArithmeticEnum.Add;

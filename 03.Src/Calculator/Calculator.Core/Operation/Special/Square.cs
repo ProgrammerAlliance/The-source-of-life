@@ -1,11 +1,14 @@
 ﻿namespace Calculator.Core
 {
+    /// <summary>
+    /// 平方
+    /// </summary>
     public class Square:ISpecialOperation
     {
-        public double GetResult(double number)
+        public double GetResult(double right)
         {
             double result = 0;
-            result = number * number;
+            result = right * right;
             return result;
         }
 

@@ -46,7 +46,7 @@ namespace Calculator.Core.Ops
             }
             catch (CalcException e)
             {
-                exp.R = e.Message;
+                exp.EV = e.Message;
             }
             
                 return exp;

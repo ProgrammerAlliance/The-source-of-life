@@ -71,7 +71,7 @@ namespace Calculator.Core.SDK
         public void InputOneOperation(SpecialEnum op)
         {
             IOps opt = new OneOperations(op);
-            opt.Process(Exp);
+            Exp=opt.Process(Exp);
             Exp.IsOpt = TypeEnum.SpecialSymbol;
             Exp.IsCreateNew = true;
         }

@@ -7,19 +7,21 @@ using Calculator.Core.SDK;
 
 namespace Calculator.Core
 {
-
+    /// <summary>
+    /// 倒数
+    /// </summary>
     public class Reciprocal : ISpecialOperation
     {
-        public double GetResult(double number)
+        public double GetResult(double right)
         {
             double result = 0;
-            if (number == 0)
+            if (right == 0)
             {
                 throw new CalcException("0没有倒数!");
             }
             else
             {
-                result = 1 / number;
+                result = 1 / right;
             }
             return result;
         }

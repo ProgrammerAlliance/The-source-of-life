@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
+    /// <summary>
+    /// 二目运算工厂
+    /// </summary>
     public class OperationFactory
     {
         public static IOperation CreatOperation(ArithmeticEnum? oe)
