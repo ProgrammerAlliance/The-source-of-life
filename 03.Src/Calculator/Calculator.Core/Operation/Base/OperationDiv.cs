@@ -1,4 +1,5 @@
-﻿using Calculator.Core.Opt;
+﻿using Calculator.Core.Enum;
+using Calculator.Core.Opt;
 using System;
 using System.Collections.Generic;
 using System.Linq;

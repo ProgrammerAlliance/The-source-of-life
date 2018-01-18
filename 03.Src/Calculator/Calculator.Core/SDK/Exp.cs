@@ -1,4 +1,5 @@
-﻿using Calculator.Core.Opt;
+﻿using Calculator.Core.Enum;
+using Calculator.Core.Opt;
 using System;
 
 namespace Calculator.Core.SDK
@@ -92,7 +93,7 @@ namespace Calculator.Core.SDK
                     var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
                     str += opt.GetToString(LExp.ToString());
                 }
-                else
+                if(RExp!=null)
                 {
                     
                 }

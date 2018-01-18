@@ -1,6 +1,7 @@
 ﻿using Calculator.Core.SDK;
 using System;
 using System.Windows.Forms;
+using Calculator.Core.Enum;
 
 
 namespace Calculator
@@ -39,31 +40,31 @@ namespace Calculator
             switch (strBtn)
             {
                 case ".":
-                    calc.InputSymbol(Core.SymbolEnum.Point);
+                    calc.InputSymbol(SymbolEnum.Point);
                     break;
                 case "±":
-                    calc.InputSymbol(Core.SymbolEnum.Sign);
+                    calc.InputSymbol(SymbolEnum.Sign);
                     break;
                 case "+":
-                    calc.InputArithmetic(Core.ArithmeticEnum.Add);
+                    calc.InputArithmetic(ArithmeticEnum.Add);
                     break;
                 case "-":
-                    calc.InputArithmetic(Core.ArithmeticEnum.Sub);
+                    calc.InputArithmetic(ArithmeticEnum.Sub);
                     break;
                 case "*":
-                    calc.InputArithmetic(Core.ArithmeticEnum.Mul);
+                    calc.InputArithmetic(ArithmeticEnum.Mul);
                     break;
                 case "/":
-                    calc.InputArithmetic(Core.ArithmeticEnum.Div);
+                    calc.InputArithmetic(ArithmeticEnum.Div);
                     break;
                 case "%":
-                    calc.InputOneOperation(Core.SpecialEnum.Percent);
+                    calc.InputOneOperation(SpecialEnum.Percent);
                     break;
                 case "1/x":
-                    calc.InputOneOperation(Core.SpecialEnum.Reciprocal);
+                    calc.InputOneOperation(SpecialEnum.Reciprocal);
                     break;
                 case "√":
-                    calc.InputOneOperation(Core.SpecialEnum.Sqrt);
+                    calc.InputOneOperation(SpecialEnum.Sqrt);
                     break;
                 case "MC":
                 case "MS":
@@ -73,13 +74,13 @@ namespace Calculator
                     calc.InputMemory(strBtn);
                     break;
                 case "←":
-                    calc.InputClear(Core.ClearEnum.Del);
+                    calc.InputClear(ClearEnum.Del);
                     break;
                 case "CE":
-                    calc.InputClear(Core.ClearEnum.CE);
+                    calc.InputClear(ClearEnum.CE);
                     break;
                 case "C":
-                    calc.InputClear(Core.ClearEnum.C);
+                    calc.InputClear(ClearEnum.C);
                     break;
                 case "=":
                     calc.InputEqual();

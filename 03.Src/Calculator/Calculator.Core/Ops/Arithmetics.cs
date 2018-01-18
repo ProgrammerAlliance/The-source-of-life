@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
+using Calculator.Core.Enum;
 
 namespace Calculator.Core.Ops
 {
