@@ -1,6 +1,5 @@
 ﻿using Calculator.Core.Opt;
 using System;
-using Calculator.Core;
 
 namespace Calculator.Core.SDK
 {
@@ -81,27 +80,23 @@ namespace Calculator.Core.SDK
         {
             string str = "";
 
-            if (Opt == null)
+            if (Opt == null || IsOpt == TypeEnum.Equal)
             {
                 return str;
             }
 
-            if (LExp != null)
+            if (LExp != null || RExp != null)
             {
-                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                str += LExp.ToString() + opt.GetToString(LExp.R);
+                if (LExp != null)
+                {
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                    str += opt.GetToString(LExp.ToString());
+                }
+                else
+                {
+                    
+                }
             }
-            else if (RExp != null)
-            {
-                str += RExp.ToString();
-            }
-            else if (LExp == null)
-            {
-                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-                str = opt.GetToString(L);
-            }
-
-
 
 
 

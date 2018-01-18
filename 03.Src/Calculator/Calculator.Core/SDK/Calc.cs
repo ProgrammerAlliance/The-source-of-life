@@ -91,7 +91,7 @@ namespace Calculator.Core.SDK
         {
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
-            Exp.IsOpt = true;
+            Exp.IsOpt = TypeEnum.Equal;
         }
 
         /// <summary>

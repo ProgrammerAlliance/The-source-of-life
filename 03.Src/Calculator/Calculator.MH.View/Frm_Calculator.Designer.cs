@@ -35,6 +35,7 @@
             this.科学型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.程序员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.历史记录ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.复制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.粘贴ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +80,15 @@
             this.txt_Log = new System.Windows.Forms.TextBox();
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
+            this.数字分组IToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.基本BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.单位转换UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.日期计算DCtrlEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.工作表WToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.抵押ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.汽车租赁VToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.油耗mpgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.油耗1100kmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +115,13 @@
             this.标准型ToolStripMenuItem,
             this.科学型ToolStripMenuItem,
             this.程序员ToolStripMenuItem,
-            this.统计信息ToolStripMenuItem});
+            this.统计信息ToolStripMenuItem,
+            this.历史记录ToolStripMenuItem2,
+            this.数字分组IToolStripMenuItem,
+            this.基本BToolStripMenuItem,
+            this.单位转换UToolStripMenuItem,
+            this.日期计算DCtrlEToolStripMenuItem,
+            this.工作表WToolStripMenuItem});
             this.查看ToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Remove;
             this.查看ToolStripMenuItem.Name = "查看ToolStripMenuItem";
             this.查看ToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
@@ -117,28 +133,34 @@
             this.标准型ToolStripMenuItem.Checked = true;
             this.标准型ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.标准型ToolStripMenuItem.Name = "标准型ToolStripMenuItem";
-            this.标准型ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.标准型ToolStripMenuItem.Text = "标准型（T）           Alt+1";
+            this.标准型ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.标准型ToolStripMenuItem.Text = "标准型(T)           Alt+1";
             // 
             // 科学型ToolStripMenuItem
             // 
             this.科学型ToolStripMenuItem.Name = "科学型ToolStripMenuItem";
-            this.科学型ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.科学型ToolStripMenuItem.Text = "科学型（S）           Alt+2";
+            this.科学型ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.科学型ToolStripMenuItem.Text = "科学型(S)           Alt+2";
             // 
             // 程序员ToolStripMenuItem
             // 
             this.程序员ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.程序员ToolStripMenuItem.Name = "程序员ToolStripMenuItem";
-            this.程序员ToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.程序员ToolStripMenuItem.Text = "程序员（P）           Alt+3";
+            this.程序员ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.程序员ToolStripMenuItem.Text = "程序员(P)           Alt+3";
             // 
             // 统计信息ToolStripMenuItem
             // 
             this.统计信息ToolStripMenuItem.AutoSize = false;
             this.统计信息ToolStripMenuItem.Name = "统计信息ToolStripMenuItem";
             this.统计信息ToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
-            this.统计信息ToolStripMenuItem.Text = "统计信息（A）        Alt+4";
+            this.统计信息ToolStripMenuItem.Text = "统计信息(A)        Alt+4";
+            // 
+            // 历史记录ToolStripMenuItem2
+            // 
+            this.历史记录ToolStripMenuItem2.Name = "历史记录ToolStripMenuItem2";
+            this.历史记录ToolStripMenuItem2.Size = new System.Drawing.Size(245, 26);
+            this.历史记录ToolStripMenuItem2.Text = "历史记录(Y)        Ctrl+H";
             // 
             // 编辑ToolStripMenuItem
             // 
@@ -701,6 +723,65 @@
             this.labOfLine.Size = new System.Drawing.Size(252, 66);
             this.labOfLine.TabIndex = 7;
             // 
+            // 数字分组IToolStripMenuItem
+            // 
+            this.数字分组IToolStripMenuItem.Name = "数字分组IToolStripMenuItem";
+            this.数字分组IToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.数字分组IToolStripMenuItem.Text = "数字分组(I)";
+            // 
+            // 基本BToolStripMenuItem
+            // 
+            this.基本BToolStripMenuItem.Name = "基本BToolStripMenuItem";
+            this.基本BToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.基本BToolStripMenuItem.Text = "基本(B)              Ctrl+F4";
+            // 
+            // 单位转换UToolStripMenuItem
+            // 
+            this.单位转换UToolStripMenuItem.Name = "单位转换UToolStripMenuItem";
+            this.单位转换UToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.单位转换UToolStripMenuItem.Text = "单位转换(U)        Ctrl+U";
+            // 
+            // 日期计算DCtrlEToolStripMenuItem
+            // 
+            this.日期计算DCtrlEToolStripMenuItem.Name = "日期计算DCtrlEToolStripMenuItem";
+            this.日期计算DCtrlEToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.日期计算DCtrlEToolStripMenuItem.Text = "日期计算(D)        Ctrl+E";
+            // 
+            // 工作表WToolStripMenuItem
+            // 
+            this.工作表WToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.抵押ToolStripMenuItem,
+            this.汽车租赁VToolStripMenuItem,
+            this.油耗mpgToolStripMenuItem,
+            this.油耗1100kmToolStripMenuItem});
+            this.工作表WToolStripMenuItem.Name = "工作表WToolStripMenuItem";
+            this.工作表WToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.工作表WToolStripMenuItem.Text = "工作表(W)";
+            // 
+            // 抵押ToolStripMenuItem
+            // 
+            this.抵押ToolStripMenuItem.Name = "抵押ToolStripMenuItem";
+            this.抵押ToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.抵押ToolStripMenuItem.Text = "抵押(M)";
+            // 
+            // 汽车租赁VToolStripMenuItem
+            // 
+            this.汽车租赁VToolStripMenuItem.Name = "汽车租赁VToolStripMenuItem";
+            this.汽车租赁VToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.汽车租赁VToolStripMenuItem.Text = "汽车租赁(V)";
+            // 
+            // 油耗mpgToolStripMenuItem
+            // 
+            this.油耗mpgToolStripMenuItem.Name = "油耗mpgToolStripMenuItem";
+            this.油耗mpgToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.油耗mpgToolStripMenuItem.Text = "油耗(mpg)(F)";
+            // 
+            // 油耗1100kmToolStripMenuItem
+            // 
+            this.油耗1100kmToolStripMenuItem.Name = "油耗1100kmToolStripMenuItem";
+            this.油耗1100kmToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+            this.油耗1100kmToolStripMenuItem.Text = "油耗(1/100km)(U)";
+            // 
             // Frm_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -807,6 +888,16 @@
         public System.Windows.Forms.Label Lab_Register;
         private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.Label labOfLine;
+        private System.Windows.Forms.ToolStripMenuItem 历史记录ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem 数字分组IToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 基本BToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 单位转换UToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 日期计算DCtrlEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 工作表WToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 抵押ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 汽车租赁VToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 油耗mpgToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 油耗1100kmToolStripMenuItem;
     }
 }
 
