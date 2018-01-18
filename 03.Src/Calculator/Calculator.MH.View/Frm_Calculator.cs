@@ -98,11 +98,6 @@ namespace Calculator
 
         }
 
-        public void DisplaySome()
-        {
-            Lab_Result.Text = calc.R();
-        }
-
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>

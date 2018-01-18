@@ -19,13 +19,29 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            if (exp.IsOpt==TypeEnum.CommonSymbol||exp.IsOpt==TypeEnum.SpecialSymbol)
+            if(exp.IsOpt==TypeEnum.Equal)
+            {
+                exp = new Expression
+                {
+                    R = "0",
+                };
+            }
+            if(exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 exp.R = "0";
-                if(exp.IsOpt==TypeEnum.SpecialSymbol)
+            }
+
+            if (exp.IsOpt==TypeEnum.SpecialSymbol)
+            {
+                if (exp.Opt == null)
                 {
-                    exp.Opt = new object();
+                    exp.LExp = null;
+                    exp.R = "0";
+                }
+                else
+                {
                     exp.RExp = null;
+                    exp.R = "0";
                 }
             }
             //判断是否已经满16个数字

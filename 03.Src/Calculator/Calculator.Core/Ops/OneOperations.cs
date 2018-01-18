@@ -21,12 +21,14 @@ namespace Calculator.Core.Ops
             if (exp.Opt == null)
             {
                 exp.Opt = _op;
+                exp.L = "0";
                 var old = exp;
                 exp = new Expression
                 {
-                    RExp = old
+                    LExp = old,
+                    R = old.DoCalc()
                 };
-                exp.R = exp.RExp.DoCalc();
+                exp.LExp.L = null;
             }
             else
             {
@@ -41,6 +43,7 @@ namespace Calculator.Core.Ops
                 exp.R = exp.RExp.DoCalc();
                 exp.RExp.L = null;
             }
+            exp.EV = exp.R;
             return exp;
         }
     }
