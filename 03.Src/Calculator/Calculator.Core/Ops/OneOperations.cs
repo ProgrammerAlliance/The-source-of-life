@@ -20,7 +20,8 @@ namespace Calculator.Core.Ops
         {
             try
             {
-                if (exp.Opt == null) //一开始就按一目运算，只有此时当前EXp符号为空
+                //一开始就按一目运算，只有此时当前EXp符号为空
+                if (exp.Opt == null) 
                 {
                     exp.Opt = _op;
                     exp.EV = exp.DoCalc();
