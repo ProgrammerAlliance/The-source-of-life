@@ -1,7 +1,8 @@
-﻿using Calculator.Core.Enum;
+﻿using Calculator.Core.Operation.Enum;
 using Calculator.Core.Opt;
+using Calculator.Core.Opt.Operation.Special;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 一目运算工厂

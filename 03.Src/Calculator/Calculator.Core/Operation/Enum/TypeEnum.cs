@@ -1,4 +1,4 @@
-﻿namespace Calculator.Core.Enum
+﻿namespace Calculator.Core.Operation.Enum
 {
     /// <summary>
     /// 状态枚举

@@ -1,6 +1,7 @@
-﻿using Calculator.Core.Enum;
+﻿
+using Calculator.Core.Operation.Enum;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Base
 {
     /// <summary>
     /// 减法类

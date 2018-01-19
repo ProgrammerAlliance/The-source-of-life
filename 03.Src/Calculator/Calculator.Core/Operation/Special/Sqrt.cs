@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Calculator.Core.Core;
+using System;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 开根号

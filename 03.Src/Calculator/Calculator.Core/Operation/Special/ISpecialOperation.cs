@@ -1,6 +1,6 @@
 ﻿using Calculator.Core.SDK;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 一目运算和算式

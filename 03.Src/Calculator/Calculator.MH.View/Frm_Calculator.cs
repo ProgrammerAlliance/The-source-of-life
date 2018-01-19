@@ -1,4 +1,4 @@
-﻿using Calculator.Core.Enum;
+﻿using Calculator.Core.Operation.Enum;
 using Calculator.Core.SDK;
 using System;
 using System.Windows.Forms;

@@ -1,5 +1,8 @@
-﻿using Calculator.Core.Enum;
+﻿using Calculator.Core.Operation.Base;
+using Calculator.Core.Operation.Enum;
+using Calculator.Core.Operation.Special;
 using Calculator.Core.Opt;
+using Calculator.Core.Opt.Operation.Special;
 using System;
 
 namespace Calculator.Core.SDK

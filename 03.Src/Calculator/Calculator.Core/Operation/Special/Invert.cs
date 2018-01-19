@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Special
 {
     public class Invert : ISpecialOperation
     {

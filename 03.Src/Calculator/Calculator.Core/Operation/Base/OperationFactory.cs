@@ -1,12 +1,6 @@
-﻿using Calculator.Core.Enum;
-using Calculator.Core.Opt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Calculator.Core.Operation.Enum;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Base
 {
     /// <summary>
     /// 二目运算工厂

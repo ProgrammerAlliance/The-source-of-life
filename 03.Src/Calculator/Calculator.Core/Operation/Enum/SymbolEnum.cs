@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Calculator.Core.Enum
+namespace Calculator.Core.Operation.Enum
 {
     public enum SymbolEnum
     {

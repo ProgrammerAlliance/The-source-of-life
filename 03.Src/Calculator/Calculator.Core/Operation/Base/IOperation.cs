@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Base
 {
     /// <summary>
     /// 二目运算和算式

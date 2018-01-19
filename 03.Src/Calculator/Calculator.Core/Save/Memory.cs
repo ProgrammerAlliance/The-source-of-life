@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Calculator.Core
+namespace Calculator.Core.Save
 {
     /// <summary>
     /// 存储类

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Calculator.Core.SDK;
+using Calculator.Core.Core;
 
-namespace Calculator.Core
+namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 倒数

@@ -1,4 +1,6 @@
-﻿namespace Calculator.Core.Opt
+﻿using Calculator.Core.Operation.Special;
+
+namespace Calculator.Core.Opt.Operation.Special
 {
 
     public class Percent : ISpecialOperation

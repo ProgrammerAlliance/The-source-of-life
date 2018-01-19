@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator.Core
+namespace Calculator.Core.Core
 {
     /// <summary>
     /// 自定义异常

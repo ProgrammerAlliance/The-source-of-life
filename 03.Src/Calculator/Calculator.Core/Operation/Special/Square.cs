@@ -1,4 +1,4 @@
-﻿namespace Calculator.Core
+﻿namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 平方

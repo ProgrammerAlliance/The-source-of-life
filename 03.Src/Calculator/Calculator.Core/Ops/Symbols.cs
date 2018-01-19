@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
-using Calculator.Core.Enum;
+﻿using Calculator.Core.SDK;
+using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Ops
 {

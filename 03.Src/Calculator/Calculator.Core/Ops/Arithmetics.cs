@@ -1,6 +1,7 @@
 ﻿using System;
 using Calculator.Core.SDK;
-using Calculator.Core.Enum;
+using Calculator.Core.Operation.Enum;
+using Calculator.Core.Core;
 
 namespace Calculator.Core.Ops
 {

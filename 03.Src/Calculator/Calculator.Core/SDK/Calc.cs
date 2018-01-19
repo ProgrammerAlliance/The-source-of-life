@@ -1,6 +1,7 @@
-﻿using Calculator.Core.Enum;
-using Calculator.Core.MOps;
+﻿using Calculator.Core.MOps;
+using Calculator.Core.Operation.Enum;
 using Calculator.Core.Ops;
+using Calculator.Core.Save;
 using System;
 using System.Collections.Generic;
 using System.Linq;
