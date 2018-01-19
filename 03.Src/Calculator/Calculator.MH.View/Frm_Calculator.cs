@@ -1,6 +1,7 @@
 ﻿using Calculator.Core.Operation.Enum;
 using Calculator.Core.SDK;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -18,6 +19,7 @@ namespace Calculator.MH.View
 
         private void Calculator_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(900, 210);
             this.MaximizeBox = false;
             labOfLine.SendToBack();
             Lab_Result.Focus();
@@ -108,7 +110,7 @@ namespace Calculator.MH.View
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
-        {        
+        {
             try
             {
                 //显示结果  调整字号
