@@ -21,6 +21,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
+            return exp;
         }
 
         public Expression Process(Expression exp, Memory memory)
