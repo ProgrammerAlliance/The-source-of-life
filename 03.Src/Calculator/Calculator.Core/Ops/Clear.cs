@@ -34,7 +34,7 @@ namespace Calculator.Core.Ops
                     exp.R = "0";
                     exp.EV = exp.R;
                     //特殊运算+CE：
-                    if (exp.LExp==null&&exp.RExp!=null) {
+                    if (exp!=null) {
                         exp.RExp = null;
                     }
 
