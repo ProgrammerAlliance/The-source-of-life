@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator.Core.SDK;
+using System;
 using System.Collections.Generic;
 
 namespace Calculator.Core
@@ -11,66 +12,35 @@ namespace Calculator.Core
         /// <summary>
         /// Memory中存储的数
         /// </summary>
-        public double MemoryNumber { get; set; }
+        public string MemoryNumber = "0";
 
-        public void Add(double result)
+        public void Add(Expression exp)
         {
-            MemoryNumber += result;
+            double Mnum = Convert.ToDouble(MemoryNumber) + Convert.ToDouble(exp.EV); 
+            MemoryNumber = Mnum.ToString();
         }
 
-        public void Sub(double result)
+        public void Sub(Expression exp)
         {
-            MemoryNumber -= result;
+            double Mnum = Convert.ToDouble(MemoryNumber) - Convert.ToDouble(exp.EV);
+            MemoryNumber = Mnum.ToString();
         }
 
-    }
-
-    public class Memorys : List<Memory>
-    {
-        public double MemoryRead()
+        public void Clear()
         {
-            if (this != null)
-            {
-                return this[Count - 1].MemoryNumber;
-            }
-            else
-            {
-                throw new Exception("内存中没有内容");
-            }
+            MemoryNumber = "0";
         }
 
-        public void MemorySave(double result)
+        public void Save(Expression exp)
         {
-            Memory memory = new Memory();
-            memory.Add(result);
-            this.Add(memory);
+            MemoryNumber = exp.EV;
         }
 
-        public void MemoryAdd(double result)
+        public Expression Read(Expression exp)
         {
-            if (this == null)
-            {
-                MemorySave(result);
-            }
-            else
-            {
-                this[Count - 1].Add(result);
-            }
-        }
-
-        public void MemorySub(double result)
-        {
-            if (this == null)
-            {
-                Memory memory = new Memory();
-                memory.Sub(result);
-                this.Add(memory);
-            }
-            else
-            {
-                this[Count - 1].Sub(result);
-            }
+            exp.R = MemoryNumber;
+            exp.EV = MemoryNumber;
+            return exp;
         }
     }
-
 }
