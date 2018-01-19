@@ -103,34 +103,41 @@ namespace Calculator.MH.View
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
-        {
-            //显示结果  调整字号
-            string str = calc.R();
-            if (str.Length < 14)
+        {        
+            try
             {
-                Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
+                //显示结果  调整字号
+                string str = calc.R();
+                if (str.Length < 14)
+                {
+                    Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
+                }
+                else if (str.Length < 17)
+                {
+                    Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
+                }
+                else
+                {
+                    Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
+                }
+                //显示表达式
+                Lab_Result.Text = str;
+                string formula = calc.GetFormula();
+                formula = ProcessFormula(formula);
+                Lab_Formula.Text = formula;
+                //显示Memery标记
+                if (calc.M())
+                {
+                    Lab_Register.Text = "M";
+                }
+                else
+                {
+                    Lab_Register.Text = "";
+                }
             }
-            else if (str.Length < 17)
+            catch (Exception)
             {
-                Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
-            }
-            else
-            {
-                Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
-            }
-            //显示表达式
-            Lab_Result.Text = str;
-            string formula = calc.GetFormula();
-            formula = ProcessFormula(formula);
-            Lab_Formula.Text = formula;
-            //显示Memery标记
-            if (calc.M())
-            {
-                Lab_Register.Text = "M";
-            }
-            else
-            {
-                Lab_Register.Text = "";
+                MessageBox.Show("系统异常，请重试！");
             }
         }
 
