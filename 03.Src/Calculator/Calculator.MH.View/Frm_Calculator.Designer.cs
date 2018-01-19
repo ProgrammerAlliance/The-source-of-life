@@ -896,7 +896,7 @@
         public System.Windows.Forms.Label Lab_Formula;
         public System.Windows.Forms.Label Lab_Result;
         public System.Windows.Forms.Label Lab_Register;
-        private System.Windows.Forms.MenuStrip Menu;
+        private new System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.Label labOfLine;
         private System.Windows.Forms.ToolStripMenuItem 查看ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 标准型ToolStripMenuItem;
