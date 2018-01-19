@@ -55,7 +55,6 @@
     <Compile Include="Ops\Memorys.cs" />
     <Compile Include="Ops\Equals.cs" />
     <Compile Include="Ops\Numbers.cs" />
-    <Compile Include="Save\Formula.cs" />
     <Compile Include="Save\History.cs" />
     <Compile Include="Save\Memory.cs" />
     <Compile Include="SDK\Calc.cs" />

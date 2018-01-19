@@ -26,6 +26,8 @@ namespace Calculator.Core.SDK
             };
         }
 
+        Memory me = new Memory();
+
         /// <summary>
         /// 0-9
         /// </summary>
@@ -80,9 +82,10 @@ namespace Calculator.Core.SDK
         /// 内存运算
         /// </summary>
         /// <param name="op"></param>
-        public void InputMemory(string op)
+        public void InputMemory(MEnum op)
         {
-
+            IOps opt = new Memorys(op);
+            Exp = opt.Process(Exp);
         }
 
         /// <summary>

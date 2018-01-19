@@ -1,4 +1,5 @@
-﻿using Calculator.Core.SDK;
+﻿using Calculator.Core.Enum;
+using Calculator.Core.SDK;
 
 namespace Calculator.Core.Ops
 {
@@ -6,7 +7,8 @@ namespace Calculator.Core.Ops
     {
         public Expression Process(Expression exp)
         {
-            var oldExp = exp;
+            exp.IsOpt = TypeEnum.Equal;
+            var oldExp = exp; 
             exp = new Expression
             {
                 L = oldExp.DoCalc(),
