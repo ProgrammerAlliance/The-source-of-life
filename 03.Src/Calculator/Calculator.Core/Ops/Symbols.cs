@@ -6,7 +6,6 @@ namespace Calculator.Core.Ops
     public class Symbols : IOps
     {
         SymbolEnum _symbol;
-
         public Symbols(SymbolEnum symbol)
         {
             this._symbol = symbol;
@@ -19,7 +18,6 @@ namespace Calculator.Core.Ops
         /// <returns></returns>
         public Expression Process(Expression exp)
         {
-
             switch (_symbol)
             {
                 case SymbolEnum.Point:
@@ -33,7 +31,6 @@ namespace Calculator.Core.Ops
                     exp.IsCreateNew = true;
                     break;
                 case SymbolEnum.Sign:
-                    //直接点“±”
                     if ("0".Equals(exp.R))
                     {
                         return exp;

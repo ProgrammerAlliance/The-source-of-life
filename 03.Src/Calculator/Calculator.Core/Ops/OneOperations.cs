@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
+﻿using Calculator.Core.SDK;
 using Calculator.Core.Operation.Enum;
 using Calculator.Core.Core;
 
@@ -17,6 +12,7 @@ namespace Calculator.Core.Ops
         {
             this._op = op;
         }
+
         /// <summary>
         /// 处理输入的一目运算符
         /// </summary>
@@ -79,7 +75,6 @@ namespace Calculator.Core.Ops
                             RExp = oldRExp,
                             Opt = _op,
                             R = exp.EV,
-                            //R = oldRExp.DoCalc(),
                             IsOpt = TypeEnum.SpecialSymbol,
                         };
                         exp.EV = exp.R = exp.RExp.DoCalc();

@@ -99,7 +99,6 @@ namespace Calculator.Core.SDK
         public override string ToString()
         {
             string str = "";
-
             if (IsOpt == TypeEnum.Equal || Opt == null)
             {
                 //在第一次输入%操作时符号不保存，表达式结果仍要输出

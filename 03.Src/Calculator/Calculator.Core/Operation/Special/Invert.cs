@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator.Core.Operation.Special
+﻿namespace Calculator.Core.Operation.Special
 {
     public class Invert : ISpecialOperation
     {
         public double GetResult(double right)
         {
-            // right = exp.R.StartsWith("-") ? exp.R.Remove(0, 1) : $"-{exp.R}";
             return 0;
         }
         public string GetResult(string str)

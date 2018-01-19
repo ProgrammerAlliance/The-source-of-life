@@ -15,7 +15,6 @@
         public string GetToString(string num)
         {
             return $"sqr({num})";
-
         }
     }
 }
