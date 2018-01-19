@@ -33,16 +33,9 @@ namespace Calculator.Core.Ops
 
             if (exp.IsOpt==TypeEnum.SpecialSymbol)
             {
-                if (exp.Opt == null)
-                {
-                    exp.LExp = null;
-                    exp.R = "0";
-                }
-                else
-                {
-                    exp.RExp = null;
-                    exp.R = "0";
-                }
+                exp.RExp = null;
+                exp.R = "0";
+                exp.Opt = null;
             }
             //判断是否已经满16个数字
             if (exp.R.Replace(".", "").Replace("-", "").Length == 16)

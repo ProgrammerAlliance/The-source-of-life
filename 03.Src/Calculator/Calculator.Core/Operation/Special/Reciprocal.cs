@@ -17,7 +17,7 @@ namespace Calculator.Core
             double result = 0;
             if (right == 0)
             {
-                throw new CalcException("0没有倒数!");
+                throw new CalcException("除数不能为零");
             }
             else
             {

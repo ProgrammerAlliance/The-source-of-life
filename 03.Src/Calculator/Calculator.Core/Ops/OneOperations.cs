@@ -20,37 +20,57 @@ namespace Calculator.Core.Ops
         {
             try
             {
-                if (exp.Opt == null)
+                if (exp.Opt == null)//
                 {
                     exp.Opt = _op;
-                    exp.L = "0";
-                    var old = exp;
-                    exp = new Expression
-                    {
-                        LExp = old
-                    };
-                    exp.R = old.DoCalc();
-                    exp.LExp.L = null; 
+                    exp.EV = exp.DoCalc();
                 }
                 else
                 {
-                    var oldRExp = exp.RExp;
-                    exp.RExp = new Expression
+                    if (exp.IsOpt == TypeEnum.Number || exp.IsOpt == TypeEnum.CommonSymbol)
                     {
-                        L = exp.L.Length == 0 ? "0" : exp.L,
-                        R = exp.R,
-                        Opt = this._op,
-                        RExp = oldRExp
-                    };
-                    exp.R = exp.RExp.DoCalc();
-                    exp.RExp.L = null;
+                        exp.RExp = new Expression
+                        {
+                            Opt = _op,
+                            R = exp.R,
+                            IsOpt = TypeEnum.SpecialSymbol,
+                        };
+                        exp.EV = exp.R = exp.RExp.DoCalc();
+                    }
+                    else if (exp.IsOpt == TypeEnum.SpecialSymbol)
+                    {
+                        if (exp.Opt is SpecialEnum)
+                        {
+                            var old = exp;
+                            exp = new Expression
+                            {
+                                Opt = _op,
+                                RExp = old
+                            };
+                            exp.R = exp.RExp.DoCalc();
+                            exp.EV = exp.DoCalc();
+                        }
+                        else
+                        {
+                            var oldRExp = exp.RExp;
+                            exp.RExp = new Expression
+                            {
+                                RExp = oldRExp,
+                                Opt = _op,
+                                R = oldRExp.DoCalc(),
+                                IsOpt=TypeEnum.SpecialSymbol,
+                            };
+                            exp.EV = exp.R = exp.RExp.DoCalc();
+                        }
+                    }
                 }
+                // var sss = exp.RExp == null ? $"sqrt({exp.R}" : $"{exp.RExp.ToString()}sqrt({exp.R}))";
             }
             catch (CalcException e)
             {
                 exp.EV = e.Message;
+                exp.Locked = true;
             }
-            exp.EV = exp.R;
             return exp;
         }
     }

@@ -33,10 +33,12 @@
             this.查看ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.标准型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.科学型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.程序员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.统计信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.程序员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.历史记录ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.数字分组IToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.基本BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单位转换UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.日期计算DCtrlEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +50,7 @@
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.复制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.粘贴ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.历史记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.复制历史记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +58,7 @@
             this.清除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.历史记录ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Lab_Formula = new System.Windows.Forms.Label();
             this.Btn_Num1 = new System.Windows.Forms.Button();
@@ -66,7 +70,6 @@
             this.Btn_Num7 = new System.Windows.Forms.Button();
             this.Btn_Num8 = new System.Windows.Forms.Button();
             this.Btn_Num9 = new System.Windows.Forms.Button();
-            this.Btn_Num0 = new System.Windows.Forms.Button();
             this.Btn_Dot = new System.Windows.Forms.Button();
             this.Btn_Mul = new System.Windows.Forms.Button();
             this.Btn_Sub = new System.Windows.Forms.Button();
@@ -89,6 +92,7 @@
             this.txt_Log = new System.Windows.Forms.TextBox();
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
+            this.Btn_Num0 = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,10 +118,12 @@
             this.查看ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.标准型ToolStripMenuItem,
             this.科学型ToolStripMenuItem,
-            this.程序员ToolStripMenuItem,
             this.统计信息ToolStripMenuItem,
+            this.程序员ToolStripMenuItem,
+            this.toolStripSeparator1,
             this.历史记录ToolStripMenuItem2,
             this.数字分组IToolStripMenuItem,
+            this.toolStripSeparator2,
             this.基本BToolStripMenuItem,
             this.单位转换UToolStripMenuItem,
             this.日期计算DCtrlEToolStripMenuItem,
@@ -134,27 +140,32 @@
             this.标准型ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.标准型ToolStripMenuItem.Name = "标准型ToolStripMenuItem";
             this.标准型ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
-            this.标准型ToolStripMenuItem.Text = "标准型(T)           Alt+1";
+            this.标准型ToolStripMenuItem.Text = "标准型(T)             Alt+1";
             // 
             // 科学型ToolStripMenuItem
             // 
             this.科学型ToolStripMenuItem.Name = "科学型ToolStripMenuItem";
             this.科学型ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
-            this.科学型ToolStripMenuItem.Text = "科学型(S)           Alt+2";
-            // 
-            // 程序员ToolStripMenuItem
-            // 
-            this.程序员ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.程序员ToolStripMenuItem.Name = "程序员ToolStripMenuItem";
-            this.程序员ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
-            this.程序员ToolStripMenuItem.Text = "程序员(P)           Alt+3";
+            this.科学型ToolStripMenuItem.Text = "科学型(S)             Alt+2";
             // 
             // 统计信息ToolStripMenuItem
             // 
             this.统计信息ToolStripMenuItem.AutoSize = false;
             this.统计信息ToolStripMenuItem.Name = "统计信息ToolStripMenuItem";
             this.统计信息ToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
-            this.统计信息ToolStripMenuItem.Text = "统计信息(A)        Alt+4";
+            this.统计信息ToolStripMenuItem.Text = "程序员(P)             Alt+3";
+            // 
+            // 程序员ToolStripMenuItem
+            // 
+            this.程序员ToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.程序员ToolStripMenuItem.Name = "程序员ToolStripMenuItem";
+            this.程序员ToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.程序员ToolStripMenuItem.Text = "统计信息(A)         Alt+4";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(242, 6);
             // 
             // 历史记录ToolStripMenuItem2
             // 
@@ -168,8 +179,15 @@
             this.数字分组IToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.数字分组IToolStripMenuItem.Text = "数字分组(I)";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(242, 6);
+            // 
             // 基本BToolStripMenuItem
             // 
+            this.基本BToolStripMenuItem.Checked = true;
+            this.基本BToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.基本BToolStripMenuItem.Name = "基本BToolStripMenuItem";
             this.基本BToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.基本BToolStripMenuItem.Text = "基本(B)              Ctrl+F4";
@@ -226,6 +244,7 @@
             this.编辑ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.复制ToolStripMenuItem,
             this.粘贴ToolStripMenuItem,
+            this.toolStripSeparator3,
             this.历史记录ToolStripMenuItem});
             this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
             this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
@@ -242,6 +261,11 @@
             this.粘贴ToolStripMenuItem.Name = "粘贴ToolStripMenuItem";
             this.粘贴ToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.粘贴ToolStripMenuItem.Text = "粘贴（P）           Ctrl+V";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(241, 6);
             // 
             // 历史记录ToolStripMenuItem
             // 
@@ -282,6 +306,7 @@
             // 
             this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看帮助ToolStripMenuItem,
+            this.toolStripSeparator4,
             this.历史记录ToolStripMenuItem1});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
@@ -292,6 +317,11 @@
             this.查看帮助ToolStripMenuItem.Name = "查看帮助ToolStripMenuItem";
             this.查看帮助ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.查看帮助ToolStripMenuItem.Text = "查看帮助(V)    F1";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(197, 6);
             // 
             // 历史记录ToolStripMenuItem1
             // 
@@ -324,6 +354,7 @@
             this.Btn_Num1.Text = "1";
             this.Btn_Num1.UseVisualStyleBackColor = false;
             this.Btn_Num1.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num2
             // 
@@ -339,6 +370,7 @@
             this.Btn_Num2.Text = "2";
             this.Btn_Num2.UseVisualStyleBackColor = false;
             this.Btn_Num2.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num3
             // 
@@ -354,6 +386,7 @@
             this.Btn_Num3.Text = "3";
             this.Btn_Num3.UseVisualStyleBackColor = false;
             this.Btn_Num3.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num4
             // 
@@ -369,6 +402,7 @@
             this.Btn_Num4.Text = "4";
             this.Btn_Num4.UseVisualStyleBackColor = false;
             this.Btn_Num4.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num5
             // 
@@ -384,6 +418,7 @@
             this.Btn_Num5.Text = "5";
             this.Btn_Num5.UseVisualStyleBackColor = false;
             this.Btn_Num5.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num6
             // 
@@ -399,6 +434,7 @@
             this.Btn_Num6.Text = "6";
             this.Btn_Num6.UseVisualStyleBackColor = false;
             this.Btn_Num6.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num7
             // 
@@ -414,6 +450,7 @@
             this.Btn_Num7.Text = "7";
             this.Btn_Num7.UseVisualStyleBackColor = false;
             this.Btn_Num7.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num8
             // 
@@ -429,6 +466,7 @@
             this.Btn_Num8.Text = "8";
             this.Btn_Num8.UseVisualStyleBackColor = false;
             this.Btn_Num8.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Num9
             // 
@@ -444,23 +482,7 @@
             this.Btn_Num9.Text = "9";
             this.Btn_Num9.UseVisualStyleBackColor = false;
             this.Btn_Num9.Click += new System.EventHandler(this.Btn_Number_Click);
-            // 
-            // Btn_Num0
-            // 
-            this.Btn_Num0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(248)))));
-            this.Btn_Num0.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Btn_Num0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(170)))));
-            this.Btn_Num0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.Btn_Num0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Num0.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_Num0.Location = new System.Drawing.Point(12, 312);
-            this.Btn_Num0.Name = "Btn_Num0";
-            this.Btn_Num0.Size = new System.Drawing.Size(98, 36);
-            this.Btn_Num0.TabIndex = 2;
-            this.Btn_Num0.TabStop = false;
-            this.Btn_Num0.Text = "0";
-            this.Btn_Num0.UseVisualStyleBackColor = false;
-            this.Btn_Num0.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Dot
             // 
@@ -476,6 +498,7 @@
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
             this.Btn_Dot.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Dot.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Mul
             // 
@@ -491,6 +514,7 @@
             this.Btn_Mul.Text = "*";
             this.Btn_Mul.UseVisualStyleBackColor = false;
             this.Btn_Mul.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Mul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Sub
             // 
@@ -506,6 +530,7 @@
             this.Btn_Sub.Text = "-";
             this.Btn_Sub.UseVisualStyleBackColor = false;
             this.Btn_Sub.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Sub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Add
             // 
@@ -521,6 +546,7 @@
             this.Btn_Add.Text = "+";
             this.Btn_Add.UseVisualStyleBackColor = false;
             this.Btn_Add.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Add.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Div
             // 
@@ -536,6 +562,7 @@
             this.Btn_Div.Text = "/";
             this.Btn_Div.UseVisualStyleBackColor = false;
             this.Btn_Div.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Div.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Rec
             // 
@@ -551,6 +578,7 @@
             this.Btn_Rec.Text = "1/x";
             this.Btn_Rec.UseVisualStyleBackColor = false;
             this.Btn_Rec.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Rec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Done
             // 
@@ -567,6 +595,7 @@
             this.Btn_Done.Text = "=";
             this.Btn_Done.UseVisualStyleBackColor = false;
             this.Btn_Done.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Done.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Per
             // 
@@ -582,6 +611,7 @@
             this.Btn_Per.Text = "%";
             this.Btn_Per.UseVisualStyleBackColor = false;
             this.Btn_Per.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Per.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Del
             // 
@@ -598,6 +628,7 @@
             this.Btn_Del.Text = "←";
             this.Btn_Del.UseVisualStyleBackColor = false;
             this.Btn_Del.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Del.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_CE
             // 
@@ -613,6 +644,7 @@
             this.Btn_CE.Text = "CE";
             this.Btn_CE.UseVisualStyleBackColor = false;
             this.Btn_CE.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_CE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Clear
             // 
@@ -628,6 +660,7 @@
             this.Btn_Clear.Text = "C";
             this.Btn_Clear.UseVisualStyleBackColor = false;
             this.Btn_Clear.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Clear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Negate
             // 
@@ -644,6 +677,7 @@
             this.Btn_Negate.Text = "±";
             this.Btn_Negate.UseVisualStyleBackColor = false;
             this.Btn_Negate.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Negate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_Reagan
             // 
@@ -660,6 +694,7 @@
             this.Btn_Reagan.Text = "√";
             this.Btn_Reagan.UseVisualStyleBackColor = false;
             this.Btn_Reagan.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Reagan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_MClear
             // 
@@ -678,6 +713,7 @@
             this.Btn_MClear.Text = "MC";
             this.Btn_MClear.UseVisualStyleBackColor = false;
             this.Btn_MClear.Click += new System.EventHandler(this.Btn_Memory_Click);
+            this.Btn_MClear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_MRead
             // 
@@ -693,6 +729,7 @@
             this.Btn_MRead.Text = "MR";
             this.Btn_MRead.UseVisualStyleBackColor = false;
             this.Btn_MRead.Click += new System.EventHandler(this.Btn_Memory_Click);
+            this.Btn_MRead.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_MSave
             // 
@@ -708,6 +745,7 @@
             this.Btn_MSave.Text = "MS";
             this.Btn_MSave.UseVisualStyleBackColor = false;
             this.Btn_MSave.Click += new System.EventHandler(this.Btn_Memory_Click);
+            this.Btn_MSave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn_M_Add
             // 
@@ -723,6 +761,7 @@
             this.Btn_M_Add.Text = "M+";
             this.Btn_M_Add.UseVisualStyleBackColor = false;
             this.Btn_M_Add.Click += new System.EventHandler(this.Btn_Memory_Click);
+            this.Btn_M_Add.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Btn__M_Sub
             // 
@@ -738,6 +777,7 @@
             this.Btn__M_Sub.Text = "M-";
             this.Btn__M_Sub.UseVisualStyleBackColor = false;
             this.Btn__M_Sub.Click += new System.EventHandler(this.Btn_Memory_Click);
+            this.Btn__M_Sub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
             // 
             // Lab_Result
             // 
@@ -782,12 +822,29 @@
             this.labOfLine.Size = new System.Drawing.Size(252, 66);
             this.labOfLine.TabIndex = 7;
             // 
+            // Btn_Num0
+            // 
+            this.Btn_Num0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(248)))));
+            this.Btn_Num0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(170)))));
+            this.Btn_Num0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Num0.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_Num0.Location = new System.Drawing.Point(12, 312);
+            this.Btn_Num0.Name = "Btn_Num0";
+            this.Btn_Num0.Size = new System.Drawing.Size(96, 36);
+            this.Btn_Num0.TabIndex = 8;
+            this.Btn_Num0.TabStop = false;
+            this.Btn_Num0.Text = "0";
+            this.Btn_Num0.UseVisualStyleBackColor = false;
+            this.Btn_Num0.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Btn_Click_Down);
+            // 
             // Frm_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(276, 357);
+            this.Controls.Add(this.Btn_Num0);
             this.Controls.Add(this.labOfLine);
             this.Controls.Add(this.Lab_Register);
             this.Controls.Add(this.txt_Log);
@@ -819,7 +876,6 @@
             this.Controls.Add(this.Btn_Num3);
             this.Controls.Add(this.Btn_Num6);
             this.Controls.Add(this.Btn_Num2);
-            this.Controls.Add(this.Btn_Num0);
             this.Controls.Add(this.Btn_Num1);
             this.Controls.Add(this.Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -838,11 +894,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem 查看ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 标准型ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 科学型ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 程序员ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 统计信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 复制ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 粘贴ToolStripMenuItem;
@@ -863,7 +914,6 @@
         private System.Windows.Forms.Button Btn_Num7;
         private System.Windows.Forms.Button Btn_Num8;
         private System.Windows.Forms.Button Btn_Num9;
-        private System.Windows.Forms.Button Btn_Num0;
         private System.Windows.Forms.Button Btn_Dot;
         private System.Windows.Forms.Button Btn_Mul;
         private System.Windows.Forms.Button Btn_Sub;
@@ -888,8 +938,15 @@
         public System.Windows.Forms.Label Lab_Register;
         private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.Label labOfLine;
+        private System.Windows.Forms.ToolStripMenuItem 查看ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 标准型ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 科学型ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 统计信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 程序员ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem 历史记录ToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem 数字分组IToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem 基本BToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单位转换UToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 日期计算DCtrlEToolStripMenuItem;
@@ -898,6 +955,9 @@
         private System.Windows.Forms.ToolStripMenuItem 汽车租赁VToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 油耗mpgToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 油耗1100kmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.Button Btn_Num0;
     }
 }
 

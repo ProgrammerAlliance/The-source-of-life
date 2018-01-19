@@ -1,6 +1,7 @@
 ﻿using Calculator.Core.Enum;
 using Calculator.Core.SDK;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
@@ -99,16 +100,27 @@ namespace Calculator
         }
 
         /// <summary>
+        /// 按钮按下时按钮变色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Click_Down(object sender, KeyEventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
         {
             string str = calc.R();
-            if(str.Length<14)
+            if (str.Length < 14)
             {
                 Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
             }
-            else if (str.Length <17)
+            else if (str.Length < 17)
             {
                 Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
             }
@@ -118,7 +130,24 @@ namespace Calculator
 
             }
             Lab_Result.Text = str;
-            Lab_Formula.Text = calc.GetFormula();
+
+            string formula = calc.GetFormula();
+            string result = "";
+            string regex = "+-*/";
+            foreach (char c in formula)
+            {
+                if (regex.Contains(c.ToString()))
+                {
+                    result += $" {c} ";
+                }
+                else
+                    result += c;
+            }
+            if (result.Length > 28)
+            {
+                result = "<<" + result.Substring(result.Length - 28);
+            }
+            Lab_Formula.Text = result;
         }
 
     }

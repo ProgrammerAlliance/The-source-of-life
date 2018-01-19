@@ -68,7 +68,7 @@
     <Compile Include="Operation\Base\OperationSub.cs" />
     <Compile Include="Operation\Special\Percent.cs" />
     <Compile Include="Operation\Special\ISpecialOperation.cs" />
-    <Compile Include="Operation\Special\SpecalFactory.cs" />
+    <Compile Include="Operation\Special\SpecialFactory.cs" />
     <Compile Include="Operation\Special\Sqrt.cs" />
     <Compile Include="Operation\Special\Square.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
