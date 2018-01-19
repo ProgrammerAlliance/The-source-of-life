@@ -83,7 +83,6 @@
             this.Btn_Clear = new System.Windows.Forms.Button();
             this.Btn_Negate = new System.Windows.Forms.Button();
             this.Btn_Reagan = new System.Windows.Forms.Button();
-            this.Btn_MClear = new System.Windows.Forms.Button();
             this.Btn_MRead = new System.Windows.Forms.Button();
             this.Btn_MSave = new System.Windows.Forms.Button();
             this.Btn_M_Add = new System.Windows.Forms.Button();
@@ -92,6 +91,7 @@
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
             this.Btn_Num0 = new System.Windows.Forms.Button();
+            this.Btn_MClear = new System.Windows.Forms.Button();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -353,6 +353,8 @@
             this.Btn_Num1.Text = "1";
             this.Btn_Num1.UseVisualStyleBackColor = false;
             this.Btn_Num1.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num1.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num2
             // 
@@ -368,6 +370,8 @@
             this.Btn_Num2.Text = "2";
             this.Btn_Num2.UseVisualStyleBackColor = false;
             this.Btn_Num2.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num2.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num3
             // 
@@ -383,6 +387,8 @@
             this.Btn_Num3.Text = "3";
             this.Btn_Num3.UseVisualStyleBackColor = false;
             this.Btn_Num3.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num3.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num4
             // 
@@ -398,6 +404,8 @@
             this.Btn_Num4.Text = "4";
             this.Btn_Num4.UseVisualStyleBackColor = false;
             this.Btn_Num4.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num4.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num5
             // 
@@ -413,6 +421,8 @@
             this.Btn_Num5.Text = "5";
             this.Btn_Num5.UseVisualStyleBackColor = false;
             this.Btn_Num5.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num5.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num6
             // 
@@ -428,6 +438,8 @@
             this.Btn_Num6.Text = "6";
             this.Btn_Num6.UseVisualStyleBackColor = false;
             this.Btn_Num6.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num6.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num7
             // 
@@ -443,6 +455,8 @@
             this.Btn_Num7.Text = "7";
             this.Btn_Num7.UseVisualStyleBackColor = false;
             this.Btn_Num7.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num7.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num8
             // 
@@ -458,6 +472,8 @@
             this.Btn_Num8.Text = "8";
             this.Btn_Num8.UseVisualStyleBackColor = false;
             this.Btn_Num8.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num8.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Num9
             // 
@@ -473,6 +489,8 @@
             this.Btn_Num9.Text = "9";
             this.Btn_Num9.UseVisualStyleBackColor = false;
             this.Btn_Num9.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num9.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Dot
             // 
@@ -488,6 +506,8 @@
             this.Btn_Dot.Text = ".";
             this.Btn_Dot.UseVisualStyleBackColor = false;
             this.Btn_Dot.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Dot.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Dot.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Mul
             // 
@@ -503,6 +523,8 @@
             this.Btn_Mul.Text = "*";
             this.Btn_Mul.UseVisualStyleBackColor = false;
             this.Btn_Mul.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Mul.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Mul.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Sub
             // 
@@ -518,6 +540,8 @@
             this.Btn_Sub.Text = "-";
             this.Btn_Sub.UseVisualStyleBackColor = false;
             this.Btn_Sub.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Sub.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Sub.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Add
             // 
@@ -533,6 +557,8 @@
             this.Btn_Add.Text = "+";
             this.Btn_Add.UseVisualStyleBackColor = false;
             this.Btn_Add.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Add.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Add.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Div
             // 
@@ -548,6 +574,8 @@
             this.Btn_Div.Text = "/";
             this.Btn_Div.UseVisualStyleBackColor = false;
             this.Btn_Div.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Div.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Div.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Rec
             // 
@@ -563,6 +591,8 @@
             this.Btn_Rec.Text = "1/x";
             this.Btn_Rec.UseVisualStyleBackColor = false;
             this.Btn_Rec.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Rec.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Rec.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Done
             // 
@@ -579,6 +609,8 @@
             this.Btn_Done.Text = "=";
             this.Btn_Done.UseVisualStyleBackColor = false;
             this.Btn_Done.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Done.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Done.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Per
             // 
@@ -594,6 +626,8 @@
             this.Btn_Per.Text = "%";
             this.Btn_Per.UseVisualStyleBackColor = false;
             this.Btn_Per.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Per.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Per.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Del
             // 
@@ -610,6 +644,8 @@
             this.Btn_Del.Text = "←";
             this.Btn_Del.UseVisualStyleBackColor = false;
             this.Btn_Del.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Del.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Del.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_CE
             // 
@@ -625,6 +661,8 @@
             this.Btn_CE.Text = "CE";
             this.Btn_CE.UseVisualStyleBackColor = false;
             this.Btn_CE.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_CE.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_CE.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Clear
             // 
@@ -640,6 +678,8 @@
             this.Btn_Clear.Text = "C";
             this.Btn_Clear.UseVisualStyleBackColor = false;
             this.Btn_Clear.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Clear.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Clear.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Negate
             // 
@@ -656,6 +696,8 @@
             this.Btn_Negate.Text = "±";
             this.Btn_Negate.UseVisualStyleBackColor = false;
             this.Btn_Negate.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Negate.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Negate.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_Reagan
             // 
@@ -672,24 +714,8 @@
             this.Btn_Reagan.Text = "√";
             this.Btn_Reagan.UseVisualStyleBackColor = false;
             this.Btn_Reagan.Click += new System.EventHandler(this.Btn_Calculator_Click);
-            // 
-            // Btn_MClear
-            // 
-            this.Btn_MClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(224)))), ((int)(((byte)(237)))));
-            this.Btn_MClear.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Btn_MClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(170)))));
-            this.Btn_MClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(236)))), ((int)(((byte)(173)))));
-            this.Btn_MClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MClear.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_MClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Btn_MClear.Location = new System.Drawing.Point(12, 112);
-            this.Btn_MClear.Name = "Btn_MClear";
-            this.Btn_MClear.Size = new System.Drawing.Size(46, 36);
-            this.Btn_MClear.TabIndex = 2;
-            this.Btn_MClear.TabStop = false;
-            this.Btn_MClear.Text = "MC";
-            this.Btn_MClear.UseVisualStyleBackColor = false;
-            this.Btn_MClear.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_Reagan.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_Reagan.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_MRead
             // 
@@ -705,6 +731,8 @@
             this.Btn_MRead.Text = "MR";
             this.Btn_MRead.UseVisualStyleBackColor = false;
             this.Btn_MRead.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_MRead.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_MRead.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_MSave
             // 
@@ -720,6 +748,8 @@
             this.Btn_MSave.Text = "MS";
             this.Btn_MSave.UseVisualStyleBackColor = false;
             this.Btn_MSave.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_MSave.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_MSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn_M_Add
             // 
@@ -735,6 +765,8 @@
             this.Btn_M_Add.Text = "M+";
             this.Btn_M_Add.UseVisualStyleBackColor = false;
             this.Btn_M_Add.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_M_Add.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_M_Add.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Btn__M_Sub
             // 
@@ -750,6 +782,8 @@
             this.Btn__M_Sub.Text = "M-";
             this.Btn__M_Sub.UseVisualStyleBackColor = false;
             this.Btn__M_Sub.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn__M_Sub.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn__M_Sub.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Lab_Result
             // 
@@ -800,6 +834,25 @@
             this.Btn_Num0.Text = "0";
             this.Btn_Num0.UseVisualStyleBackColor = false;
             this.Btn_Num0.Click += new System.EventHandler(this.Btn_Number_Click);
+            this.Btn_Num0.MouseLeave += new System.EventHandler(this.Btn_Num_MouseLeave);
+            this.Btn_Num0.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
+            // 
+            // Btn_MClear
+            // 
+            this.Btn_MClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(224)))), ((int)(((byte)(237)))));
+            this.Btn_MClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(151)))), ((int)(((byte)(170)))));
+            this.Btn_MClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_MClear.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_MClear.Location = new System.Drawing.Point(12, 112);
+            this.Btn_MClear.Name = "Btn_MClear";
+            this.Btn_MClear.Size = new System.Drawing.Size(46, 36);
+            this.Btn_MClear.TabIndex = 9;
+            this.Btn_MClear.TabStop = false;
+            this.Btn_MClear.Text = "MC";
+            this.Btn_MClear.UseVisualStyleBackColor = false;
+            this.Btn_MClear.Click += new System.EventHandler(this.Btn_Calculator_Click);
+            this.Btn_MClear.MouseLeave += new System.EventHandler(this.Btn_Syb_MouseLeave);
+            this.Btn_MClear.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MouseMove);
             // 
             // Frm_Calculator
             // 
@@ -807,6 +860,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(276, 357);
+            this.Controls.Add(this.Btn_MClear);
             this.Controls.Add(this.Btn_Num0);
             this.Controls.Add(this.labOfLine);
             this.Controls.Add(this.Lab_Register);
@@ -824,7 +878,6 @@
             this.Controls.Add(this.Btn_MRead);
             this.Controls.Add(this.Btn_Div);
             this.Controls.Add(this.Btn_CE);
-            this.Controls.Add(this.Btn_MClear);
             this.Controls.Add(this.Btn_Num9);
             this.Controls.Add(this.Btn_Del);
             this.Controls.Add(this.Btn_Num8);
@@ -888,7 +941,6 @@
         private System.Windows.Forms.Button Btn_Clear;
         private System.Windows.Forms.Button Btn_Negate;
         private System.Windows.Forms.Button Btn_Reagan;
-        private System.Windows.Forms.Button Btn_MClear;
         private System.Windows.Forms.Button Btn_MRead;
         private System.Windows.Forms.Button Btn_MSave;
         private System.Windows.Forms.Button Btn_M_Add;
@@ -918,6 +970,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.Button Btn_Num0;
+        private System.Windows.Forms.Button Btn_MClear;
     }
 }
 

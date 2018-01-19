@@ -99,54 +99,39 @@ namespace Calculator.MH.View
             ScreenDisplay();
         }
 
-        private void Btn_Memory_Click(object sender, EventArgs e)
-        {
-            string strBtn = ((Button)sender).Text;
-            ScreenDisplay();
-
-        }
-
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
         {
             //显示结果  调整字号
-            try
+            string str = calc.R();
+            if (str.Length < 14)
             {
-                string str = calc.R();
-                if (str.Length < 14)
-                {
-                    Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
-                }
-                else if (str.Length < 17)
-                {
-                    Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
-                }
-                else
-                {
-                    Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
-                }
-                //显示表达式
-                Lab_Result.Text = str;
-                string formula = calc.GetFormula();
-                formula = ProcessFormula(formula);
-                Lab_Formula.Text = formula;
-                //显示Memery标记
-                if (calc.M())
-                {
-                    Lab_Register.Text = "M";
-                }
-                else
-                {
-                    Lab_Register.Text = "";
-                }
+                Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
             }
-            catch (Exception)
+            else if (str.Length < 17)
             {
-                MessageBox.Show("非法操作！");               
+                Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
             }
-           
+            else
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
+            }
+            //显示表达式
+            Lab_Result.Text = str;
+            string formula = calc.GetFormula();
+            formula = ProcessFormula(formula);
+            Lab_Formula.Text = formula;
+            //显示Memery标记
+            if (calc.M())
+            {
+                Lab_Register.Text = "M";
+            }
+            else
+            {
+                Lab_Register.Text = "";
+            }
         }
 
         /// <summary>
@@ -170,6 +155,36 @@ namespace Calculator.MH.View
                 result = "<<" + result.Substring(result.Length - 28);
             }
             return result;
+        }
+
+        /// <summary>
+        /// 鼠标移动到按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(255, 232, 207);
+        }
+
+        /// <summary>
+        /// 鼠标离开按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Num_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(234, 241, 248);
+        }
+
+        /// <summary>
+        /// 鼠标离开按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Syb_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(212, 224, 237);
         }
     }
 }
