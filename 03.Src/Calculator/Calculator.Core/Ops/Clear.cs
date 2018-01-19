@@ -12,6 +12,11 @@ namespace Calculator.Core.Ops
             this._op = op;
         }
 
+        /// <summary>
+        /// 处理C CE Del
+        /// </summary>
+        /// <param name="exp"></param>
+        /// <returns></returns>
         public Expression Process(Expression exp)
         {
             switch (_op)

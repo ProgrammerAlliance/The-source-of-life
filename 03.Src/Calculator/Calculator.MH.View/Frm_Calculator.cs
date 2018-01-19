@@ -4,7 +4,7 @@ using System;
 using System.Windows.Forms;
 
 
-namespace Calculator
+namespace Calculator.MH.View
 {
 
     public partial class Frm_Calculator : Form

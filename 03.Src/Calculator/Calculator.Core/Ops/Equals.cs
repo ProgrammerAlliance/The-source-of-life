@@ -4,6 +4,11 @@ namespace Calculator.Core.Ops
 {
     public class Equals : IOps
     {
+        /// <summary>
+        /// 处理等于号
+        /// </summary>
+        /// <param name="exp"></param>
+        /// <returns></returns>
         public Expression Process(Expression exp)
         {
             try
