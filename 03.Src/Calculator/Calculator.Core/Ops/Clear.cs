@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
+﻿using Calculator.Core.SDK;
 using Calculator.Core.Enum;
 
 namespace Calculator.Core.Ops
@@ -19,7 +14,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            switch (_op)
+            switch (_op) 
             {
                 case ClearEnum.C:
                     exp = new Expression()
@@ -31,6 +26,7 @@ namespace Calculator.Core.Ops
                         RExp = null,
                         Opt = null,
                         IsCreateNew = false,
+                        IsOpt = TypeEnum.Equal,
                     };
                     break;
                 case ClearEnum.CE:
@@ -38,17 +34,22 @@ namespace Calculator.Core.Ops
                     exp.R = "0";
                     exp.EV = exp.R;
                     //特殊运算+CE：
-
-                    if ("".Equals(exp.L))
-                    {
-                        exp.Opt = null;
-                    }
+                    //if ("".Equals(exp.L)&&exp.RExp!=null&&exp.Opt is SpecialEnum)
+                    //{
+                    //    exp.Opt = null;
+                    //}
 
                     break;
 
                 case ClearEnum.Del:
+                    //输入等于号后删除键无效
+                    if(exp.IsOpt==TypeEnum.Equal)
+                    {
+                        return exp;
+                    }
                     //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
+                    exp.R = "-".Equals(exp.R) ? "0" : exp.R;
                     exp.EV = exp.R;
                     //运算+Del
                     //无响应

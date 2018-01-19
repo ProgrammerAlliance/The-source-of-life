@@ -11,7 +11,6 @@ namespace Calculator.Core.SDK
     public class Calc
     {
         Expression Exp { get; set; }
-
         public Calc()
         {
             Exp = new Expression
@@ -23,6 +22,7 @@ namespace Calculator.Core.SDK
                 RExp = null,
                 Opt = null,
                 IsCreateNew = false,
+                IsOpt = TypeEnum.Equal,
             };
         }
 
@@ -34,6 +34,10 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputNumber(int num)
         {
+            if(Exp.Locked)
+            {
+                return;
+            }
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
             if (Exp.IsOpt==TypeEnum.CommonSymbol)
@@ -49,9 +53,12 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputSymbol(SymbolEnum op)
         {
+            if(Exp.Locked)
+            {
+                return;
+            }
             IOps opt = new Symbols(op);
             Exp = opt.Process(Exp);
-            // Exp.IsOpt = false;
         }
 
         /// <summary>
@@ -60,6 +67,10 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputArithmetic(ArithmeticEnum op)
         {
+            if(Exp.Locked)
+            {
+                return;
+            }
             IOps opt = new Arithmetics(op);
             Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.CommonSymbol;
@@ -72,8 +83,12 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputOneOperation(SpecialEnum op)
         {
+            if (Exp.Locked)
+            {
+                return;
+            }
             IOps opt = new OneOperations(op);
-            opt.Process(Exp);
+            Exp=opt.Process(Exp);
             Exp.IsOpt = TypeEnum.SpecialSymbol;
             Exp.IsCreateNew = true;
         }
@@ -93,9 +108,14 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputEqual()
         {
+            if (Exp.Locked)
+            {
+                return;
+            }
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.Equal;
+            
         }
 
         /// <summary>
@@ -103,8 +123,14 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputClear(ClearEnum op)
         {
+            if(Exp.Locked&&op==ClearEnum.Del)
+            {
+                return;
+            }
+            op = Exp.Locked ? ClearEnum.C : op;
             IOps opt = new Clear(op);
             Exp = opt.Process(Exp);
+            Exp.Locked = false;
         }
 
         /// <summary>

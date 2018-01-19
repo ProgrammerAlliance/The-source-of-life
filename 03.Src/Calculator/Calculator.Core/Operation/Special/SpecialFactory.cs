@@ -1,14 +1,12 @@
 ﻿using Calculator.Core.Enum;
 using Calculator.Core.Opt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator.Core
 {
-    public class SpecalFactory
+    /// <summary>
+    /// 一目运算工厂
+    /// </summary>
+    public class SpecialFactory
     {
         public static ISpecialOperation CreateSpecialOperation(SpecialEnum? se)
         {

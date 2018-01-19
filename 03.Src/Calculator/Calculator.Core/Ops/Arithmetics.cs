@@ -19,13 +19,19 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
+            exp.R = Convert.ToDouble(exp.R).ToString();
             //1.第一次点 运算，不需要实例化新对象
-            if (exp.Opt == null||exp.IsOpt==TypeEnum.Equal)
+            if (exp.Opt == null)
             {
                 exp.Opt = this._op;
                 exp.L = exp.R;
                 exp.EV = exp.R;
                 return exp;
+            }
+            if(exp.IsOpt==TypeEnum.Equal)
+            {
+                exp.Opt = _op;
+                exp.R = exp.L;
             }
             if(exp.IsOpt==TypeEnum.CommonSymbol)
             {
@@ -49,7 +55,6 @@ namespace Calculator.Core.Ops
                     Opt = this._op,
                 };
                 exp.L = exp.R;
-              string str=   exp.LExp.ToString();
             }
             exp.EV = exp.R;
             return exp;

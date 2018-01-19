@@ -19,23 +19,18 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
+            
             switch (_symbol)
             {
                 case SymbolEnum.Point:
-                    //1.直接点“.”
-                    if (exp.R == "")
+                    if (exp.R == ""||exp.IsOpt!=TypeEnum.Number)
                     {
                         exp.R = "0.";
                     }
-                    //2.数字->运算->“.”
-                    if (exp.IsCreateNew)
-                    {
-                        exp.R = "0.";
-                    }
-
-                    //3.正常“.”
                     exp.R = exp.R.Contains(".") ? exp.R : $"{exp.R}.";
                     exp.EV = exp.R;
+                    exp.IsOpt = TypeEnum.Number;
+                    exp.IsCreateNew = true;
                     break;
                 case SymbolEnum.Sign:
                     //1.直接点“±”

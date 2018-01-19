@@ -9,29 +9,33 @@ using System.Threading.Tasks;
 namespace Calculator.Core
 {
     /// <summary>
-    /// todo: mh
+    /// 除法计算
     /// </summary>
     public class OperationDiv : IOperation
     {
-        public double GetResult(double number1, double number2)
+        public double GetResult(double left, double right)
         {
             double result = 0;
 
-            if (number1 == 0 && number2 == 0)
+            if (left == 0 && right == 0)
             {
-                throw new Exception("结果未定义!");
+                throw new CalcException("结果未定义");
             }
-            else if (number2 != 0)
+            else if (right != 0)
             {
-                result = number1 / number2;
+                result = left / right;
             }
             else
             {
-                throw new Exception("除数不能为零!");
+                throw new CalcException("除数不能为零");
             }
             return result;
         }
-
+        /// <summary>
+        /// 算式
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public string GetToString(string num)
         {
             return num + (char)ArithmeticEnum.Div;

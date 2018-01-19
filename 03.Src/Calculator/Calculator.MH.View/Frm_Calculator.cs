@@ -1,7 +1,8 @@
-﻿using Calculator.Core.SDK;
+﻿using Calculator.Core.Enum;
+using Calculator.Core.SDK;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Calculator.Core.Enum;
 
 
 namespace Calculator
@@ -33,7 +34,7 @@ namespace Calculator
             calc.InputNumber(Convert.ToInt32(((Button)sender).Text));
             ScreenDisplay();
         }
-        
+
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
@@ -98,18 +99,55 @@ namespace Calculator
 
         }
 
-        public void DisplaySome()
+        /// <summary>
+        /// 按钮按下时按钮变色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Click_Down(object sender, KeyEventArgs e)
         {
-            Lab_Result.Text = calc.R();
+
         }
+
 
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
         {
-            Lab_Result.Text = calc.R();
-            Lab_Formula.Text = calc.GetFormula();
+            string str = calc.R();
+            if (str.Length < 14)
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 14F);
+            }
+            else if (str.Length < 17)
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 12F);
+            }
+            else
+            {
+                Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
+
+            }
+            Lab_Result.Text = str;
+
+            string formula = calc.GetFormula();
+            string result = "";
+            string regex = "+-*/";
+            foreach (char c in formula)
+            {
+                if (regex.Contains(c.ToString()))
+                {
+                    result += $" {c} ";
+                }
+                else
+                    result += c;
+            }
+            if (result.Length > 28)
+            {
+                result = "<<" + result.Substring(result.Length - 28);
+            }
+            Lab_Formula.Text = result;
         }
 
     }

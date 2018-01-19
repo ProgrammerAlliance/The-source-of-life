@@ -6,6 +6,9 @@ namespace Calculator.Core.SDK
 {
     public class Expression
     {
+        /// <summary>
+        /// 记录当前输入的类型：数字，普通符号，特殊符号，等于号
+        /// </summary>
         public TypeEnum IsOpt;
 
         /// <summary>
@@ -44,6 +47,11 @@ namespace Calculator.Core.SDK
         public object Opt { get; set; }
 
         /// <summary>
+        /// 判断当前键盘是否锁定
+        /// </summary>
+        public bool Locked = false;
+
+        /// <summary>
         /// 运算
         /// </summary>
         /// <returns></returns>
@@ -57,18 +65,21 @@ namespace Calculator.Core.SDK
             }
             else if (Opt is SpecialEnum)
             {
-                var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
                 switch ((SpecialEnum)Opt)
                 {
                     case SpecialEnum.Percent:
                         var Popt = new Percent();
-                        string str = this.L;
                         result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
                         break;
                     default:
                         result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
                         break;
                 }
+            }
+            else
+            {
+                result = Convert.ToDouble(EV).ToString();
             }
             return result;
         }
@@ -81,65 +92,57 @@ namespace Calculator.Core.SDK
         {
             string str = "";
 
-            if (Opt == null || IsOpt == TypeEnum.Equal)
+            if (IsOpt == TypeEnum.Equal || Opt == null)
             {
                 return str;
             }
-
-            if (LExp != null || RExp != null)
+            if (LExp != null)  //左分支不为空
             {
-                if (LExp != null)
+                var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+
+                if (LExp.L == null || LExp.IsOpt == TypeEnum.SpecialSymbol)
                 {
-                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
                     str += opt.GetToString(LExp.ToString());
                 }
-                if(RExp!=null)
+                else
                 {
-                    
+                    str += LExp.ToString() + opt.GetToString(LExp.R);
                 }
             }
+            if (RExp != null)  //右分支不为空
+            {
+                if (Opt is ArithmeticEnum)  //当前层符号为普通符号
+                {
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
 
-
-
-
-
-
-
-            //if (LExp == null && RExp == null && Opt == null) return str;
-            //if (LExp != null)
-            //{
-            //    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-            //    str += LExp.ToString() + opt.GetToString(LExp.R);
-            //}
-            //else if (RExp != null)
-            //{
-            //    if ((SpecialEnum)RExp.Opt == SpecialEnum.Percent)
-            //    {
-            //        str += R;
-            //    }
-            //    else
-            //    {
-            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
-            //        str += opt.GetToString((RExp.ToString()));
-            //    }
-            //}
-            //else if (L != null)
-            //{
-            //    if (Opt is ArithmeticEnum)
-            //    {
-            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-            //        str += opt.GetToString(this.L);
-            //    }
-            //    else if (Opt is SpecialEnum)
-            //    {
-            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)Opt);
-            //        str += opt.GetToString(R);
-            //    }
-            //}
-            //else
-            //{
-            //    return R;
-            //}
+                    if (LExp != null)  //左分支不为空直接追加右分支生成的字符串
+                    {
+                        str += RExp.ToString();
+                    }
+                    else  //左分支为空带上当前左值生成字符串
+                    {
+                        str += opt.GetToString(L) + RExp.ToString();
+                    }
+                }
+                else  //当前层符号为一目运算符
+                {
+                    var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                    str += opt.GetToString(RExp.ToString());
+                }
+            }
+            else if (LExp == null && RExp == null)   //到达底层
+            {
+                if (Opt is ArithmeticEnum)
+                {
+                    var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
+                    str = L + (char)((ArithmeticEnum)Opt);
+                }
+                else
+                {
+                    var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
+                    str = opt.GetToString(R);
+                }
+            }
             return str;
         }
     }
