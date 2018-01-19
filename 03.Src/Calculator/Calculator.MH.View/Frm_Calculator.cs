@@ -34,6 +34,11 @@ namespace Calculator.MH.View
             ScreenDisplay();
         }
 
+        /// <summary>
+        /// 符号按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Calculator_Click(object sender, EventArgs e)
         {
             string strBtn = ((Button)sender).Text;
