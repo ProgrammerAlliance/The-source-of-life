@@ -17,6 +17,11 @@ namespace Calculator.Core.Ops
             this._symbol = symbol;
         }
 
+        /// <summary>
+        /// 处理输入的小数点和正负号
+        /// </summary>
+        /// <param name="exp"></param>
+        /// <returns></returns>
         public Expression Process(Expression exp)
         {
 
