@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CalcException.cs" />
+    <Compile Include="MOps\IMOps.cs" />
     <Compile Include="Operation\Enum\ArithmeticEnum.cs" />
     <Compile Include="Operation\Enum\ClearEnum.cs" />
     <Compile Include="Operation\Enum\MEnum.cs" />
@@ -52,7 +53,7 @@
     <Compile Include="Ops\Symbols.cs" />
     <Compile Include="Ops\Arithmetics.cs" />
     <Compile Include="Ops\OneOperations.cs" />
-    <Compile Include="Ops\Memorys.cs" />
+    <Compile Include="MOps\Memorys.cs" />
     <Compile Include="Ops\Equals.cs" />
     <Compile Include="Ops\Numbers.cs" />
     <Compile Include="Save\History.cs" />

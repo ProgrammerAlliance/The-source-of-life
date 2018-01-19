@@ -20,7 +20,7 @@ namespace Calculator.Core.Ops
         public Expression Process(Expression exp)
         {
             exp.R = Convert.ToDouble(exp.R).ToString();
-            //1.第一次点 运算，不需要实例化新对象
+            //第一次点 运算，不需要实例化新对象
             if (exp.Opt == null)
             {
                 exp.Opt = this._op;
@@ -39,9 +39,9 @@ namespace Calculator.Core.Ops
                 exp.EV = exp.R;
                 return exp;
             }
-
             try
             {
+                //正常运算，需要创建新的表达式
                 if (exp.IsCreateNew)
                 {
                     var oldExp = exp;
@@ -62,7 +62,6 @@ namespace Calculator.Core.Ops
                 exp.EV = e.Message;
                 exp.Locked = true;
             }
-
             return exp;
         }
 

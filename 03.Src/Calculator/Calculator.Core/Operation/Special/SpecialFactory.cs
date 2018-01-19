@@ -14,7 +14,6 @@ namespace Calculator.Core
 
             switch (se)
             {
-                
                 case SpecialEnum.Square:
                     {
                         spo = new Square();

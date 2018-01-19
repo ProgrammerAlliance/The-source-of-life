@@ -16,11 +16,12 @@ namespace Calculator.Core.Ops
         {
             this._op = op;
         }
+
         public Expression Process(Expression exp)
         {
             try
             {
-                if (exp.Opt == null)//
+                if (exp.Opt == null)
                 {
                     exp.Opt = _op;
                     exp.EV = exp.DoCalc();
@@ -58,13 +59,12 @@ namespace Calculator.Core.Ops
                                 RExp = oldRExp,
                                 Opt = _op,
                                 R = oldRExp.DoCalc(),
-                                IsOpt=TypeEnum.SpecialSymbol,
+                                IsOpt = TypeEnum.SpecialSymbol,
                             };
                             exp.EV = exp.R = exp.RExp.DoCalc();
                         }
                     }
                 }
-                // var sss = exp.RExp == null ? $"sqrt({exp.R}" : $"{exp.RExp.ToString()}sqrt({exp.R}))";
             }
             catch (CalcException e)
             {

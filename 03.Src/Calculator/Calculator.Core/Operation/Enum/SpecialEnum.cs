@@ -1,5 +1,8 @@
 ﻿namespace Calculator.Core.Enum
 {
+    /// <summary>
+    /// 一目运算符号枚举
+    /// </summary>
     public enum SpecialEnum
     {
         Percent = 1,

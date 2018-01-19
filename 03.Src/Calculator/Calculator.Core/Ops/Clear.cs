@@ -14,7 +14,7 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            switch (_op) 
+            switch (_op)
             {
                 case ClearEnum.C:
                     exp = new Expression()
@@ -38,12 +38,10 @@ namespace Calculator.Core.Ops
                     //{
                     //    exp.Opt = null;
                     //}
-
                     break;
-
                 case ClearEnum.Del:
                     //输入等于号后删除键无效
-                    if(exp.IsOpt==TypeEnum.Equal)
+                    if (exp.IsOpt == TypeEnum.Equal)
                     {
                         return exp;
                     }
@@ -55,8 +53,6 @@ namespace Calculator.Core.Ops
                     //无响应
                     break;
             }
-
-
             return exp;
         }
     }

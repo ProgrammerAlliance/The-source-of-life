@@ -12,6 +12,11 @@ namespace Calculator.Core
     /// </summary>
     public class Reciprocal : ISpecialOperation
     {
+        /// <summary>
+        /// 重载的计算方法
+        /// </summary>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public double GetResult(double right)
         {
             double result = 0;
@@ -26,7 +31,11 @@ namespace Calculator.Core
             return result;
         }
 
-
+        /// <summary>
+        /// 倒数算式
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
         public string GetToString(string num)
         {
             return $"reciproc({num})";

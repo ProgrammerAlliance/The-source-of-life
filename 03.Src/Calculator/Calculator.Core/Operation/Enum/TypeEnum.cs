@@ -1,5 +1,8 @@
 ﻿namespace Calculator.Core.Enum
 {
+    /// <summary>
+    /// 状态枚举
+    /// </summary>
     public enum TypeEnum
     {
         CommonSymbol = 1,
