@@ -75,6 +75,7 @@ namespace Calculator.Core.SDK
                     case SpecialEnum.Invert:
                         var Iopt = new Invert();
                         result = Iopt.GetResult(this.R);
+                        result = Convert.ToDouble(result).ToString();
                         break;
                     default:
                         result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
