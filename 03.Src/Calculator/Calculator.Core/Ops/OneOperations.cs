@@ -16,6 +16,11 @@ namespace Calculator.Core.Ops
         {
             this._op = op;
         }
+        /// <summary>
+        /// 处理输入的一目运算符
+        /// </summary>
+        /// <param name="exp"></param>
+        /// <returns></returns>
         public Expression Process(Expression exp)
         {
             try

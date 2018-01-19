@@ -13,6 +13,11 @@ namespace Calculator.Core.Ops
             this._op = op;
         }
 
+        /// <summary>
+        /// 处理输入的二目运算符号
+        /// </summary>
+        /// <param name="exp"></param>
+        /// <returns></returns>
         public Expression Process(Expression exp)
         {
             exp.R = Convert.ToDouble(exp.R).ToString();

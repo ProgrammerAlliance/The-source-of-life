@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.MH.View
 {
     partial class Frm_Calculator
     {
