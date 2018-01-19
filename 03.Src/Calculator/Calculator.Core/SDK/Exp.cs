@@ -112,40 +112,7 @@ namespace Calculator.Core.SDK
             {
                 return R;
             }
-
-
-
             return str;
-
-
-
-            //if (LExp != null || RExp != null)
-            //{
-            //    if (LExp != null)
-            //    {
-            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-            //        str += LExp.ToString() + opt.GetToString(LExp.R);
-            //    }
-            //    if (RExp != null)
-            //    {
-            //        var opt = SpecalFactory.CreateSpecialOperation((SpecialEnum)RExp.Opt);
-            //        str += opt.GetToString(RExp.ToString());
-            //    }
-            //}
-            //else
-            //{
-            //    if (Opt is ArithmeticEnum)
-            //    {
-            //        string str2 = R;
-            //        var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
-            //        str = opt.GetToString(L);
-            //    }
-            //    else
-            //    {
-            //        return R;
-            //    }
-            //}
-            //return str;
         }
     }
 }
