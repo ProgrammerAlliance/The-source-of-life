@@ -39,7 +39,6 @@ namespace Calculator.Core
                         oper = new OperationDiv();
                         break;
                     }
-
             }
             return oper;
         }

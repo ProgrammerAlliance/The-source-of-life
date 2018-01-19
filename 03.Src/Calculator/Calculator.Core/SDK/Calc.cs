@@ -1,4 +1,5 @@
 ﻿using Calculator.Core.Enum;
+using Calculator.Core.MOps;
 using Calculator.Core.Ops;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace Calculator.Core.SDK
     public class Calc
     {
         Expression Exp { get; set; }
+
         public Calc()
         {
             Exp = new Expression
@@ -26,19 +28,21 @@ namespace Calculator.Core.SDK
             };
         }
 
+        Memory me = new Memory();
+
         /// <summary>
         /// 0-9
         /// </summary>
         /// <param name="op"></param>
         public void InputNumber(int num)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
-            if (Exp.IsOpt==TypeEnum.CommonSymbol)
+            if (Exp.IsOpt == TypeEnum.CommonSymbol)
             {
                 Exp.IsCreateNew = true;
             }
@@ -51,7 +55,7 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputSymbol(SymbolEnum op)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
@@ -65,7 +69,7 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputArithmetic(ArithmeticEnum op)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
@@ -86,7 +90,7 @@ namespace Calculator.Core.SDK
                 return;
             }
             IOps opt = new OneOperations(op);
-            Exp=opt.Process(Exp);
+            Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.SpecialSymbol;
             Exp.IsCreateNew = true;
         }
@@ -95,9 +99,10 @@ namespace Calculator.Core.SDK
         /// 内存运算
         /// </summary>
         /// <param name="op"></param>
-        public void InputMemory(string op)
+        public void InputMemory(MEnum op)
         {
-
+            IMOps iMOps = new Memorys(op);
+            Exp = iMOps.Process(Exp, me);
         }
 
         /// <summary>
@@ -112,17 +117,17 @@ namespace Calculator.Core.SDK
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.Equal;
-            
         }
 
         /// <summary>
         /// C CE Del
         /// </summary>
         public void InputClear(ClearEnum op)
-        {   //键盘锁定下只能按C、CE
+        {
+            //键盘锁定下只能按C、CE
             //按完一目操作符不能按退格
-            //按完四目操作符不能按退格
-            if((Exp.Locked&&op==ClearEnum.Del)||(Exp.IsOpt==TypeEnum.SpecialSymbol&&op==ClearEnum.Del)||(Exp.IsOpt==TypeEnum.CommonSymbol&&op==ClearEnum.Del))
+            //按完二目操作符不能按退格
+            if ((Exp.Locked && op == ClearEnum.Del) || ((Exp.IsOpt == TypeEnum.SpecialSymbol) || (Exp.IsOpt == TypeEnum.CommonSymbol) && op == ClearEnum.Del))
             {
                 return;
             }
