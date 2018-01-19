@@ -1,6 +1,4 @@
-﻿using Calculator.Core.SDK;
-
-namespace Calculator.Core.Operation.Special
+﻿namespace Calculator.Core.Operation.Special
 {
     /// <summary>
     /// 一目运算和算式
@@ -19,7 +17,6 @@ namespace Calculator.Core.Operation.Special
         /// </summary>
         /// <param name="num">之前的算式</param>
         /// <returns></returns>
-        string GetToString(string num);
-        
+        string GetToString(string num);     
     }
 }

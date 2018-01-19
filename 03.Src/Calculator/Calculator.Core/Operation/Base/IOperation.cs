@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator.Core.Operation.Base
+﻿namespace Calculator.Core.Operation.Base
 {
     /// <summary>
     /// 二目运算和算式
@@ -25,6 +19,5 @@ namespace Calculator.Core.Operation.Base
         /// <param name="num">左式</param>
         /// <returns></returns>
         string GetToString(string num);
-        
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using Calculator.Core.Operation.Enum;
+﻿using Calculator.Core.Operation.Enum;
 
 namespace Calculator.Core.Operation.Base
 {

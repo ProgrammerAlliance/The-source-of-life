@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Calculator.Core.SDK;
-using Calculator.Core.Core;
+﻿using Calculator.Core.Core;
 
 namespace Calculator.Core.Operation.Special
 {
@@ -40,7 +34,6 @@ namespace Calculator.Core.Operation.Special
         public string GetToString(string num)
         {
             return $"reciproc({num})";
-
         }
     }
 }

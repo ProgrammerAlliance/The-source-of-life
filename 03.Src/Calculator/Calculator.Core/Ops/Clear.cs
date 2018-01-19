@@ -35,10 +35,8 @@ namespace Calculator.Core.Ops
                     };
                     break;
                 case ClearEnum.CE:
-                    //正常情况：
                     exp.R = "0";
                     exp.EV = exp.R;
-                    //特殊运算+CE：
                     if (exp.IsOpt == TypeEnum.SpecialSymbol)
                     {
                             exp.RExp = null;
@@ -50,19 +48,15 @@ namespace Calculator.Core.Ops
                     }
                     break;
                 case ClearEnum.Del:
-                    //输入等于号后删除键无效
                     if (exp.IsOpt == TypeEnum.Equal)
                     {
                         return exp;
                     }
-                    //数字+Del
                     exp.R = exp.R.Length > 1 ? exp.R.Remove(exp.R.Length - 1) : "0";
                     exp.R = "-".Equals(exp.R) ? "0" : exp.R;
                     exp.EV = exp.R;
                     break;
             }
-
-
             return exp;
         }
     }

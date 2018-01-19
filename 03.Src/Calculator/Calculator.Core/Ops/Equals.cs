@@ -28,7 +28,6 @@ namespace Calculator.Core.Ops
             }
             catch (CalcException e)
             {
-
                 exp.EV = e.Message;
             }
             return exp;

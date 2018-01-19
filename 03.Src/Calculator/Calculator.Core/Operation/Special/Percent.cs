@@ -2,7 +2,6 @@
 
 namespace Calculator.Core.Opt.Operation.Special
 {
-
     public class Percent : ISpecialOperation
     {
         /// <summary>
