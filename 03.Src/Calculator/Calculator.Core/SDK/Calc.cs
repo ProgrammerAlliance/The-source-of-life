@@ -120,7 +120,7 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputClear(ClearEnum op)
         {
-            if(Exp.Locked&&op==ClearEnum.Del)
+            if((Exp.Locked&&op==ClearEnum.Del)||(Exp.IsOpt==TypeEnum.SpecialSymbol&&op==ClearEnum.Del)||Exp.IsOpt==TypeEnum.CommonSymbol)
             {
                 return;
             }
