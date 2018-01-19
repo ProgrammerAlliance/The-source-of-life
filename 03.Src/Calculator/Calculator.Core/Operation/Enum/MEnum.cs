@@ -1,5 +1,8 @@
 ﻿namespace Calculator.Core.Enum
 {
+    /// <summary>
+    /// M键枚举
+    /// </summary>
     public enum MEnum
     {
         MClear = 1,

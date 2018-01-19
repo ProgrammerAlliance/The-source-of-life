@@ -7,8 +7,18 @@ namespace Calculator.Core
     /// </summary>
     public interface ISpecialOperation
     {
+        /// <summary>
+        /// 运算的抽象方法
+        /// </summary>
+        /// <param name="right">右值</param>
+        /// <returns></returns>
         double GetResult(double right);
 
+        /// <summary>
+        /// 获取算式的抽象方法
+        /// </summary>
+        /// <param name="num">之前的算式</param>
+        /// <returns></returns>
         string GetToString(string num);
         
     }

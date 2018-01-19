@@ -9,10 +9,16 @@ using System.Threading.Tasks;
 namespace Calculator.Core
 {
     /// <summary>
-    /// 除法计算
+    /// 除法类
     /// </summary>
     public class OperationDiv : IOperation
     {
+        /// <summary>
+        /// 除法计算
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
         public double GetResult(double left, double right)
         {
             double result = 0;
@@ -31,10 +37,11 @@ namespace Calculator.Core
             }
             return result;
         }
+
         /// <summary>
-        /// 算式
+        /// 除法算式
         /// </summary>
-        /// <param name="num"></param>
+        /// <param name="num">左式</param>
         /// <returns></returns>
         public string GetToString(string num)
         {

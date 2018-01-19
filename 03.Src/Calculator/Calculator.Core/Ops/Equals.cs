@@ -19,14 +19,12 @@ namespace Calculator.Core.Ops
                     IsCreateNew = false,
                 };
                 exp.EV = exp.L;
-
             }
             catch (CalcException e)
             {
 
                 exp.EV = e.Message;
             }
-            
             return exp;
         }
     }

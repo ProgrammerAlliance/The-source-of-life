@@ -10,6 +10,7 @@
         {
             return 0;
         }
+
         /// <summary>
         /// 重载计算方法
         /// </summary>
@@ -20,6 +21,7 @@
         {
             return (left* right) / 100;
         }
+
         /// <summary>
         /// 百分号算式
         /// </summary>

@@ -19,11 +19,11 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            
+
             switch (_symbol)
             {
                 case SymbolEnum.Point:
-                    if (exp.R == ""||exp.IsOpt!=TypeEnum.Number)
+                    if (exp.R == "" || exp.IsOpt != TypeEnum.Number)
                     {
                         exp.R = "0.";
                     }
@@ -33,20 +33,15 @@ namespace Calculator.Core.Ops
                     exp.IsCreateNew = true;
                     break;
                 case SymbolEnum.Sign:
-                    //1.直接点“±”
+                    //直接点“±”
                     if ("0".Equals(exp.R))
                     {
                         return exp;
                     }
-
-                    //2.数字->运算->“±”
-                    
-                    //3.正常点“±”
                     exp.R = exp.R.StartsWith("-") ? exp.R.Remove(0, 1) : $"-{exp.R}";
                     exp.EV = exp.R;
                     break;
             }
-
             return exp;
         }
     }

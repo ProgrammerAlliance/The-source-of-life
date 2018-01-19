@@ -6,22 +6,15 @@ using System.Threading.Tasks;
 using Calculator.Core.SDK;
 using Calculator.Core.Enum;
 
-namespace Calculator.Core.Ops
+namespace Calculator.Core.MOps
 {
-    public class Memorys : IOps
+    public class Memorys : IMOps
     {
         MEnum _op;
 
         public Memorys(MEnum op)
         {
             this._op = op;
-        }
-
-
-
-        public Expression Process(Expression exp)
-        {
-            return exp;
         }
 
         public Expression Process(Expression exp, Memory memory)

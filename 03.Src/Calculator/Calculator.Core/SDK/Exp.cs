@@ -96,7 +96,8 @@ namespace Calculator.Core.SDK
             {
                 return str;
             }
-            if (LExp != null)  //左分支不为空
+            //左分支不为空
+            if (LExp != null)
             {
                 var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
 
@@ -109,28 +110,34 @@ namespace Calculator.Core.SDK
                     str += LExp.ToString() + opt.GetToString(LExp.R);
                 }
             }
-            if (RExp != null)  //右分支不为空
+            //右分支不为空
+            if (RExp != null)
             {
-                if (Opt is ArithmeticEnum)  //当前层符号为普通符号
+                //当前层符号为普通符号
+                if (Opt is ArithmeticEnum)
                 {
                     var opt = OperationFactory.CreatOperation((ArithmeticEnum)Opt);
 
-                    if (LExp != null)  //左分支不为空直接追加右分支生成的字符串
+                    //左分支不为空直接追加右分支生成的字符串
+                    if (LExp != null)
                     {
                         str += RExp.ToString();
                     }
-                    else  //左分支为空带上当前左值生成字符串
+                    //左分支为空带上当前左值生成字符串
+                    else
                     {
                         str += opt.GetToString(L) + RExp.ToString();
                     }
                 }
-                else  //当前层符号为一目运算符
+                //当前层符号为一目运算符
+                else
                 {
                     var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
                     str += opt.GetToString(RExp.ToString());
                 }
             }
-            else if (LExp == null && RExp == null)   //到达底层
+            //到达底层
+            else if (LExp == null && RExp == null)
             {
                 if (Opt is ArithmeticEnum)
                 {
@@ -145,7 +152,5 @@ namespace Calculator.Core.SDK
             }
             return str;
         }
-
-  
     }
 }

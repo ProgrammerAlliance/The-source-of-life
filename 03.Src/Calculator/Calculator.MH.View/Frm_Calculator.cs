@@ -67,19 +67,19 @@ namespace Calculator
                     calc.InputOneOperation(SpecialEnum.Sqrt);
                     break;
                 case "MC":
-                    calc.InputMemory(MEnum.MClear);
+                   // calc.InputMemory(MEnum.MClear);
                     break;
                 case "MS":
-                    calc.InputMemory(MEnum.MSave);
+                  //  calc.InputMemory(MEnum.MSave);
                     break;
                 case "MR":
-                    calc.InputMemory(MEnum.MRead);
+                   // calc.InputMemory(MEnum.MRead);
                     break;
                 case "M+":
-                    calc.InputMemory(MEnum.MAdd);
+                  //  calc.InputMemory(MEnum.MAdd);
                     break;
                 case "M-":
-                    calc.InputMemory(MEnum.MSub);
+                   // calc.InputMemory(MEnum.MSub);
                     break;
                 case "←":
                     calc.InputClear(ClearEnum.Del);

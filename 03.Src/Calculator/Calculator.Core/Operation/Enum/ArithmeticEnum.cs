@@ -1,7 +1,7 @@
 ﻿namespace Calculator.Core.Enum
 {
     /// <summary>
-    /// 四则运算运算符的枚举
+    /// 二目运算符号枚举
     /// </summary>
     public enum ArithmeticEnum
     {
