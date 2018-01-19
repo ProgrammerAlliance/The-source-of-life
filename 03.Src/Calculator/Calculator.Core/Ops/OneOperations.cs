@@ -46,6 +46,7 @@ namespace Calculator.Core.Ops
                     };
                     exp.EV = exp.R = exp.RExp.DoCalc();
                     exp.RExp.L = null;
+                    exp.RExp.EV = exp.EV;
                 }
                 //连续输入特殊运算
                 else if (exp.IsOpt == TypeEnum.SpecialSymbol)
@@ -76,6 +77,7 @@ namespace Calculator.Core.Ops
                             IsOpt = TypeEnum.SpecialSymbol,
                         };
                         exp.EV = exp.R = exp.RExp.DoCalc();
+                        exp.RExp.EV = exp.EV;
                     }
                 }
             }
