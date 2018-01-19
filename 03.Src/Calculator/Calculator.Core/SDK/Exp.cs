@@ -72,6 +72,10 @@ namespace Calculator.Core.SDK
                         var Popt = new Percent();
                         result = Popt.GetResult(Convert.ToDouble(this.L), Convert.ToDouble(this.R)).ToString();
                         break;
+                    case SpecialEnum.Invert:
+                        var Iopt = new Invert();
+                        result = Iopt.GetResult(this.R);
+                        break;
                     default:
                         result = opt.GetResult(Convert.ToDouble(this.R)).ToString();
                         break;

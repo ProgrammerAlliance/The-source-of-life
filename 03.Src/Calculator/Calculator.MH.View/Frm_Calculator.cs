@@ -68,19 +68,19 @@ namespace Calculator
                     calc.InputOneOperation(SpecialEnum.Sqrt);
                     break;
                 case "MC":
-                   // calc.InputMemory(MEnum.MClear);
+                    calc.InputMemory(MEnum.MClear);
                     break;
                 case "MS":
-                  //  calc.InputMemory(MEnum.MSave);
+                    calc.InputMemory(MEnum.MSave);
                     break;
                 case "MR":
-                   // calc.InputMemory(MEnum.MRead);
+                    calc.InputMemory(MEnum.MRead);
                     break;
                 case "M+":
-                  //  calc.InputMemory(MEnum.MAdd);
+                    calc.InputMemory(MEnum.MAdd);
                     break;
                 case "M-":
-                   // calc.InputMemory(MEnum.MSub);
+                    calc.InputMemory(MEnum.MSub);
                     break;
                 case "←":
                     calc.InputClear(ClearEnum.Del);
@@ -108,21 +108,11 @@ namespace Calculator
         }
 
         /// <summary>
-        /// 按钮按下时按钮变色
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Btn_Click_Down(object sender, KeyEventArgs e)
-        {
-
-        }
-
-
-        /// <summary>
         /// 向屏幕显示输出
         /// </summary>
         public void ScreenDisplay()
         {
+            //显示结果  调整字号
             string str = calc.R();
             if (str.Length < 14)
             {
@@ -135,13 +125,21 @@ namespace Calculator
             else
             {
                 Lab_Result.Font = new System.Drawing.Font("宋体", 10F);
-
             }
+            //显示表达式
             Lab_Result.Text = str;
-
             string formula = calc.GetFormula();
             formula = ProcessFormula(formula);
             Lab_Formula.Text = formula;
+            //显示Memery标记
+            if(calc.M())
+            {
+                Lab_Register.Text = "M";
+            }
+            else
+            {
+                Lab_Register.Text = "";
+            }
         }
 
         /// <summary>

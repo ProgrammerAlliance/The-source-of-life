@@ -28,7 +28,7 @@ namespace Calculator.Core.SDK
             };
         }
 
-        Memory me = new Memory();
+        Memory menory = new Memory();
 
         /// <summary>
         /// 0-9
@@ -57,6 +57,15 @@ namespace Calculator.Core.SDK
         {
             if (Exp.Locked)
             {
+                return;
+            }
+            if(op==SymbolEnum.Sign&&Exp.IsOpt!=TypeEnum.Number)
+            {
+                if(Exp.Opt==null)
+                {
+                    return;
+                }
+                InputOneOperation(SpecialEnum.Invert);
                 return;
             }
             IOps opt = new Symbols(op);
@@ -102,7 +111,7 @@ namespace Calculator.Core.SDK
         public void InputMemory(MEnum op)
         {
             IMOps iMOps = new Memorys(op);
-            Exp = iMOps.Process(Exp, me);
+            Exp = iMOps.Process(Exp, menory);
         }
 
         /// <summary>
@@ -144,6 +153,19 @@ namespace Calculator.Core.SDK
         public string R()
         {
             return Exp.EV;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public bool M()
+        {
+            if("0".Equals(menory.MemoryNumber))
+            {
+                return false;
+            }
+            return true;
         }
 
         /// <summary>

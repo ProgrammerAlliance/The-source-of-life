@@ -48,6 +48,7 @@
     <Compile Include="Operation\Enum\SpecialEnum.cs" />
     <Compile Include="Operation\Enum\SymbolEnum.cs" />
     <Compile Include="Operation\Enum\TypeEnum.cs" />
+    <Compile Include="Operation\Special\Invert.cs" />
     <Compile Include="Ops\Clear.cs" />
     <Compile Include="Ops\IOps.cs" />
     <Compile Include="Ops\Symbols.cs" />
