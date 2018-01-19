@@ -21,28 +21,9 @@ namespace Calculator.Core.Ops
 
         public Expression Process(Expression exp)
         {
-            switch (_op)
-            {
-                case MEnum.MClear:
-                    memory.Clear();
-                    break;
-                case MEnum.MRead:
-                    memory.Read(exp);
-                    break;
-                case MEnum.MSave:
-                    memory.Save(exp);
-                    break;
-                case MEnum.MAdd:
-                    memory.Add(exp);
-                    break;
-                case MEnum.MSub:
-                    memory.Sub(exp);
-                    break;
-            }
-            return exp;
         }
 
-        public Expression Process(Expression exp,Memory memory)
+        public Expression Process(Expression exp, Memory memory)
         {
             switch (_op)
             {

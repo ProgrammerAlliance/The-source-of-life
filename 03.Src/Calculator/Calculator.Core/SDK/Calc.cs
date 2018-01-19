@@ -34,13 +34,13 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputNumber(int num)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
             IOps opt = new Numbers(num);
             Exp = opt.Process(Exp);
-            if (Exp.IsOpt==TypeEnum.CommonSymbol)
+            if (Exp.IsOpt == TypeEnum.CommonSymbol)
             {
                 Exp.IsCreateNew = true;
             }
@@ -53,7 +53,7 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputSymbol(SymbolEnum op)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
@@ -67,7 +67,7 @@ namespace Calculator.Core.SDK
         /// <param name="op"></param>
         public void InputArithmetic(ArithmeticEnum op)
         {
-            if(Exp.Locked)
+            if (Exp.Locked)
             {
                 return;
             }
@@ -88,7 +88,7 @@ namespace Calculator.Core.SDK
                 return;
             }
             IOps opt = new OneOperations(op);
-            Exp=opt.Process(Exp);
+            Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.SpecialSymbol;
             Exp.IsCreateNew = true;
         }
@@ -115,7 +115,7 @@ namespace Calculator.Core.SDK
             IOps opt = new Equals();
             Exp = opt.Process(Exp);
             Exp.IsOpt = TypeEnum.Equal;
-            
+
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Calculator.Core.SDK
         /// </summary>
         public void InputClear(ClearEnum op)
         {
-            if(Exp.Locked&&op==ClearEnum.Del)
+            if (Exp.Locked && op == ClearEnum.Del)
             {
                 return;
             }
