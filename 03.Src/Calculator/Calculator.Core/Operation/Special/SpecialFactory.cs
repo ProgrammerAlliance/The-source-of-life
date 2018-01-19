@@ -36,7 +36,7 @@ namespace Calculator.Core
                     }
                 case SpecialEnum.Invert:
                     {
-                        spo = new Percent();
+                        spo = new Invert();
                         break;
                     }
             }
