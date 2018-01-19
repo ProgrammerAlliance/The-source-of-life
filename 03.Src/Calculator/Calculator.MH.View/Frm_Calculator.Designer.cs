@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Calculator));
-            this.Menu = new System.Windows.Forms.MenuStrip();
+            this.MenuBar = new System.Windows.Forms.MenuStrip();
             this.查看ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.标准型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.科学型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,23 +92,23 @@
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
             this.Btn_Num0 = new System.Windows.Forms.Button();
-            this.Menu.SuspendLayout();
+            this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Menu
+            // MenuBar
             // 
-            this.Menu.AutoSize = false;
-            this.Menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuBar.AutoSize = false;
+            this.MenuBar.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MenuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.查看ToolStripMenuItem,
             this.编辑ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
-            this.Menu.Location = new System.Drawing.Point(0, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Menu.Size = new System.Drawing.Size(276, 28);
-            this.Menu.TabIndex = 0;
-            this.Menu.Text = "menuStrip1";
+            this.MenuBar.Location = new System.Drawing.Point(0, 0);
+            this.MenuBar.Name = "MenuBar";
+            this.MenuBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.MenuBar.Size = new System.Drawing.Size(276, 28);
+            this.MenuBar.TabIndex = 0;
+            this.MenuBar.Text = "menuStrip1";
             // 
             // 查看ToolStripMenuItem
             // 
@@ -839,17 +839,17 @@
             this.Controls.Add(this.Btn_Num6);
             this.Controls.Add(this.Btn_Num2);
             this.Controls.Add(this.Btn_Num1);
-            this.Controls.Add(this.Menu);
+            this.Controls.Add(this.MenuBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MainMenuStrip = this.Menu;
+            this.MainMenuStrip = this.MenuBar;
             this.Name = "Frm_Calculator";
             this.Text = "计算器";
             this.Activated += new System.EventHandler(this.Calculator_Load);
             this.Load += new System.EventHandler(this.Calculator_Load);
-            this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
+            this.MenuBar.ResumeLayout(false);
+            this.MenuBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -896,7 +896,7 @@
         public System.Windows.Forms.Label Lab_Formula;
         public System.Windows.Forms.Label Lab_Result;
         public System.Windows.Forms.Label Lab_Register;
-        private System.Windows.Forms.MenuStrip Menu;
+        private System.Windows.Forms.MenuStrip MenuBar;
         private System.Windows.Forms.Label labOfLine;
         private System.Windows.Forms.ToolStripMenuItem 查看ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 标准型ToolStripMenuItem;

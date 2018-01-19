@@ -183,7 +183,6 @@ namespace Calculator.Core.SDK
             catch (Exception)
             {
                 Exp.Locked = true;
-               
             }
             return str;
         }
