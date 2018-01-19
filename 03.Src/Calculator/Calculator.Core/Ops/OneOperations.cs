@@ -21,22 +21,31 @@ namespace Calculator.Core.Ops
             try
             {
                 //一开始就按一目运算，只有此时当前EXp符号为空
-                if (exp.Opt == null) 
+                if (exp.Opt == null)
                 {
+                    //一开始一目运算符为百分号，结果为0，不保留算式
+                    if (_op == SpecialEnum.Percent)
+                    {
+                        exp.R = "0";
+                        exp.EV = exp.R;
+                        return exp;
+                    }
                     exp.Opt = _op;
                     exp.EV = exp.DoCalc();
                     return exp;
                 }
-                //在输入数字和普通运算符后  按下特殊运算符  此时向右支延伸
+                //在输入数字或普通运算符后  按下特殊运算符  此时向右支延伸
                 if (exp.IsOpt == TypeEnum.Number || exp.IsOpt == TypeEnum.CommonSymbol)
                 {
                     exp.RExp = new Expression
                     {
+                        L = exp.L,
                         Opt = _op,
                         R = exp.R,
                         IsOpt = TypeEnum.SpecialSymbol,
                     };
                     exp.EV = exp.R = exp.RExp.DoCalc();
+                    exp.RExp.L = null;
                 }
                 //连续输入特殊运算
                 else if (exp.IsOpt == TypeEnum.SpecialSymbol)
@@ -59,16 +68,16 @@ namespace Calculator.Core.Ops
                         var oldRExp = exp.RExp;
                         exp.RExp = new Expression
                         {
+                            L = exp.L,
                             RExp = oldRExp,
                             Opt = _op,
-                            R = oldRExp.DoCalc(),
+                            R = exp.EV,
+                            //R = oldRExp.DoCalc(),
                             IsOpt = TypeEnum.SpecialSymbol,
                         };
                         exp.EV = exp.R = exp.RExp.DoCalc();
                     }
                 }
-
-                // var sss = exp.RExp == null ? $"sqrt({exp.R}" : $"{exp.RExp.ToString()}sqrt({exp.R}))";
             }
             catch (CalcException e)
             {
