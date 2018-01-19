@@ -99,13 +99,6 @@ namespace Calculator.MH.View
             ScreenDisplay();
         }
 
-        private void Btn_Memory_Click(object sender, EventArgs e)
-        {
-            string strBtn = ((Button)sender).Text;
-            ScreenDisplay();
-
-        }
-
         /// <summary>
         /// 向屏幕显示输出
         /// </summary>
@@ -131,7 +124,7 @@ namespace Calculator.MH.View
             formula = ProcessFormula(formula);
             Lab_Formula.Text = formula;
             //显示Memery标记
-            if(calc.M())
+            if (calc.M())
             {
                 Lab_Register.Text = "M";
             }
@@ -162,6 +155,36 @@ namespace Calculator.MH.View
                 result = "<<" + result.Substring(result.Length - 28);
             }
             return result;
+        }
+
+        /// <summary>
+        /// 鼠标移动到按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_MouseMove(object sender, MouseEventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(255, 232, 207);
+        }
+
+        /// <summary>
+        /// 鼠标离开按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Num_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(234, 241, 248);
+        }
+
+        /// <summary>
+        /// 鼠标离开按钮改变颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Syb_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = System.Drawing.Color.FromArgb(212, 224, 237);
         }
     }
 }
