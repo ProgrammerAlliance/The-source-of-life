@@ -89,7 +89,6 @@
             this.Btn_M_Add = new System.Windows.Forms.Button();
             this.Btn__M_Sub = new System.Windows.Forms.Button();
             this.Lab_Result = new System.Windows.Forms.Label();
-            this.txt_Log = new System.Windows.Forms.TextBox();
             this.Lab_Register = new System.Windows.Forms.Label();
             this.labOfLine = new System.Windows.Forms.Label();
             this.Btn_Num0 = new System.Windows.Forms.Button();
@@ -791,14 +790,6 @@
             this.Lab_Result.Text = "0";
             this.Lab_Result.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txt_Log
-            // 
-            this.txt_Log.Location = new System.Drawing.Point(434, 38);
-            this.txt_Log.Multiline = true;
-            this.txt_Log.Name = "txt_Log";
-            this.txt_Log.Size = new System.Drawing.Size(313, 310);
-            this.txt_Log.TabIndex = 5;
-            // 
             // Lab_Register
             // 
             this.Lab_Register.BackColor = System.Drawing.SystemColors.Control;
@@ -847,7 +838,6 @@
             this.Controls.Add(this.Btn_Num0);
             this.Controls.Add(this.labOfLine);
             this.Controls.Add(this.Lab_Register);
-            this.Controls.Add(this.txt_Log);
             this.Controls.Add(this.Lab_Result);
             this.Controls.Add(this.Lab_Formula);
             this.Controls.Add(this.Btn_Num5);
@@ -889,7 +879,6 @@
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -933,7 +922,6 @@
         private System.Windows.Forms.Button Btn_M_Add;
         private System.Windows.Forms.Button Btn__M_Sub;
         public System.Windows.Forms.Label Lab_Formula;
-        private System.Windows.Forms.TextBox txt_Log;
         public System.Windows.Forms.Label Lab_Result;
         public System.Windows.Forms.Label Lab_Register;
         private System.Windows.Forms.MenuStrip Menu;

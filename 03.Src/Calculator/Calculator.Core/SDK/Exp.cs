@@ -94,6 +94,11 @@ namespace Calculator.Core.SDK
 
             if (IsOpt == TypeEnum.Equal || Opt == null)
             {
+                //在第一次输入%操作时符号不保存，表达式结果仍要输出
+                if (IsOpt == TypeEnum.SpecialSymbol)
+                {
+                    str = EV;
+                }
                 return str;
             }
             //左分支不为空
@@ -132,6 +137,11 @@ namespace Calculator.Core.SDK
                 //当前层符号为一目运算符
                 else
                 {
+                    if ((SpecialEnum)Opt == SpecialEnum.Percent)
+                    {
+                        str = EV;
+                        return str;
+                    }
                     var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
                     str += opt.GetToString(RExp.ToString());
                 }
@@ -146,6 +156,11 @@ namespace Calculator.Core.SDK
                 }
                 else
                 {
+                    if ((SpecialEnum)Opt == SpecialEnum.Percent)
+                    {
+                        str = EV;
+                        return str;
+                    }
                     var opt = SpecialFactory.CreateSpecialOperation((SpecialEnum)Opt);
                     str = opt.GetToString(R);
                 }
