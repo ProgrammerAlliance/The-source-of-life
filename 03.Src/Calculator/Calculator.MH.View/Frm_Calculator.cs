@@ -19,7 +19,6 @@ namespace Calculator.MH.View
 
         private void Calculator_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(900, 210);
             this.MaximizeBox = false;
             labOfLine.SendToBack();
             Lab_Result.Focus();
