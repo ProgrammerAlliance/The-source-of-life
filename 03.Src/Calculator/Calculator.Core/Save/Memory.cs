@@ -48,6 +48,7 @@ namespace Calculator.Core.Save
         /// <param name="exp"></param>
         public void Save(Expression exp)
         {
+            exp.EV = Convert.ToDouble(exp.EV).ToString();
             MemoryNumber = exp.EV;
         }
 
