@@ -174,7 +174,17 @@ namespace Calculator.Core.SDK
         /// <returns></returns>
         public string GetFormula()
         {
-            return Exp.ToString();
+            string str = null;
+            try
+            {
+               str= Exp.ToString();
+            }
+            catch (Exception)
+            {
+                Exp.Locked = true;
+               
+            }
+            return str;
         }
     }
 }
