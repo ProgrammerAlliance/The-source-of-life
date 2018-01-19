@@ -1,7 +1,6 @@
 ﻿using Calculator.Core.Enum;
 using Calculator.Core.SDK;
 using System;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
