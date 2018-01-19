@@ -22,7 +22,6 @@ namespace Calculator.Core.Ops
         {
             try
             {
-                //一开始就按一目运算，只有此时当前EXp符号为空
                 if (exp.Opt == null)
                 {
                     //一开始一目运算符为百分号，结果为0，不保留算式
