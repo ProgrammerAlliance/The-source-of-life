@@ -127,7 +127,7 @@ namespace Calculator.Core.SDK
             //键盘锁定下只能按C、CE
             //按完一目操作符不能按退格
             //按完二目操作符不能按退格
-            if ((Exp.Locked && op == ClearEnum.Del) || ((Exp.IsOpt == TypeEnum.SpecialSymbol) || (Exp.IsOpt == TypeEnum.CommonSymbol) && op == ClearEnum.Del))
+            if ((Exp.Locked && op == ClearEnum.Del) || ((Exp.IsOpt == TypeEnum.SpecialSymbol) || (Exp.IsOpt == TypeEnum.CommonSymbol)) && op == ClearEnum.Del)
             {
                 return;
             }
