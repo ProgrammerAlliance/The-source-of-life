@@ -145,5 +145,7 @@ namespace Calculator.Core.SDK
             }
             return str;
         }
+
+  
     }
 }

@@ -13,6 +13,7 @@ namespace Calculator.Core
             result = left + right;
             return result;
         }
+
         /// <summary>
         /// 加法算式
         /// </summary>

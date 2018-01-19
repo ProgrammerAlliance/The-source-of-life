@@ -68,11 +68,19 @@ namespace Calculator
                     calc.InputOneOperation(SpecialEnum.Sqrt);
                     break;
                 case "MC":
+                    calc.InputMemory(MEnum.MClear);
+                    break;
                 case "MS":
+                    calc.InputMemory(MEnum.MSave);
+                    break;
                 case "MR":
+                    calc.InputMemory(MEnum.MRead);
+                    break;
                 case "M+":
+                    calc.InputMemory(MEnum.MAdd);
+                    break;
                 case "M-":
-                    calc.InputMemory(strBtn);
+                    calc.InputMemory(MEnum.MSub);
                     break;
                 case "←":
                     calc.InputClear(ClearEnum.Del);
@@ -132,6 +140,15 @@ namespace Calculator
             Lab_Result.Text = str;
 
             string formula = calc.GetFormula();
+            formula = ProcessFormula(formula);
+            Lab_Formula.Text = formula;
+        }
+
+        /// <summary>
+        /// 处理生成的字符串，过长要省略显示：<<1+2+3+
+        /// </summary>
+        public string ProcessFormula(string formula)
+        {
             string result = "";
             string regex = "+-*/";
             foreach (char c in formula)
@@ -147,8 +164,7 @@ namespace Calculator
             {
                 result = "<<" + result.Substring(result.Length - 28);
             }
-            Lab_Formula.Text = result;
+            return result;
         }
-
     }
 }

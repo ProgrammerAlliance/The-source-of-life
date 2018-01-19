@@ -119,8 +119,10 @@ namespace Calculator.Core.SDK
         /// C CE Del
         /// </summary>
         public void InputClear(ClearEnum op)
-        {
-            if(Exp.Locked&&op==ClearEnum.Del)
+        {   //键盘锁定下只能按C、CE
+            //按完一目操作符不能按退格
+            //按完四目操作符不能按退格
+            if((Exp.Locked&&op==ClearEnum.Del)||(Exp.IsOpt==TypeEnum.SpecialSymbol&&op==ClearEnum.Del)||(Exp.IsOpt==TypeEnum.CommonSymbol&&op==ClearEnum.Del))
             {
                 return;
             }
